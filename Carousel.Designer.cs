@@ -48,10 +48,11 @@
     "th context menu.";
             this.imageBox1.ImportImageText = "Import image from file...";
             this.imageBox1.Location = new System.Drawing.Point(-1, -2);
+            this.imageBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.imageBox1.Name = "imageBox1";
             this.imageBox1.OpenFileDialogTitle = "Please choose image an file";
             this.imageBox1.PasteMenuText = "Paste image from clipboard";
-            this.imageBox1.Size = new System.Drawing.Size(801, 454);
+            this.imageBox1.Size = new System.Drawing.Size(1067, 558);
             this.imageBox1.TabIndex = 0;
             this.imageBox1.TabStop = false;
             // 
@@ -63,23 +64,26 @@
             this.flashButton1.ClickedImage = null;
             this.flashButton1.DisabledImage = null;
             this.flashButton1.Image = ((System.Drawing.Image)(resources.GetObject("flashButton1.Image")));
-            this.flashButton1.Location = new System.Drawing.Point(755, 10);
+            this.flashButton1.Location = new System.Drawing.Point(1007, 12);
+            this.flashButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flashButton1.Name = "flashButton1";
             this.flashButton1.NeutralImage = null;
             this.flashButton1.OverImage = null;
-            this.flashButton1.Size = new System.Drawing.Size(36, 36);
+            this.flashButton1.Size = new System.Drawing.Size(48, 44);
             this.flashButton1.TabIndex = 3;
             this.flashButton1.Text = "flashButton1";
             this.flashButton1.UseVisualStyleBackColor = false;
+            this.flashButton1.Click += new System.EventHandler(this.flashButton1_Click);
             this.flashButton1.Paint += new System.Windows.Forms.PaintEventHandler(this.flashButton1_Paint);
             // 
             // Carousel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.flashButton1);
             this.Controls.Add(this.imageBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Carousel";
             this.Text = "Carousel";
             ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).EndInit();

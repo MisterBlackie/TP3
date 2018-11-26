@@ -39,9 +39,9 @@
             this.BTN_Ok = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.OFD_Image = new System.Windows.Forms.OpenFileDialog();
             this.IBX_Avatar = new PhotoManagerClient.ImageBox();
+            this.BTN_Rechercher = new System.Windows.Forms.Button();
+            this.OFD_Image = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IBX_Avatar)).BeginInit();
@@ -144,20 +144,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Avatar";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 489);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 28);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Rechercher";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // OFD_Image
-            // 
-            this.OFD_Image.FileName = "openFileDialog1";
-            // 
             // IBX_Avatar
             // 
             this.IBX_Avatar.AllowDrop = true;
@@ -175,6 +161,20 @@
             this.IBX_Avatar.TabStop = false;
             this.IBX_Avatar.BackgroundImageChanged += new System.EventHandler(this.IBX_Avatar_BackgroundImageChanged);
             // 
+            // BTN_Rechercher
+            // 
+            this.BTN_Rechercher.Location = new System.Drawing.Point(12, 489);
+            this.BTN_Rechercher.Name = "BTN_Rechercher";
+            this.BTN_Rechercher.Size = new System.Drawing.Size(116, 28);
+            this.BTN_Rechercher.TabIndex = 7;
+            this.BTN_Rechercher.Text = "Rechercher";
+            this.BTN_Rechercher.UseVisualStyleBackColor = true;
+            this.BTN_Rechercher.Click += new System.EventHandler(this.BTN_Rechercher_Click);
+            // 
+            // OFD_Image
+            // 
+            this.OFD_Image.FileName = "openFileDialog1";
+            // 
             // DLG_Account
             // 
             this.AcceptButton = this.BTN_Ok;
@@ -182,7 +182,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BTN_Cancel;
             this.ClientSize = new System.Drawing.Size(352, 529);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BTN_Rechercher);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BTN_Ok);
@@ -214,7 +214,7 @@
         private System.Windows.Forms.Button BTN_Ok;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BTN_Rechercher;
         private System.Windows.Forms.OpenFileDialog OFD_Image;
     }
 }

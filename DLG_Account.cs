@@ -23,6 +23,7 @@ namespace Client_PM
         }
         private void DLG_Account_Load(object sender, EventArgs e)
         {
+
             ValidationProvider = new ValidationProvider(this, SubmitTask);
             ValidationProvider.AddControlToValidate(TBX_Username, Validate_TBX_Username, Validate_TBX_Username_OnSubmit);
             ValidationProvider.AddControlToValidate(TBX_Password, Validate_TBX_Password);
@@ -110,14 +111,11 @@ namespace Client_PM
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BTN_Rechercher_Click(object sender, EventArgs e)
         {
             if (OFD_Image.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                System.IO.StreamReader sr = new
-                   System.IO.StreamReader(OFD_Image.FileName);
-                MessageBox.Show(sr.ReadToEnd());
-                sr.Close();
+                IBX_Avatar.BackgroundImage = Image.FromFile(OFD_Image.FileName);
             }
         }
     }

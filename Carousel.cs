@@ -33,5 +33,10 @@ namespace Client_PM
             int y = (flashButton1.Height - bmp.Height) / 2;
             e.Graphics.DrawImage(bmp, x, y);
         }
+
+        private void flashButton1_Click(object sender, EventArgs e)
+        {
+            Refresh();
+        }
     }
 }

@@ -35,7 +35,7 @@
             this.BTN_Cancel = new System.Windows.Forms.Button();
             this.BTN_Ok = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.CBX_SeSouvenir = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,7 +95,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.CBX_SeSouvenir);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.TBX_UserName);
@@ -107,16 +107,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informations de connexion";
             // 
-            // checkBox1
+            // CBX_SeSouvenir
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(18, 151);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.checkBox1.Size = new System.Drawing.Size(162, 24);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Se souvenir de moi";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.CBX_SeSouvenir.AutoSize = true;
+            this.CBX_SeSouvenir.Location = new System.Drawing.Point(18, 151);
+            this.CBX_SeSouvenir.Name = "CBX_SeSouvenir";
+            this.CBX_SeSouvenir.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CBX_SeSouvenir.Size = new System.Drawing.Size(162, 24);
+            this.CBX_SeSouvenir.TabIndex = 2;
+            this.CBX_SeSouvenir.Text = "Se souvenir de moi";
+            this.CBX_SeSouvenir.UseVisualStyleBackColor = true;
             // 
             // DLG_Login
             // 
@@ -135,6 +135,7 @@
             this.Name = "DLG_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Connexion";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DLG_Login_FormClosing);
             this.Load += new System.EventHandler(this.DLG_Login_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -151,6 +152,6 @@
         private System.Windows.Forms.Button BTN_Cancel;
         private System.Windows.Forms.Button BTN_Ok;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox CBX_SeSouvenir;
     }
 }

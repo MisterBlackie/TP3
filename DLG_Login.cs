@@ -27,6 +27,30 @@ namespace Client_PM
             ValidationProvider = new ValidationProvider(this, Submit_Task);
             ValidationProvider.AddControlToValidate(TBX_UserName, Validate_UserName, Validate_UserName_OnSubmit);
             ValidationProvider.AddControlToValidate(TBX_Password, Validate_Password, Validate_Password_OnSubmit);
+
+            LoadSettings();
+        }
+
+        private void LoadSettings()
+        {
+            if (!Properties.Settings.Default.First_Use)
+            {
+                TBX_UserName.Text = Properties.Settings.Default.Username;
+                TBX_Password.Text = Properties.Settings.Default.Password;
+            }
+        }
+
+        private void SaveSettings()
+        {
+            if (CBX_SeSouvenir.Checked)
+            {
+                Properties.Settings.Default.Username = TBX_UserName.Text;
+                Properties.Settings.Default.Password = TBX_Password.Text;
+
+                Properties.Settings.Default.First_Use = false;
+
+                Properties.Settings.Default.Save();
+            }
         }
 
         private bool Validate_UserName(ref string message)
@@ -58,6 +82,11 @@ namespace Client_PM
             WaitSplash.Show(this, "Login...");
             Logged_User = DBPhotosWebServices.Login(TBX_UserName.Text, TBX_Password.Text);
             WaitSplash.Hide();
+        }
+
+        private void DLG_Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveSettings();
         }
     }
 }
