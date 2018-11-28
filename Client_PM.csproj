@@ -173,16 +173,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Add_Neutral.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Edit_Neutral.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Delete_Neutral.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Properties\Show.png" />
     <None Include="Resources\Start.png" />
     <None Include="Resources\Download.png" />
     <None Include="Resources\Settings.png" />
@@ -190,6 +180,162 @@
     <None Include="Resources\Next.png" />
     <None Include="Resources\Return_Neutral.png" />
     <None Include="Resources\Show.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddToSlide_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddToSlide_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddToSlide_Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddToSlide_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download_Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hide_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hide_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hide_Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hide_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next_Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Previous_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Previous_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Previous_Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Previous_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove_Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reset_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reset_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reset_Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reset_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Show_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Show_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Show_Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Show_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start_Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start_Neutral.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

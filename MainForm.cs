@@ -33,7 +33,7 @@ namespace Client_PM
 
         private void Update_UI()
         {
-            MI_Account_Profil.Enabled = Logged_User != null;
+            MI_Account_Profile.Enabled = Logged_User != null;
         }
 
         private void Init_UsersList()
