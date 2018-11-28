@@ -56,18 +56,11 @@
             this.TBC_PhotoManager = new System.Windows.Forms.TabControl();
             this.TP_Photos = new System.Windows.Forms.TabPage();
             this.GB_Others = new System.Windows.Forms.GroupBox();
-            this.flashButton8 = new PhotoManagerClient.FlashButton();
             this.GB_Scroll = new System.Windows.Forms.GroupBox();
-            this.flashButton7 = new PhotoManagerClient.FlashButton();
-            this.flashButton5 = new PhotoManagerClient.FlashButton();
             this.GB_Slideshow = new System.Windows.Forms.GroupBox();
-            this.flashButton9 = new PhotoManagerClient.FlashButton();
-            this.flashButton10 = new PhotoManagerClient.FlashButton();
-            this.flashButton6 = new PhotoManagerClient.FlashButton();
             this.GB_Image = new System.Windows.Forms.GroupBox();
             this.FB_AjouterPhoto = new PhotoManagerClient.FlashButton();
             this.FB_EditionPhoto = new PhotoManagerClient.FlashButton();
-            this.flashButton4 = new PhotoManagerClient.FlashButton();
             this.FB_SupprimerPhoto = new PhotoManagerClient.FlashButton();
             this.TP_Filters = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -315,7 +308,6 @@
             //
             // GB_Others
             //
-            this.GB_Others.Controls.Add(this.flashButton8);
             this.GB_Others.Location = new System.Drawing.Point(553, 6);
             this.GB_Others.Name = "GB_Others";
             this.GB_Others.Size = new System.Drawing.Size(562, 75);
@@ -323,28 +315,8 @@
             this.GB_Others.TabStop = false;
             this.GB_Others.Text = "Autres options";
             //
-            // flashButton8
-            //
-            this.flashButton8.BackgroundImage = global::Client_PM.Properties.Resources.Download;
-            this.flashButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton8.ClickedImage = global::Client_PM.Properties.Resources.Download_Clicked;
-            this.flashButton8.DisabledImage = global::Client_PM.Properties.Resources.Download_Disabled;
-            this.flashButton8.Image = ((System.Drawing.Image)(resources.GetObject("flashButton8.Image")));
-            this.flashButton8.Location = new System.Drawing.Point(13, 25);
-            this.flashButton8.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.flashButton8.Name = "flashButton8";
-            this.flashButton8.NeutralImage = global::Client_PM.Properties.Resources.Download_Neutral;
-            this.flashButton8.OverImage = global::Client_PM.Properties.Resources.Download_Hover;
-            this.flashButton8.Size = new System.Drawing.Size(40, 40);
-            this.flashButton8.TabIndex = 12;
-            this.flashButton8.Text = "flashButton8";
-            this.FB_ToolTips.SetToolTip(this.flashButton8, "Télécharger l\'image séléctionnée");
-            this.flashButton8.UseVisualStyleBackColor = true;
-            //
             // GB_Scroll
             //
-            this.GB_Scroll.Controls.Add(this.flashButton7);
-            this.GB_Scroll.Controls.Add(this.flashButton5);
             this.GB_Scroll.Location = new System.Drawing.Point(239, 6);
             this.GB_Scroll.Name = "GB_Scroll";
             this.GB_Scroll.Size = new System.Drawing.Size(114, 75);
@@ -352,47 +324,8 @@
             this.GB_Scroll.TabStop = false;
             this.GB_Scroll.Text = "Défilement";
             //
-            // flashButton7
-            //
-            this.flashButton7.BackgroundImage = global::Client_PM.Properties.Resources.Previous_Neutral;
-            this.flashButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton7.ClickedImage = global::Client_PM.Properties.Resources.Previous_Hover;
-            this.flashButton7.DisabledImage = global::Client_PM.Properties.Resources.Previous_Disabled;
-            this.flashButton7.Image = ((System.Drawing.Image)(resources.GetObject("flashButton7.Image")));
-            this.flashButton7.Location = new System.Drawing.Point(11, 25);
-            this.flashButton7.Margin = new System.Windows.Forms.Padding(8, 3, 8, 3);
-            this.flashButton7.Name = "flashButton7";
-            this.flashButton7.NeutralImage = global::Client_PM.Properties.Resources.Previous_Neutral;
-            this.flashButton7.OverImage = global::Client_PM.Properties.Resources.Previous_Hover;
-            this.flashButton7.Size = new System.Drawing.Size(40, 40);
-            this.flashButton7.TabIndex = 8;
-            this.flashButton7.Text = "flashButton7";
-            this.FB_ToolTips.SetToolTip(this.flashButton7, "Image précédente");
-            this.flashButton7.UseVisualStyleBackColor = true;
-            //
-            // flashButton5
-            //
-            this.flashButton5.BackgroundImage = global::Client_PM.Properties.Resources.Next_Neutral;
-            this.flashButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton5.ClickedImage = global::Client_PM.Properties.Resources.Next_Clicked;
-            this.flashButton5.DisabledImage = global::Client_PM.Properties.Resources.Next_Disabled;
-            this.flashButton5.Image = ((System.Drawing.Image)(resources.GetObject("flashButton5.Image")));
-            this.flashButton5.Location = new System.Drawing.Point(63, 25);
-            this.flashButton5.Margin = new System.Windows.Forms.Padding(8, 3, 8, 3);
-            this.flashButton5.Name = "flashButton5";
-            this.flashButton5.NeutralImage = global::Client_PM.Properties.Resources.Next_Neutral;
-            this.flashButton5.OverImage = global::Client_PM.Properties.Resources.Next_Neutral;
-            this.flashButton5.Size = new System.Drawing.Size(40, 40);
-            this.flashButton5.TabIndex = 7;
-            this.flashButton5.Text = "flashButton5";
-            this.FB_ToolTips.SetToolTip(this.flashButton5, "Image suivante");
-            this.flashButton5.UseVisualStyleBackColor = true;
-            //
             // GB_Slideshow
             //
-            this.GB_Slideshow.Controls.Add(this.flashButton9);
-            this.GB_Slideshow.Controls.Add(this.flashButton10);
-            this.GB_Slideshow.Controls.Add(this.flashButton6);
             this.GB_Slideshow.Location = new System.Drawing.Point(359, 6);
             this.GB_Slideshow.Name = "GB_Slideshow";
             this.GB_Slideshow.Size = new System.Drawing.Size(188, 75);
@@ -400,66 +333,10 @@
             this.GB_Slideshow.TabStop = false;
             this.GB_Slideshow.Text = "Diaporama";
             //
-            // flashButton9
-            //
-            this.flashButton9.BackgroundImage = global::Client_PM.Properties.Resources.Reset_Neutral;
-            this.flashButton9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton9.ClickedImage = global::Client_PM.Properties.Resources.Reset_Clicked;
-            this.flashButton9.DisabledImage = global::Client_PM.Properties.Resources.Reset_Disabled;
-            this.flashButton9.Image = ((System.Drawing.Image)(resources.GetObject("flashButton9.Image")));
-            this.flashButton9.Location = new System.Drawing.Point(135, 25);
-            this.flashButton9.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.flashButton9.Name = "flashButton9";
-            this.flashButton9.NeutralImage = global::Client_PM.Properties.Resources.Reset_Neutral;
-            this.flashButton9.OverImage = global::Client_PM.Properties.Resources.Reset_Hover;
-            this.flashButton9.Size = new System.Drawing.Size(40, 40);
-            this.flashButton9.TabIndex = 13;
-            this.flashButton9.Text = "flashButton9";
-            this.FB_ToolTips.SetToolTip(this.flashButton9, "Réinitialiser le diaporama");
-            this.flashButton9.UseVisualStyleBackColor = true;
-            //
-            // flashButton10
-            //
-            this.flashButton10.BackgroundImage = global::Client_PM.Properties.Resources.Start_Neutral;
-            this.flashButton10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton10.ClickedImage = global::Client_PM.Properties.Resources.Start_Clicked;
-            this.flashButton10.DisabledImage = global::Client_PM.Properties.Resources.Start_Disabled;
-            this.flashButton10.Image = ((System.Drawing.Image)(resources.GetObject("flashButton10.Image")));
-            this.flashButton10.Location = new System.Drawing.Point(73, 25);
-            this.flashButton10.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.flashButton10.Name = "flashButton10";
-            this.flashButton10.NeutralImage = global::Client_PM.Properties.Resources.Start_Neutral;
-            this.flashButton10.OverImage = global::Client_PM.Properties.Resources.Start_Hover;
-            this.flashButton10.Size = new System.Drawing.Size(40, 40);
-            this.flashButton10.TabIndex = 14;
-            this.flashButton10.Text = "flashButton10";
-            this.FB_ToolTips.SetToolTip(this.flashButton10, "Démarrer le diaporama");
-            this.flashButton10.UseVisualStyleBackColor = true;
-            //
-            // flashButton6
-            //
-            this.flashButton6.BackgroundImage = global::Client_PM.Properties.Resources.AddToSlide_Neutral;
-            this.flashButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton6.ClickedImage = global::Client_PM.Properties.Resources.AddToSlide_Clicked;
-            this.flashButton6.DisabledImage = global::Client_PM.Properties.Resources.AddToSlide_Disabled;
-            this.flashButton6.Image = ((System.Drawing.Image)(resources.GetObject("flashButton6.Image")));
-            this.flashButton6.Location = new System.Drawing.Point(13, 25);
-            this.flashButton6.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.flashButton6.Name = "flashButton6";
-            this.flashButton6.NeutralImage = global::Client_PM.Properties.Resources.AddToSlide_Neutral;
-            this.flashButton6.OverImage = global::Client_PM.Properties.Resources.AddToSlide_Hover;
-            this.flashButton6.Size = new System.Drawing.Size(40, 40);
-            this.flashButton6.TabIndex = 3;
-            this.flashButton6.Text = "flashButton6";
-            this.FB_ToolTips.SetToolTip(this.flashButton6, "Ajoute l\'image séléctionnée au diaporama");
-            this.flashButton6.UseVisualStyleBackColor = true;
-            this.flashButton6.Click += new System.EventHandler(this.flashButton6_Click);
-            //
             // GB_Image
             //
             this.GB_Image.Controls.Add(this.FB_AjouterPhoto);
             this.GB_Image.Controls.Add(this.FB_EditionPhoto);
-            this.GB_Image.Controls.Add(this.flashButton4);
             this.GB_Image.Controls.Add(this.FB_SupprimerPhoto);
             this.GB_Image.Location = new System.Drawing.Point(6, 6);
             this.GB_Image.Name = "GB_Image";
@@ -503,24 +380,6 @@
             this.FB_EditionPhoto.TabIndex = 5;
             this.FB_ToolTips.SetToolTip(this.FB_EditionPhoto, "Modifier l\'image séléctionnée");
             this.FB_EditionPhoto.UseVisualStyleBackColor = true;
-            //
-            // flashButton4
-            //
-            this.flashButton4.BackgroundImage = global::Client_PM.Properties.Resources.Show_Neutral;
-            this.flashButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton4.ClickedImage = global::Client_PM.Properties.Resources.Show_Clicked;
-            this.flashButton4.DisabledImage = global::Client_PM.Properties.Resources.Show_Disabled;
-            this.flashButton4.Image = ((System.Drawing.Image)(resources.GetObject("flashButton4.Image")));
-            this.flashButton4.Location = new System.Drawing.Point(170, 25);
-            this.flashButton4.Margin = new System.Windows.Forms.Padding(7, 3, 7, 3);
-            this.flashButton4.Name = "flashButton4";
-            this.flashButton4.NeutralImage = global::Client_PM.Properties.Resources.Show_Neutral;
-            this.flashButton4.OverImage = global::Client_PM.Properties.Resources.Show_Hover;
-            this.flashButton4.Size = new System.Drawing.Size(40, 40);
-            this.flashButton4.TabIndex = 6;
-            this.flashButton4.Text = "flashButton4";
-            this.FB_ToolTips.SetToolTip(this.flashButton4, "Masquer les informations des photos");
-            this.flashButton4.UseVisualStyleBackColor = true;
             //
             // FB_SupprimerPhoto
             //
@@ -661,7 +520,6 @@
             this.FB_Telecharger.Size = new System.Drawing.Size(36, 36);
             this.FB_Telecharger.TabIndex = 12;
             this.FB_Telecharger.Text = "flashButton8";
-            this.toolTip1.SetToolTip(this.FB_Telecharger, "Télécharger l\'image séléctionnée");
             this.FB_Telecharger.UseVisualStyleBackColor = true;
             //
             // FB_DefilementGauche
@@ -678,7 +536,6 @@
             this.FB_DefilementGauche.Size = new System.Drawing.Size(36, 36);
             this.FB_DefilementGauche.TabIndex = 8;
             this.FB_DefilementGauche.Text = "flashButton7";
-            this.toolTip1.SetToolTip(this.FB_DefilementGauche, "Image précédente");
             this.FB_DefilementGauche.UseVisualStyleBackColor = true;
             //
             // FB_DefilementDroite
@@ -695,7 +552,6 @@
             this.FB_DefilementDroite.Size = new System.Drawing.Size(36, 36);
             this.FB_DefilementDroite.TabIndex = 7;
             this.FB_DefilementDroite.Text = "flashButton5";
-            this.toolTip1.SetToolTip(this.FB_DefilementDroite, "Image suivante");
             this.FB_DefilementDroite.UseVisualStyleBackColor = true;
             //
             // FB_ResetDiapo
@@ -712,7 +568,6 @@
             this.FB_ResetDiapo.Size = new System.Drawing.Size(36, 36);
             this.FB_ResetDiapo.TabIndex = 13;
             this.FB_ResetDiapo.Text = "flashButton9";
-            this.toolTip1.SetToolTip(this.FB_ResetDiapo, "Réinitialiser le diaporama");
             this.FB_ResetDiapo.UseVisualStyleBackColor = true;
             //
             // FB_StartDiapo
@@ -729,7 +584,6 @@
             this.FB_StartDiapo.Size = new System.Drawing.Size(40, 40);
             this.FB_StartDiapo.TabIndex = 14;
             this.FB_StartDiapo.Text = "flashButton10";
-            this.toolTip1.SetToolTip(this.FB_StartDiapo, "Démarrer le diaporama");
             this.FB_StartDiapo.UseVisualStyleBackColor = true;
             //
             // FB_DiapoAddPhoto
@@ -746,7 +600,6 @@
             this.FB_DiapoAddPhoto.Size = new System.Drawing.Size(36, 36);
             this.FB_DiapoAddPhoto.TabIndex = 3;
             this.FB_DiapoAddPhoto.Text = "flashButton6";
-            this.toolTip1.SetToolTip(this.FB_DiapoAddPhoto, "Ajoute l\'image séléctionnée au diaporama");
             this.FB_DiapoAddPhoto.UseVisualStyleBackColor = true;
             this.FB_DiapoAddPhoto.Click += new System.EventHandler(this.flashButton6_Click);
             //
@@ -764,7 +617,6 @@
             this.FB_AjouterPhoto.OverImage = null;
             this.FB_AjouterPhoto.Size = new System.Drawing.Size(36, 36);
             this.FB_AjouterPhoto.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.FB_AjouterPhoto, "Ajouter une image");
             this.FB_AjouterPhoto.UseVisualStyleBackColor = false;
             this.FB_AjouterPhoto.Click += new System.EventHandler(this.FB_AjouterPhoto_Click);
             //
@@ -781,7 +633,6 @@
             this.FB_EditionPhoto.OverImage = null;
             this.FB_EditionPhoto.Size = new System.Drawing.Size(36, 36);
             this.FB_EditionPhoto.TabIndex = 5;
-            this.toolTip1.SetToolTip(this.FB_EditionPhoto, "Modifier l\'image séléctionnée");
             this.FB_EditionPhoto.UseVisualStyleBackColor = true;
             //
             // FB_Info
@@ -798,7 +649,6 @@
             this.FB_Info.Size = new System.Drawing.Size(36, 36);
             this.FB_Info.TabIndex = 6;
             this.FB_Info.Text = "flashButton4";
-            this.toolTip1.SetToolTip(this.FB_Info, "Masquer les informations des photos");
             this.FB_Info.UseVisualStyleBackColor = true;
             //
             // FB_SupprimerPhoto
@@ -814,7 +664,6 @@
             this.FB_SupprimerPhoto.OverImage = null;
             this.FB_SupprimerPhoto.Size = new System.Drawing.Size(36, 36);
             this.FB_SupprimerPhoto.TabIndex = 4;
-            this.toolTip1.SetToolTip(this.FB_SupprimerPhoto, "Supprimer l\'image séléctionnée");
             this.FB_SupprimerPhoto.UseVisualStyleBackColor = true;
             //
             // flashButton12
