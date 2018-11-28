@@ -74,13 +74,13 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.flashButton11 = new PhotoManagerClient.FlashButton();
             this.flashButton12 = new PhotoManagerClient.FlashButton();
+            this.flashButton11 = new PhotoManagerClient.FlashButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.MS_Account.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -99,7 +99,7 @@
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Location = new System.Drawing.Point(366, 46);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(176, 22);
+            this.dateTimePicker2.Size = new System.Drawing.Size(176, 26);
             this.dateTimePicker2.TabIndex = 9;
             // 
             // label1
@@ -108,7 +108,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(344, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 16);
+            this.label1.Size = new System.Drawing.Size(18, 20);
             this.label1.TabIndex = 8;
             this.label1.Text = "à";
             // 
@@ -117,7 +117,7 @@
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(366, 21);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(176, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(176, 26);
             this.dateTimePicker1.TabIndex = 7;
             // 
             // CBX_Keywords
@@ -126,7 +126,7 @@
             this.CBX_Keywords.FormattingEnabled = true;
             this.CBX_Keywords.Location = new System.Drawing.Point(104, 48);
             this.CBX_Keywords.Name = "CBX_Keywords";
-            this.CBX_Keywords.Size = new System.Drawing.Size(195, 24);
+            this.CBX_Keywords.Size = new System.Drawing.Size(195, 28);
             this.CBX_Keywords.TabIndex = 0;
             this.CBX_Keywords.SelectedIndexChanged += new System.EventHandler(this.CBX_Keywords_SelectedIndexChanged);
             // 
@@ -136,12 +136,13 @@
             this.CBX_UsersList.FormattingEnabled = true;
             this.CBX_UsersList.Location = new System.Drawing.Point(104, 20);
             this.CBX_UsersList.Name = "CBX_UsersList";
-            this.CBX_UsersList.Size = new System.Drawing.Size(195, 24);
+            this.CBX_UsersList.Size = new System.Drawing.Size(195, 28);
             this.CBX_UsersList.TabIndex = 0;
             this.CBX_UsersList.SelectedIndexChanged += new System.EventHandler(this.CBX_UsersList_SelectedIndexChanged);
             // 
             // MS_Account
             // 
+            this.MS_Account.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MS_Account.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.accountToolStripMenuItem,
             this.photosToolStripMenuItem,
@@ -150,7 +151,7 @@
             this.àProposToolStripMenuItem});
             this.MS_Account.Location = new System.Drawing.Point(0, 0);
             this.MS_Account.Name = "MS_Account";
-            this.MS_Account.Size = new System.Drawing.Size(1153, 24);
+            this.MS_Account.Size = new System.Drawing.Size(1153, 28);
             this.MS_Account.TabIndex = 2;
             this.MS_Account.Text = "menuStrip1";
             // 
@@ -162,42 +163,43 @@
             this.Mi_Account_Create,
             this.MI_Account_Exit});
             this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
-            this.accountToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.accountToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
             this.accountToolStripMenuItem.Text = "Compte";
             // 
             // MI_Account_Login
             // 
             this.MI_Account_Login.Name = "MI_Account_Login";
-            this.MI_Account_Login.Size = new System.Drawing.Size(166, 22);
+            this.MI_Account_Login.Size = new System.Drawing.Size(216, 26);
             this.MI_Account_Login.Text = "Connexion";
             this.MI_Account_Login.Click += new System.EventHandler(this.MI_Account_Login_Click);
             // 
             // MI_Account_Profil
             // 
             this.MI_Account_Profil.Name = "MI_Account_Profil";
-            this.MI_Account_Profil.Size = new System.Drawing.Size(166, 22);
+            this.MI_Account_Profil.Size = new System.Drawing.Size(216, 26);
             this.MI_Account_Profil.Text = "Profil";
             this.MI_Account_Profil.Click += new System.EventHandler(this.MI_Account_Profil_Click);
             // 
             // Mi_Account_Create
             // 
             this.Mi_Account_Create.Name = "Mi_Account_Create";
-            this.Mi_Account_Create.Size = new System.Drawing.Size(166, 22);
+            this.Mi_Account_Create.Size = new System.Drawing.Size(216, 26);
             this.Mi_Account_Create.Text = "Nouveau compte";
             this.Mi_Account_Create.Click += new System.EventHandler(this.Mi_Account_Create_Click);
             // 
             // MI_Account_Exit
             // 
             this.MI_Account_Exit.Name = "MI_Account_Exit";
-            this.MI_Account_Exit.Size = new System.Drawing.Size(166, 22);
+            this.MI_Account_Exit.Size = new System.Drawing.Size(216, 26);
             this.MI_Account_Exit.Text = "Deconnexion";
+            this.MI_Account_Exit.Click += new System.EventHandler(this.MI_Account_Exit_Click);
             // 
             // photosToolStripMenuItem
             // 
             this.photosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.affichageToolStripMenuItem});
             this.photosToolStripMenuItem.Name = "photosToolStripMenuItem";
-            this.photosToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.photosToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
             this.photosToolStripMenuItem.Text = "Photos";
             // 
             // affichageToolStripMenuItem
@@ -208,31 +210,31 @@
             this.gaucheToolStripMenuItem,
             this.droiteToolStripMenuItem});
             this.affichageToolStripMenuItem.Name = "affichageToolStripMenuItem";
-            this.affichageToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.affichageToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
             this.affichageToolStripMenuItem.Text = "Affichage";
             // 
             // hautToolStripMenuItem
             // 
             this.hautToolStripMenuItem.Name = "hautToolStripMenuItem";
-            this.hautToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.hautToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
             this.hautToolStripMenuItem.Text = "Haut";
             // 
             // basToolStripMenuItem
             // 
             this.basToolStripMenuItem.Name = "basToolStripMenuItem";
-            this.basToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.basToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
             this.basToolStripMenuItem.Text = "Bas";
             // 
             // gaucheToolStripMenuItem
             // 
             this.gaucheToolStripMenuItem.Name = "gaucheToolStripMenuItem";
-            this.gaucheToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.gaucheToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
             this.gaucheToolStripMenuItem.Text = "Gauche";
             // 
             // droiteToolStripMenuItem
             // 
             this.droiteToolStripMenuItem.Name = "droiteToolStripMenuItem";
-            this.droiteToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.droiteToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
             this.droiteToolStripMenuItem.Text = "Droite";
             // 
             // listeNoireToolStripMenuItem
@@ -241,31 +243,31 @@
             this.ajouterToolStripMenuItem,
             this.afficherLaListeToolStripMenuItem});
             this.listeNoireToolStripMenuItem.Name = "listeNoireToolStripMenuItem";
-            this.listeNoireToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.listeNoireToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
             this.listeNoireToolStripMenuItem.Text = "Liste Noire";
             // 
             // ajouterToolStripMenuItem
             // 
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
             // 
             // afficherLaListeToolStripMenuItem
             // 
             this.afficherLaListeToolStripMenuItem.Name = "afficherLaListeToolStripMenuItem";
-            this.afficherLaListeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.afficherLaListeToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
             this.afficherLaListeToolStripMenuItem.Text = "Afficher la liste";
             // 
             // aideToolStripMenuItem
             // 
             this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
-            this.aideToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.aideToolStripMenuItem.Size = new System.Drawing.Size(52, 24);
             this.aideToolStripMenuItem.Text = "Aide";
             // 
             // àProposToolStripMenuItem
             // 
             this.àProposToolStripMenuItem.Name = "àProposToolStripMenuItem";
-            this.àProposToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.àProposToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.àProposToolStripMenuItem.Text = "À propos";
             this.àProposToolStripMenuItem.Click += new System.EventHandler(this.àProposToolStripMenuItem_Click);
             // 
@@ -303,10 +305,10 @@
             this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1121, 93);
+            this.tabPage1.Size = new System.Drawing.Size(1121, 88);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Photos";
             // 
@@ -530,10 +532,10 @@
             this.tabPage2.BackColor = System.Drawing.Color.White;
             this.tabPage2.Controls.Add(this.groupBox6);
             this.tabPage2.Controls.Add(this.groupBox5);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1121, 93);
+            this.tabPage2.Size = new System.Drawing.Size(1121, 88);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Filtres";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
@@ -562,7 +564,7 @@
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.Location = new System.Drawing.Point(6, 22);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(92, 20);
+            this.radioButton1.Size = new System.Drawing.Size(115, 24);
             this.radioButton1.TabIndex = 11;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Utilisateurs";
@@ -574,23 +576,11 @@
             this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton3.Location = new System.Drawing.Point(305, 21);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(55, 20);
+            this.radioButton3.Size = new System.Drawing.Size(66, 24);
             this.radioButton3.TabIndex = 13;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Date";
             this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(6, 48);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(86, 20);
-            this.radioButton2.TabIndex = 12;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Mots-Clés";
-            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // checkBox4
             // 
@@ -598,10 +588,22 @@
             this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox4.Location = new System.Drawing.Point(559, 35);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(190, 20);
+            this.checkBox4.Size = new System.Drawing.Size(237, 24);
             this.checkBox4.TabIndex = 10;
             this.checkBox4.Text = "Ne pas afficher mes photos";
             this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(6, 48);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(107, 24);
+            this.radioButton2.TabIndex = 12;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Mots-Clés";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -614,23 +616,6 @@
             this.groupBox5.TabIndex = 14;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Liste noire";
-            // 
-            // flashButton11
-            // 
-            this.flashButton11.BackgroundImage = global::Client_PM.Properties.Resources.Add_Neutral;
-            this.flashButton11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton11.ClickedImage = null;
-            this.flashButton11.DisabledImage = null;
-            this.flashButton11.Image = ((System.Drawing.Image)(resources.GetObject("flashButton11.Image")));
-            this.flashButton11.Location = new System.Drawing.Point(190, 25);
-            this.flashButton11.Name = "flashButton11";
-            this.flashButton11.NeutralImage = null;
-            this.flashButton11.OverImage = null;
-            this.flashButton11.Size = new System.Drawing.Size(36, 36);
-            this.flashButton11.TabIndex = 2;
-            this.flashButton11.Text = "flashButton11";
-            this.toolTip1.SetToolTip(this.flashButton11, "Ajouter l\'utilisateur à la liste");
-            this.flashButton11.UseVisualStyleBackColor = true;
             // 
             // flashButton12
             // 
@@ -649,18 +634,35 @@
             this.toolTip1.SetToolTip(this.flashButton12, "Réinitialiser la liste");
             this.flashButton12.UseVisualStyleBackColor = true;
             // 
+            // flashButton11
+            // 
+            this.flashButton11.BackgroundImage = global::Client_PM.Properties.Resources.Add_Neutral;
+            this.flashButton11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.flashButton11.ClickedImage = null;
+            this.flashButton11.DisabledImage = null;
+            this.flashButton11.Image = ((System.Drawing.Image)(resources.GetObject("flashButton11.Image")));
+            this.flashButton11.Location = new System.Drawing.Point(190, 25);
+            this.flashButton11.Name = "flashButton11";
+            this.flashButton11.NeutralImage = null;
+            this.flashButton11.OverImage = null;
+            this.flashButton11.Size = new System.Drawing.Size(36, 36);
+            this.flashButton11.TabIndex = 2;
+            this.flashButton11.Text = "flashButton11";
+            this.toolTip1.SetToolTip(this.flashButton11, "Ajouter l\'utilisateur à la liste");
+            this.flashButton11.UseVisualStyleBackColor = true;
+            // 
             // comboBox1
             // 
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(6, 33);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(167, 24);
+            this.comboBox1.Size = new System.Drawing.Size(167, 28);
             this.comboBox1.TabIndex = 0;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1153, 674);
             this.Controls.Add(this.tabControl1);

@@ -20,7 +20,6 @@ namespace Client_PM
             InitializeComponent();
             Text = "Photo Manager Client application - Not connected";
         }
-
  
         bool initializing = true;
         private void MainForm_Shown(object sender, EventArgs e)
@@ -45,6 +44,13 @@ namespace Client_PM
                     CBX_UsersList.Items.Add(user);
             }
             CBX_UsersList.SelectedIndex = 0;
+        }
+
+        private void Disconnect()
+        {
+            Logged_User = null;
+
+            Setup_Logged_User();
         }
 
         private void LoadPhoto()
@@ -138,6 +144,7 @@ namespace Client_PM
             }
             else
             {
+                Text = "Photo Manager Client application - Not connected";
                 CBX_UsersList.Items.Clear();
                 CBX_Keywords.Items.Clear();
                 PhotoBrowser.Clear();
@@ -201,6 +208,11 @@ namespace Client_PM
         {
             A_propos DLG = new A_propos();
             DLG.ShowDialog();
+        }
+
+        private void MI_Account_Exit_Click(object sender, EventArgs e)
+        {
+            Disconnect();
         }
     }
 }
