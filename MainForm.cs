@@ -84,7 +84,7 @@ namespace Client_PM
 
            if ( DLG.ShowDialog() == DialogResult.OK)
             {
-                //DLG.Photo.OwnerId = Logged_User.Id;
+                DLG.Photo.OwnerId = Logged_User.Id;
                 DBPhotosWebServices.CreatePhoto(DLG.Photo); // À vérifier, est-ce le web service lie la photo au usager automatiquement ou on doit l'affecter par nous même ? Si on doit le lier, décommenté la ligne au dessus
             }
         }

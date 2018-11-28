@@ -7,17 +7,57 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using PhotoManagerClient;
+using System.Threading;
 namespace Client_PM
 {
     public partial class Carousel : Form
     {
+        public List<Photo> PhotoListe { get; set; }
+
         public Carousel()
         {
             InitializeComponent();
         }
 
+        private void ChangerFullScreen()
+        {
+            if (WindowState == FormWindowState.Maximized)
+            {
+                WindowState = FormWindowState.Normal;
+                FormBorderStyle = FormBorderStyle.Sizable;
+            }
+            else
+            {
+                WindowState = FormWindowState.Maximized;
+                FormBorderStyle = FormBorderStyle.None;
+            }
+        }
 
+        private void OuvrirSettings()
+        {
+            CarouselSettings DLG = new CarouselSettings();
+
+            Thread ThreadDLG = new Thread(SettingsManagement);
+
+            ThreadDLG.Start(DLG);
+            while(ThreadDLG.IsAlive)
+            {
+
+            }
+        }
+
+        private void SettingsManagement(object DLG)
+        {
+            try
+            {
+                ((CarouselSettings)DLG).Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
         private void paramètresToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -29,12 +69,21 @@ namespace Client_PM
         {
             Bitmap bmp = Properties.Resources.Settings;
             bmp.MakeTransparent(Color.White);
-            int x = (flashButton1.Width - bmp.Width) / 2;
-            int y = (flashButton1.Height - bmp.Height) / 2;
+            int x = (FB_Settings.Width - bmp.Width) / 2;
+            int y = (FB_Settings.Height - bmp.Height) / 2;
             e.Graphics.DrawImage(bmp, x, y);
         }
 
-        private void flashButton1_Click(object sender, EventArgs e)
+        private void Carousel_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F11) // Plein écran
+            {
+                ChangerFullScreen();
+                e.Handled = true;
+            }
+        }
+
+        private void FB_Settings_Click(object sender, EventArgs e)
         {
             Refresh();
         }

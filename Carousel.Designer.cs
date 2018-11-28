@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Carousel));
             this.imageBox1 = new PhotoManagerClient.ImageBox();
-            this.flashButton1 = new PhotoManagerClient.FlashButton();
+            this.FB_Settings = new PhotoManagerClient.FlashButton();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +48,7 @@
     "th context menu.";
             this.imageBox1.ImportImageText = "Import image from file...";
             this.imageBox1.Location = new System.Drawing.Point(-1, -2);
-            this.imageBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imageBox1.Margin = new System.Windows.Forms.Padding(4);
             this.imageBox1.Name = "imageBox1";
             this.imageBox1.OpenFileDialogTitle = "Please choose image an file";
             this.imageBox1.PasteMenuText = "Paste image from clipboard";
@@ -56,36 +56,38 @@
             this.imageBox1.TabIndex = 0;
             this.imageBox1.TabStop = false;
             // 
-            // flashButton1
+            // FB_Settings
             // 
-            this.flashButton1.BackColor = System.Drawing.Color.Transparent;
-            this.flashButton1.BackgroundImage = global::Client_PM.Properties.Resources.Settings;
-            this.flashButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton1.ClickedImage = null;
-            this.flashButton1.DisabledImage = null;
-            this.flashButton1.Image = ((System.Drawing.Image)(resources.GetObject("flashButton1.Image")));
-            this.flashButton1.Location = new System.Drawing.Point(1007, 12);
-            this.flashButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.flashButton1.Name = "flashButton1";
-            this.flashButton1.NeutralImage = null;
-            this.flashButton1.OverImage = null;
-            this.flashButton1.Size = new System.Drawing.Size(48, 44);
-            this.flashButton1.TabIndex = 3;
-            this.flashButton1.Text = "flashButton1";
-            this.flashButton1.UseVisualStyleBackColor = false;
-            this.flashButton1.Click += new System.EventHandler(this.flashButton1_Click);
-            this.flashButton1.Paint += new System.Windows.Forms.PaintEventHandler(this.flashButton1_Paint);
+            this.FB_Settings.BackColor = System.Drawing.Color.Transparent;
+            this.FB_Settings.BackgroundImage = global::Client_PM.Properties.Resources.Settings;
+            this.FB_Settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FB_Settings.ClickedImage = null;
+            this.FB_Settings.DisabledImage = null;
+            this.FB_Settings.Image = ((System.Drawing.Image)(resources.GetObject("FB_Settings.Image")));
+            this.FB_Settings.Location = new System.Drawing.Point(1007, 12);
+            this.FB_Settings.Margin = new System.Windows.Forms.Padding(4);
+            this.FB_Settings.Name = "FB_Settings";
+            this.FB_Settings.NeutralImage = null;
+            this.FB_Settings.OverImage = null;
+            this.FB_Settings.Size = new System.Drawing.Size(48, 44);
+            this.FB_Settings.TabIndex = 3;
+            this.FB_Settings.Text = "flashButton1";
+            this.FB_Settings.UseVisualStyleBackColor = false;
+            this.FB_Settings.Click += new System.EventHandler(this.FB_Settings_Click);
+            this.FB_Settings.Paint += new System.Windows.Forms.PaintEventHandler(this.flashButton1_Paint);
             // 
             // Carousel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.flashButton1);
+            this.Controls.Add(this.FB_Settings);
             this.Controls.Add(this.imageBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Carousel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Carousel";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Carousel_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -94,6 +96,6 @@
         #endregion
 
         private PhotoManagerClient.ImageBox imageBox1;
-        private PhotoManagerClient.FlashButton flashButton1;
+        private PhotoManagerClient.FlashButton FB_Settings;
     }
 }
