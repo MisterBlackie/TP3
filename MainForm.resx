@@ -120,7 +120,7 @@
   <metadata name="MS_Account.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="fileSystemWatcher1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="FileWatcher.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>136, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -172,14 +172,14 @@
         YII=
 </value>
   </data>
-  <data name="flashButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="FB_AjouterPhoto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAABxJREFUWEftwTEBAAAAwqD1T20HbyAAAAAAgFsNFGQAAarEPc4AAAAASUVORK5C
         YII=
 </value>
   </data>
-  <data name="flashButton3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="FB_EditionPhoto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAABxJREFUWEftwTEBAAAAwqD1T20HbyAAAAAAgFsNFGQAAarEPc4AAAAASUVORK5C
@@ -263,7 +263,7 @@
         YII=
 </value>
   </data>
-  <data name="flashButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="FB_SupprimerPhoto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAABxJREFUWEftwTEBAAAAwqD1T20HbyAAAAAAgFsNFGQAAarEPc4AAAAASUVORK5C
@@ -284,4 +284,10 @@
         YII=
 </value>
   </data>
+  <metadata name="FileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>392, 17</value>
+  </metadata>
+  <metadata name="FolderBrowser.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>497, 17</value>
+  </metadata>
 </root>

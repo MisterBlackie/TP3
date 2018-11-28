@@ -43,7 +43,7 @@ namespace Client_PM
                 if (user.Name != null)
                     CBX_UsersList.Items.Add(user);
             }
-            CBX_UsersList.SelectedIndex = 0;
+            CBX_UsersList.SelectedIndex = 1;
         }
 
         private void Disconnect()
@@ -58,6 +58,17 @@ namespace Client_PM
             WaitSplash.Show(this, "Loading photos from server...");
             PhotoBrowser.LoadPhotos(PhotoFilter.GetPhotos());
             WaitSplash.Hide();
+        }
+
+        private void AjouterPhoto()
+        {
+            AJoutPhoto DLG = new AJoutPhoto();
+
+           if ( DLG.ShowDialog() == DialogResult.OK)
+            {
+                //DLG.Photo.OwnerId = Logged_User.Id;
+                DBPhotosWebServices.CreatePhoto(DLG.Photo); // À vérifier, est-ce le web service lie la photo au usager automatiquement ou on doit l'affecter par nous même ? Si on doit le lier, décommenté la ligne au dessus
+            }
         }
 
         private void Init_Keywords_List()
@@ -213,6 +224,11 @@ namespace Client_PM
         private void MI_Account_Exit_Click(object sender, EventArgs e)
         {
             Disconnect();
+        }
+
+        private void FB_AjouterPhoto_Click(object sender, EventArgs e)
+        {
+            AjouterPhoto();
         }
     }
 }
