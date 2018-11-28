@@ -20,7 +20,7 @@ namespace Client_PM
             InitializeComponent();
             Text = "Photo Manager Client application - Not connected";
         }
- 
+
         bool initializing = true;
         private void MainForm_Shown(object sender, EventArgs e)
         {
@@ -33,7 +33,9 @@ namespace Client_PM
 
         private void Update_UI()
         {
-            MI_Account_Profile.Enabled = Logged_User != null;
+            MI_Account_Profil.Enabled = Logged_User != null;
+
+            ChangerEtatBouton();
         }
 
         private void Init_UsersList()
@@ -53,6 +55,22 @@ namespace Client_PM
             Setup_Logged_User();
         }
 
+        private void ChangerEtatBouton()
+        {
+            FB_AjouterPhoto.Enabled = Logged_User != null;
+            FB_EditionPhoto.Enabled = Logged_User != null;
+            FB_SupprimerPhoto.Enabled = Logged_User != null;
+            FB_Info.Enabled = Logged_User != null;
+
+            FB_DefilementDroite.Enabled = Logged_User != null;
+            FB_DefilementGauche.Enabled = Logged_User != null;
+
+            FB_DiapoAddPhoto.Enabled = Logged_User != null;
+            FB_StartDiapo.Enabled = Logged_User != null;
+            FB_ResetDiapo.Enabled = Logged_User != null;
+
+            FB_Telecharger.Enabled = Logged_User != null;
+        }
         private void LoadPhoto()
         {
             WaitSplash.Show(this, "Loading photos from server...");
@@ -194,11 +212,6 @@ namespace Client_PM
             }
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void flashButton6_Click(object sender, EventArgs e)
         {
             Carousel dlg = new Carousel();
@@ -229,6 +242,11 @@ namespace Client_PM
         private void FB_AjouterPhoto_Click(object sender, EventArgs e)
         {
             AjouterPhoto();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            ChangerEtatBouton();
         }
     }
 }

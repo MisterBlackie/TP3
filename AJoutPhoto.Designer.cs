@@ -55,7 +55,7 @@
             this.label1.Location = new System.Drawing.Point(16, 101);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 20);
+            this.label1.Size = new System.Drawing.Size(115, 25);
             this.label1.TabIndex = 10;
             this.label1.Text = "Description:";
             // 
@@ -79,7 +79,7 @@
             this.label2.Location = new System.Drawing.Point(16, 229);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 20);
+            this.label2.Size = new System.Drawing.Size(83, 25);
             this.label2.TabIndex = 11;
             this.label2.Text = "Mot-clé:";
             // 
@@ -91,7 +91,7 @@
             this.TB_Keywords.Location = new System.Drawing.Point(19, 251);
             this.TB_Keywords.Margin = new System.Windows.Forms.Padding(2);
             this.TB_Keywords.Name = "TB_Keywords";
-            this.TB_Keywords.Size = new System.Drawing.Size(337, 26);
+            this.TB_Keywords.Size = new System.Drawing.Size(337, 30);
             this.TB_Keywords.TabIndex = 4;
             // 
             // groupBox1
@@ -111,7 +111,7 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(373, 307);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Information";
             // 
@@ -120,9 +120,9 @@
             this.RBTN_EstPrivee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.RBTN_EstPrivee.AutoSize = true;
-            this.RBTN_EstPrivee.Location = new System.Drawing.Point(267, 60);
+            this.RBTN_EstPrivee.Location = new System.Drawing.Point(249, 60);
             this.RBTN_EstPrivee.Name = "RBTN_EstPrivee";
-            this.RBTN_EstPrivee.Size = new System.Drawing.Size(70, 24);
+            this.RBTN_EstPrivee.Size = new System.Drawing.Size(88, 29);
             this.RBTN_EstPrivee.TabIndex = 2;
             this.RBTN_EstPrivee.TabStop = true;
             this.RBTN_EstPrivee.Text = "Privée";
@@ -136,7 +136,7 @@
             this.TB_Titre.Location = new System.Drawing.Point(19, 59);
             this.TB_Titre.Margin = new System.Windows.Forms.Padding(2);
             this.TB_Titre.Name = "TB_Titre";
-            this.TB_Titre.Size = new System.Drawing.Size(215, 26);
+            this.TB_Titre.Size = new System.Drawing.Size(215, 30);
             this.TB_Titre.TabIndex = 1;
             // 
             // label3
@@ -148,7 +148,7 @@
             this.label3.Location = new System.Drawing.Point(15, 37);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 20);
+            this.label3.Size = new System.Drawing.Size(57, 25);
             this.label3.TabIndex = 9;
             this.label3.Text = "Titre:";
             // 
@@ -181,7 +181,7 @@
             this.BTN_Selectionner.Location = new System.Drawing.Point(14, 567);
             this.BTN_Selectionner.Name = "BTN_Selectionner";
             this.BTN_Selectionner.Size = new System.Drawing.Size(95, 34);
-            this.BTN_Selectionner.TabIndex = 5;
+            this.BTN_Selectionner.TabIndex = 1;
             this.BTN_Selectionner.Text = "Parcourir";
             this.BTN_Selectionner.UseVisualStyleBackColor = true;
             this.BTN_Selectionner.Click += new System.EventHandler(this.BTN_Selectionner_Click);
@@ -213,7 +213,7 @@
             // AJoutPhoto
             // 
             this.AcceptButton = this.BTN_Ajout;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BTN_Cancel;
             this.ClientSize = new System.Drawing.Size(402, 613);
