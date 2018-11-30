@@ -15,13 +15,13 @@ namespace Client_PM
     {
         User Logged_User = null;
         PhotoFilter PhotoFilter = null;
+        bool Initializing = true;
         public MainForm()
         {
             InitializeComponent();
             Text = "Photo Manager Client - Not connected";
         }
-
-        bool initializing = true;
+        
         private void MainForm_Shown(object sender, EventArgs e)
         {
             // Get server attention...
@@ -33,141 +33,9 @@ namespace Client_PM
 
         private void Update_UI()
         {
-            MI_Account_Profile.Enabled = Logged_User != null;
+            UpdateControls();
             UpdateFlashButtons();
         }
-
-        private void Init_UsersList()
-        {
-            foreach (User user in PhotoFilter.UsersList)
-            {
-                if (user.Name != null)
-                    CBX_UsersList.Items.Add(user);
-            }
-            CBX_UsersList.SelectedIndex = 1;
-        }
-
-        private void Disconnect()
-        {
-            Logged_User = null;
-            Setup_Logged_User();
-        }
-
-        private void UpdateFlashButtons()
-        {
-            //Image
-            FB_Image_Add.Enabled = Logged_User != null;
-            FB_Image_Edit.Enabled = Logged_User != null;
-            FB_Image_Remove.Enabled = Logged_User != null;
-            FB_Image_Show.Enabled = Logged_User != null;
-
-            //Scroll
-            FB_Scroll_Prev.Enabled = Logged_User != null;
-            FB_Scroll_Next.Enabled = Logged_User != null;
-
-            //SlideShow
-            FB_Slideshow_Add.Enabled = Logged_User != null;
-            FB_Slideshow_Start.Enabled = Logged_User != null;
-            FB_Slideshow_Reset.Enabled = Logged_User != null;
-
-            //Others
-            FB_Other_Download.Enabled = Logged_User != null;
-
-            //Blacklist
-            FB_Blacklist_Add.Enabled = Logged_User != null;
-            FB_Blacklist_Reset.Enabled = Logged_User != null;
-        }
-        private void LoadPhoto()
-        {
-            WaitSplash.Show(this, "Loading photos from server...");
-            PhotoBrowser.LoadPhotos(PhotoFilter.GetPhotos());
-            WaitSplash.Hide();
-        }
-
-        private void AddPhoto()
-        {
-            AddPhoto DLG = new AddPhoto();
-
-            if (DLG.ShowDialog() == DialogResult.OK)
-            {
-                DLG.Photo.OwnerId = Logged_User.Id;
-                DBPhotosWebServices.CreatePhoto(DLG.Photo); // À vérifier, est-ce le web service lie la photo au usager automatiquement ou on doit l'affecter par nous même ? Si on doit le lier, décommenté la ligne au dessus
-            }
-        }
-
-        private void Init_Keywords_List()
-        {
-            CBX_Keywords.Items.Clear();
-            CBX_Keywords.Items.Add("");
-
-            foreach (string keyword in PhotoFilter.KeywordsList)
-            {
-                CBX_Keywords.Items.Add(keyword.Clone());
-            }
-            CBX_Keywords.SelectedIndex = 0;
-        }
-
-        private void CBX_UsersList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            User selectedUser = (User)CBX_UsersList.SelectedItem;
-            if (selectedUser.Id == -1) // Only mine
-            {
-                PhotoFilter.SetUserFilter(false, false, 0);
-            }
-            else
-            {
-                if (selectedUser.Id == 0) // All users
-                {
-                    PhotoFilter.SetUserFilter(false, true, 0);
-                }
-                else
-                {
-                    PhotoFilter.SetUserFilter(true, false, selectedUser.Id);
-                }
-            }
-            initializing = true;
-            PhotoFilter.SetKeywordsFilter(false, "");
-            LoadPhoto();
-            Init_Keywords_List();
-            initializing = false;
-        }
-
-        private void CBX_Keywords_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (!initializing)
-            {
-
-                PhotoFilter.SetKeywordsFilter(true, CBX_Keywords.SelectedItem.ToString());
-
-                LoadPhoto();
-                PhotoBrowser.SelectNext();
-                PhotoBrowser.Focus();
-            }
-        }
-
-        private void Setup_Logged_User()
-        {
-            if (Logged_User != null)
-            {
-                Text = "Photo Manager Client - " + Logged_User.Name;
-                PhotoFilter = new PhotoFilter(Logged_User.Id);
-                Init_UsersList();
-                initializing = true;
-                LoadPhoto();
-                Init_Keywords_List();
-                initializing = false;
-            }
-            else
-            {
-                Text = "Photo Manager Client - Not connected";
-                CBX_UsersList.Items.Clear();
-                CBX_Keywords.Items.Clear();
-                PhotoBrowser.Clear();
-                PhotoFilter = null;
-            }
-            Update_UI();
-        }
-
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -188,7 +56,11 @@ namespace Client_PM
 
         private void FB_Image_Remove_Click(object sender, EventArgs e)
         {
-
+            if (PhotoBrowser.SelectedPhoto != null && PhotoBrowser.SelectedPhoto.OwnerId == Logged_User.Id)
+            {
+                DBPhotosWebServices.DeletePhoto(PhotoBrowser.SelectedPhoto);
+                PhotoBrowser.DeleteSelectedPhoto();
+            }
         }
 
         private void FB_Image_Show_Click(object sender, EventArgs e)
@@ -198,12 +70,12 @@ namespace Client_PM
 
         private void FB_Scroll_Prev_Click(object sender, EventArgs e)
         {
-
+            PhotoBrowser.SelectPrevious();
         }
 
         private void FB_Scroll_Next_Click(object sender, EventArgs e)
         {
-
+            PhotoBrowser.SelectNext();
         }
 
         private void FB_Slideshow_Add_Click(object sender, EventArgs e)
@@ -309,5 +181,186 @@ namespace Client_PM
             DLG.ShowDialog();
         }
         #endregion
+
+        #region Filters
+
+        private void CBX_UsersList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (RB_Users.Checked)
+            {
+                User selectedUser = (User)CBX_UsersList.SelectedItem;
+                if (selectedUser.Id == -1) // Only mine
+                {
+                    PhotoFilter.SetUserFilter(false, false, 0);
+                }
+                else
+                {
+                    if (selectedUser.Id == 0) // All users
+                    {
+                        PhotoFilter.SetUserFilter(false, true, 0);
+                    }
+                    else
+                    {
+                        PhotoFilter.SetUserFilter(true, false, selectedUser.Id);
+                    }
+                }
+                Initializing = true;
+                PhotoFilter.SetKeywordsFilter(false, "");
+                LoadPhoto();
+                Init_Keywords_List();
+                Initializing = false;
+            }
+        }
+
+        private void CBX_Keywords_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (RB_Keyword.Checked)
+            {
+                if (!Initializing)
+                {
+                    PhotoFilter.SetKeywordsFilter(true, CBX_Keywords.SelectedItem.ToString());
+                    LoadPhoto();
+                    PhotoBrowser.SelectNext();
+                    PhotoBrowser.Focus();
+                }
+            }
+        }
+        private void CB_HideMyPhotos_CheckedChanged(object sender, EventArgs e)
+        {
+            PhotoFilter.SetUserFilter(CB_HideMyPhotos.Checked, PhotoFilter.ShowAllUsers, PhotoFilter.ByOwnerUserId);
+            LoadPhoto();
+        }
+        #endregion
+
+        #region Events
+        private void PhotoBrowser_SelectedChanged(object sender, EventArgs e)
+        {
+            if (PhotoBrowser.SelectedPhoto != null && PhotoBrowser.SelectedPhoto.OwnerId != Logged_User.Id)
+            {
+                FB_Image_Edit.Enabled = false;
+                FB_Image_Remove.Enabled = false;
+            }
+            else
+            {
+                FB_Image_Edit.Enabled = true;
+                FB_Image_Remove.Enabled = true;
+            }
+        }
+        #endregion
+
+        #region Functions
+        private void Setup_Logged_User()
+        {
+            if (Logged_User != null)
+            {
+                Text = "Photo Manager Client - " + Logged_User.Name;
+                PhotoFilter = new PhotoFilter(Logged_User.Id);
+                Init_UsersList();
+                Initializing = true;
+                LoadPhoto();
+                Init_Keywords_List();
+                Initializing = false;
+            }
+            else
+            {
+                Text = "Photo Manager Client - Not connected";
+                CBX_UsersList.Items.Clear();
+                CBX_Keywords.Items.Clear();
+                PhotoBrowser.Clear();
+                PhotoFilter = null;
+            }
+            Update_UI();
+        }
+
+        private void Init_Keywords_List()
+        {
+            CBX_Keywords.Items.Clear();
+            CBX_Keywords.Items.Add("");
+
+            foreach (string keyword in PhotoFilter.KeywordsList)
+            {
+                CBX_Keywords.Items.Add(keyword.Clone());
+            }
+            CBX_Keywords.SelectedIndex = 0;
+        }
+
+        private void AddPhoto()
+        {
+            AddPhoto DLG = new AddPhoto();
+
+            if (DLG.ShowDialog() == DialogResult.OK)
+            {
+                DLG.Photo.OwnerId = Logged_User.Id;
+                DBPhotosWebServices.CreatePhoto(DLG.Photo);
+            }
+        }
+
+        private void UpdateFlashButtons()
+        {
+            //Image
+            FB_Image_Add.Enabled = Logged_User != null;
+            FB_Image_Edit.Enabled = Logged_User != null;
+            FB_Image_Remove.Enabled = Logged_User != null;
+            FB_Image_Show.Enabled = Logged_User != null;
+
+            //Scroll
+            FB_Scroll_Prev.Enabled = Logged_User != null;
+            FB_Scroll_Next.Enabled = Logged_User != null;
+
+            //SlideShow
+            FB_Slideshow_Add.Enabled = Logged_User != null;
+            FB_Slideshow_Start.Enabled = Logged_User != null;
+            FB_Slideshow_Reset.Enabled = Logged_User != null;
+
+            //Others
+            FB_Other_Download.Enabled = Logged_User != null;
+
+            //Blacklist
+            FB_Blacklist_Add.Enabled = Logged_User != null;
+            FB_Blacklist_Reset.Enabled = Logged_User != null;
+        }
+
+        private void Init_UsersList()
+        {
+            foreach (User user in PhotoFilter.UsersList)
+            {
+                if (user.Name != null)
+                    CBX_UsersList.Items.Add(user);
+                CBX_BlackList.Items.Add(user);
+            }
+            CBX_UsersList.SelectedIndex = 1;
+        }
+
+        private void Disconnect()
+        {
+            Logged_User = null;
+            Setup_Logged_User();
+        }
+
+
+        private void LoadPhoto()
+        {
+            WaitSplash.Show(this, "Loading photos from server...");
+            PhotoBrowser.LoadPhotos(PhotoFilter.GetPhotos());
+            WaitSplash.Hide();
+        }
+
+        private void UpdateControls()
+        {
+            MI_Account_Profile.Enabled = Logged_User != null;
+            MI_Account_Login.Enabled = !(Logged_User != null);
+            TSMI_Blacklist.Enabled = Logged_User != null;
+            RB_Users.Enabled = Logged_User != null;
+            RB_Keyword.Enabled = Logged_User != null;
+            RB_Date.Enabled = Logged_User != null;
+            CBX_UsersList.Enabled = Logged_User != null;
+            CBX_Keywords.Enabled = Logged_User != null;
+            CBX_BlackList.Enabled = Logged_User != null;
+            DTP_Start.Enabled = Logged_User != null;
+            DTP_End.Enabled = Logged_User != null;
+            CB_HideMyPhotos.Enabled = Logged_User != null;
+        }
+        #endregion
+
     }
 }

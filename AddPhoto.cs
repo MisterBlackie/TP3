@@ -75,7 +75,7 @@ namespace Client_PM
 
         private void BTN_Ajout_Click(object sender, EventArgs e)
         {
-            
+            Photo.Title = TB_Titre.Text;
             Photo.Description = RTB_Description.Text;
             Photo.Keywords = TB_Keywords.Text;
             Photo.Shared = !RBTN_EstPrivee.Checked;
