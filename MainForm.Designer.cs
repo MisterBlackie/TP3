@@ -178,9 +178,9 @@
             // MI_Account_Profile
             // 
             this.MI_Account_Profile.Name = "MI_Account_Profile";
-            this.MI_Account_Profile.Size = new System.Drawing.Size(166, 22);
+            this.MI_Account_Profile.Size = new System.Drawing.Size(180, 22);
             this.MI_Account_Profile.Text = "Profil";
-            this.MI_Account_Profile.Click += new System.EventHandler(this.MI_Account_Profil_Click);
+            this.MI_Account_Profile.Click += new System.EventHandler(this.MI_Account_Profile_Click);
             // 
             // Mi_Account_Create
             // 
@@ -212,32 +212,36 @@
             this.MI_Display_Left,
             this.MI_Display_Right});
             this.MI_Display.Name = "MI_Display";
-            this.MI_Display.Size = new System.Drawing.Size(125, 22);
+            this.MI_Display.Size = new System.Drawing.Size(180, 22);
             this.MI_Display.Text = "Affichage";
             // 
             // MI_Display_Up
             // 
             this.MI_Display_Up.Name = "MI_Display_Up";
-            this.MI_Display_Up.Size = new System.Drawing.Size(114, 22);
+            this.MI_Display_Up.Size = new System.Drawing.Size(180, 22);
             this.MI_Display_Up.Text = "Haut";
+            this.MI_Display_Up.Click += new System.EventHandler(this.MI_Display_Up_Click);
             // 
             // MI_Display_Down
             // 
             this.MI_Display_Down.Name = "MI_Display_Down";
-            this.MI_Display_Down.Size = new System.Drawing.Size(114, 22);
+            this.MI_Display_Down.Size = new System.Drawing.Size(180, 22);
             this.MI_Display_Down.Text = "Bas";
+            this.MI_Display_Down.Click += new System.EventHandler(this.MI_Display_Down_Click);
             // 
             // MI_Display_Left
             // 
             this.MI_Display_Left.Name = "MI_Display_Left";
-            this.MI_Display_Left.Size = new System.Drawing.Size(114, 22);
+            this.MI_Display_Left.Size = new System.Drawing.Size(180, 22);
             this.MI_Display_Left.Text = "Gauche";
+            this.MI_Display_Left.Click += new System.EventHandler(this.MI_Display_Left_Click);
             // 
             // MI_Display_Right
             // 
             this.MI_Display_Right.Name = "MI_Display_Right";
-            this.MI_Display_Right.Size = new System.Drawing.Size(114, 22);
+            this.MI_Display_Right.Size = new System.Drawing.Size(180, 22);
             this.MI_Display_Right.Text = "Droite";
+            this.MI_Display_Right.Click += new System.EventHandler(this.MI_Display_Right_Click);
             // 
             // TSMI_Blacklist
             // 
@@ -251,27 +255,30 @@
             // MI_Blacklist_Add
             // 
             this.MI_Blacklist_Add.Name = "MI_Blacklist_Add";
-            this.MI_Blacklist_Add.Size = new System.Drawing.Size(152, 22);
+            this.MI_Blacklist_Add.Size = new System.Drawing.Size(180, 22);
             this.MI_Blacklist_Add.Text = "Ajouter";
+            this.MI_Blacklist_Add.Click += new System.EventHandler(this.MI_Blacklist_Add_Click);
             // 
             // MI_Blacklist_Show
             // 
             this.MI_Blacklist_Show.Name = "MI_Blacklist_Show";
-            this.MI_Blacklist_Show.Size = new System.Drawing.Size(152, 22);
+            this.MI_Blacklist_Show.Size = new System.Drawing.Size(180, 22);
             this.MI_Blacklist_Show.Text = "Afficher la liste";
+            this.MI_Blacklist_Show.Click += new System.EventHandler(this.MI_Blacklist_Show_Click);
             // 
             // TSMI_Help
             // 
             this.TSMI_Help.Name = "TSMI_Help";
             this.TSMI_Help.Size = new System.Drawing.Size(43, 20);
             this.TSMI_Help.Text = "Aide";
+            this.TSMI_Help.Click += new System.EventHandler(this.TSMI_Help_Click);
             // 
             // TSMI_About
             // 
             this.TSMI_About.Name = "TSMI_About";
             this.TSMI_About.Size = new System.Drawing.Size(67, 20);
             this.TSMI_About.Text = "À propos";
-            this.TSMI_About.Click += new System.EventHandler(this.àProposToolStripMenuItem_Click);
+            this.TSMI_About.Click += new System.EventHandler(this.TSMI_About_Click);
             // 
             // FileWatcher
             // 
@@ -327,6 +334,7 @@
             this.FB_Other_Download.Size = new System.Drawing.Size(36, 36);
             this.FB_Other_Download.TabIndex = 0;
             this.FB_Other_Download.UseVisualStyleBackColor = true;
+            this.FB_Other_Download.Click += new System.EventHandler(this.FB_Other_Download_Click);
             // 
             // GB_Scroll
             // 
@@ -354,6 +362,7 @@
             this.FB_Scroll_Next.Size = new System.Drawing.Size(36, 36);
             this.FB_Scroll_Next.TabIndex = 1;
             this.FB_Scroll_Next.UseVisualStyleBackColor = true;
+            this.FB_Scroll_Next.Click += new System.EventHandler(this.FB_Scroll_Next_Click);
             // 
             // FB_Scroll_Prev
             // 
@@ -370,6 +379,7 @@
             this.FB_Scroll_Prev.Size = new System.Drawing.Size(36, 36);
             this.FB_Scroll_Prev.TabIndex = 0;
             this.FB_Scroll_Prev.UseVisualStyleBackColor = true;
+            this.FB_Scroll_Prev.Click += new System.EventHandler(this.FB_Scroll_Prev_Click);
             // 
             // GB_Slideshow
             // 
@@ -398,6 +408,7 @@
             this.FB_Slideshow_Reset.Size = new System.Drawing.Size(36, 36);
             this.FB_Slideshow_Reset.TabIndex = 2;
             this.FB_Slideshow_Reset.UseVisualStyleBackColor = true;
+            this.FB_Slideshow_Reset.Click += new System.EventHandler(this.FB_Slideshow_Reset_Click);
             // 
             // FB_Slideshow_Start
             // 
@@ -414,6 +425,7 @@
             this.FB_Slideshow_Start.Size = new System.Drawing.Size(36, 36);
             this.FB_Slideshow_Start.TabIndex = 1;
             this.FB_Slideshow_Start.UseVisualStyleBackColor = true;
+            this.FB_Slideshow_Start.Click += new System.EventHandler(this.FB_Slideshow_Start_Click);
             // 
             // FB_Slideshow_Add
             // 
@@ -430,6 +442,7 @@
             this.FB_Slideshow_Add.Size = new System.Drawing.Size(36, 36);
             this.FB_Slideshow_Add.TabIndex = 0;
             this.FB_Slideshow_Add.UseVisualStyleBackColor = true;
+            this.FB_Slideshow_Add.Click += new System.EventHandler(this.FB_Slideshow_Add_Click);
             // 
             // GB_Image
             // 
@@ -459,6 +472,7 @@
             this.FB_Image_Show.Size = new System.Drawing.Size(36, 36);
             this.FB_Image_Show.TabIndex = 3;
             this.FB_Image_Show.UseVisualStyleBackColor = true;
+            this.FB_Image_Show.Click += new System.EventHandler(this.FB_Image_Show_Click);
             // 
             // FB_Image_Remove
             // 
@@ -475,6 +489,7 @@
             this.FB_Image_Remove.Size = new System.Drawing.Size(36, 36);
             this.FB_Image_Remove.TabIndex = 2;
             this.FB_Image_Remove.UseVisualStyleBackColor = true;
+            this.FB_Image_Remove.Click += new System.EventHandler(this.FB_Image_Remove_Click);
             // 
             // FB_Image_Edit
             // 
@@ -491,6 +506,7 @@
             this.FB_Image_Edit.Size = new System.Drawing.Size(36, 36);
             this.FB_Image_Edit.TabIndex = 1;
             this.FB_Image_Edit.UseVisualStyleBackColor = true;
+            this.FB_Image_Edit.Click += new System.EventHandler(this.FB_Image_Edit_Click);
             // 
             // FB_Image_Add
             // 
@@ -507,6 +523,7 @@
             this.FB_Image_Add.Size = new System.Drawing.Size(36, 36);
             this.FB_Image_Add.TabIndex = 0;
             this.FB_Image_Add.UseVisualStyleBackColor = true;
+            this.FB_Image_Add.Click += new System.EventHandler(this.FB_Image_Add_Click);
             // 
             // TP_Filters
             // 
@@ -519,7 +536,6 @@
             this.TP_Filters.Size = new System.Drawing.Size(1121, 87);
             this.TP_Filters.TabIndex = 1;
             this.TP_Filters.Text = "Filtres";
-            this.TP_Filters.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // GB_Filters
             // 
@@ -614,6 +630,7 @@
             this.FB_Blacklist_Reset.TabIndex = 2;
             this.FB_Blacklist_Reset.Text = "flashButton14";
             this.FB_Blacklist_Reset.UseVisualStyleBackColor = true;
+            this.FB_Blacklist_Reset.Click += new System.EventHandler(this.FB_Blacklist_Reset_Click);
             // 
             // FB_Blacklist_Add
             // 
@@ -631,6 +648,7 @@
             this.FB_Blacklist_Add.TabIndex = 1;
             this.FB_Blacklist_Add.Text = "flashButton13";
             this.FB_Blacklist_Add.UseVisualStyleBackColor = true;
+            this.FB_Blacklist_Add.Click += new System.EventHandler(this.FB_Blacklist_Add_Click);
             // 
             // CBX_BlackList
             // 

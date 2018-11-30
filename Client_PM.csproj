@@ -64,11 +64,11 @@
     <Compile Include="A propos.Designer.cs">
       <DependentUpon>A propos.cs</DependentUpon>
     </Compile>
-    <Compile Include="AJoutPhoto.cs">
+    <Compile Include="AddPhoto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AJoutPhoto.Designer.cs">
-      <DependentUpon>AJoutPhoto.cs</DependentUpon>
+    <Compile Include="AddPhoto.Designer.cs">
+      <DependentUpon>AddPhoto.cs</DependentUpon>
     </Compile>
     <Compile Include="Carousel.cs">
       <SubType>Form</SubType>
@@ -127,8 +127,8 @@
     <EmbeddedResource Include="A propos.resx">
       <DependentUpon>A propos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AJoutPhoto.resx">
-      <DependentUpon>AJoutPhoto.cs</DependentUpon>
+    <EmbeddedResource Include="AddPhoto.resx">
+      <DependentUpon>AddPhoto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Carousel.resx">
       <DependentUpon>Carousel.cs</DependentUpon>

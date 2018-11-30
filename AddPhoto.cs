@@ -11,13 +11,13 @@ using Validation;
 
 namespace Client_PM
 {
-    public partial class AJoutPhoto : Form
+    public partial class AddPhoto : Form
     {
         public PhotoManagerClient.Photo Photo { get; set; }
 
         private ValidationProvider ValidationProvider;
 
-        public AJoutPhoto()
+        public AddPhoto()
         {
             Photo = new PhotoManagerClient.Photo();
             InitializeComponent();

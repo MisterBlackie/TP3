@@ -1,6 +1,6 @@
 ﻿namespace Client_PM
 {
-    partial class AJoutPhoto
+    partial class AddPhoto
     {
         /// <summary>
         /// Required designer variable.

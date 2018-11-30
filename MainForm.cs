@@ -18,7 +18,7 @@ namespace Client_PM
         public MainForm()
         {
             InitializeComponent();
-            Text = "Photo Manager Client application - Not connected";
+            Text = "Photo Manager Client - Not connected";
         }
 
         bool initializing = true;
@@ -33,8 +33,8 @@ namespace Client_PM
 
         private void Update_UI()
         {
-            //MI_Account_Profil.Enabled = Logged_User != null;
-            ChangerEtatBouton();
+            MI_Account_Profile.Enabled = Logged_User != null;
+            UpdateFlashButtons();
         }
 
         private void Init_UsersList()
@@ -50,23 +50,32 @@ namespace Client_PM
         private void Disconnect()
         {
             Logged_User = null;
-
             Setup_Logged_User();
         }
 
-        private void ChangerEtatBouton()
+        private void UpdateFlashButtons()
         {
+            //Image
             FB_Image_Add.Enabled = Logged_User != null;
             FB_Image_Edit.Enabled = Logged_User != null;
             FB_Image_Remove.Enabled = Logged_User != null;
             FB_Image_Show.Enabled = Logged_User != null;
 
+            //Scroll
             FB_Scroll_Prev.Enabled = Logged_User != null;
             FB_Scroll_Next.Enabled = Logged_User != null;
 
+            //SlideShow
             FB_Slideshow_Add.Enabled = Logged_User != null;
             FB_Slideshow_Start.Enabled = Logged_User != null;
             FB_Slideshow_Reset.Enabled = Logged_User != null;
+
+            //Others
+            FB_Other_Download.Enabled = Logged_User != null;
+
+            //Blacklist
+            FB_Blacklist_Add.Enabled = Logged_User != null;
+            FB_Blacklist_Reset.Enabled = Logged_User != null;
         }
         private void LoadPhoto()
         {
@@ -75,11 +84,11 @@ namespace Client_PM
             WaitSplash.Hide();
         }
 
-        private void AjouterPhoto()
+        private void AddPhoto()
         {
-            AJoutPhoto DLG = new AJoutPhoto();
+            AddPhoto DLG = new AddPhoto();
 
-           if ( DLG.ShowDialog() == DialogResult.OK)
+            if (DLG.ShowDialog() == DialogResult.OK)
             {
                 DLG.Photo.OwnerId = Logged_User.Id;
                 DBPhotosWebServices.CreatePhoto(DLG.Photo); // À vérifier, est-ce le web service lie la photo au usager automatiquement ou on doit l'affecter par nous même ? Si on doit le lier, décommenté la ligne au dessus
@@ -136,31 +145,11 @@ namespace Client_PM
             }
         }
 
-        private void BTN_Left_Click(object sender, EventArgs e)
-        {
-            PhotoBrowser.Placement = PhotoBrowserPlacement.Left;
-        }
-
-        private void BTN_Top_Click(object sender, EventArgs e)
-        {
-            PhotoBrowser.Placement = PhotoBrowserPlacement.Top;
-        }
-
-        private void BTN_Right_Click(object sender, EventArgs e)
-        {
-            PhotoBrowser.Placement = PhotoBrowserPlacement.Right;
-        }
-
-        private void BTN_Bottom_Click(object sender, EventArgs e)
-        {
-            PhotoBrowser.Placement = PhotoBrowserPlacement.Bottom;
-        }
-
         private void Setup_Logged_User()
         {
             if (Logged_User != null)
             {
-                Text = "Photo Manager Client application -" + Logged_User.Name;
+                Text = "Photo Manager Client - " + Logged_User.Name;
                 PhotoFilter = new PhotoFilter(Logged_User.Id);
                 Init_UsersList();
                 initializing = true;
@@ -170,7 +159,7 @@ namespace Client_PM
             }
             else
             {
-                Text = "Photo Manager Client application - Not connected";
+                Text = "Photo Manager Client - Not connected";
                 CBX_UsersList.Items.Clear();
                 CBX_Keywords.Items.Clear();
                 PhotoBrowser.Clear();
@@ -178,6 +167,78 @@ namespace Client_PM
             }
             Update_UI();
         }
+
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            UpdateFlashButtons();
+        }
+
+        #region FlashButtons
+
+        private void FB_Image_Add_Click(object sender, EventArgs e)
+        {
+            AddPhoto();
+        }
+
+        private void FB_Image_Edit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FB_Image_Remove_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FB_Image_Show_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FB_Scroll_Prev_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FB_Scroll_Next_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FB_Slideshow_Add_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FB_Slideshow_Start_Click(object sender, EventArgs e)
+        {
+            Carousel dlg = new Carousel();
+            dlg.Show();
+        }
+
+        private void FB_Slideshow_Reset_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FB_Other_Download_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FB_Blacklist_Add_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FB_Blacklist_Reset_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region StripMenu
         private void MI_Account_Login_Click(object sender, EventArgs e)
         {
             DLG_Login dlg = new DLG_Login();
@@ -188,10 +249,14 @@ namespace Client_PM
             }
         }
 
-        private void MI_Account_Profil_Click(object sender, EventArgs e)
+        private void MI_Account_Profile_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Mi_Account_Create_Click(object sender, EventArgs e)
         {
             DLG_Account dlg = new DLG_Account();
-            dlg.User = Logged_User;
             if (dlg.ShowDialog() == DialogResult.OK)
             {
                 Logged_User = dlg.User;
@@ -199,51 +264,50 @@ namespace Client_PM
             }
         }
 
-        private void Mi_Account_Create_Click(object sender, EventArgs e)
-        {
-            DLG_Account dlg = new DLG_Account();
-             if (dlg.ShowDialog() == DialogResult.OK)
-            {
-                Logged_User = dlg.User;
-                Setup_Logged_User();
-            }
-        }
-
-        private void flashButton6_Click(object sender, EventArgs e)
-        {
-            Carousel dlg = new Carousel();
-            dlg.Show();
-        }
-
-        private void trackBar1_Scroll(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void àProposToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            A_propos DLG = new A_propos();
-            DLG.ShowDialog();
-        }
-
         private void MI_Account_Exit_Click(object sender, EventArgs e)
         {
             Disconnect();
         }
 
-        private void FB_AjouterPhoto_Click(object sender, EventArgs e)
+        private void MI_Display_Up_Click(object sender, EventArgs e)
         {
-            AjouterPhoto();
+            PhotoBrowser.Placement = PhotoBrowserPlacement.Top;
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void MI_Display_Down_Click(object sender, EventArgs e)
         {
-            ChangerEtatBouton();
+            PhotoBrowser.Placement = PhotoBrowserPlacement.Bottom;
         }
+
+        private void MI_Display_Left_Click(object sender, EventArgs e)
+        {
+            PhotoBrowser.Placement = PhotoBrowserPlacement.Left;
+        }
+
+        private void MI_Display_Right_Click(object sender, EventArgs e)
+        {
+            PhotoBrowser.Placement = PhotoBrowserPlacement.Right;
+        }
+
+        private void MI_Blacklist_Add_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MI_Blacklist_Show_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TSMI_Help_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void TSMI_About_Click(object sender, EventArgs e)
+        {
+            A_propos DLG = new A_propos();
+            DLG.ShowDialog();
+        }
+        #endregion
     }
 }
