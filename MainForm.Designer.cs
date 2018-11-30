@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.DTP_End = new System.Windows.Forms.DateTimePicker();
+            this.LBL_DateText = new System.Windows.Forms.Label();
+            this.DTP_Start = new System.Windows.Forms.DateTimePicker();
             this.CBX_Keywords = new System.Windows.Forms.ComboBox();
             this.CBX_UsersList = new System.Windows.Forms.ComboBox();
             this.MS_Account = new System.Windows.Forms.MenuStrip();
@@ -56,46 +56,33 @@
             this.TBC_PhotoManager = new System.Windows.Forms.TabControl();
             this.TP_Photos = new System.Windows.Forms.TabPage();
             this.GB_Others = new System.Windows.Forms.GroupBox();
+            this.FB_Other_Download = new PhotoManagerClient.FlashButton();
             this.GB_Scroll = new System.Windows.Forms.GroupBox();
+            this.FB_Scroll_Next = new PhotoManagerClient.FlashButton();
+            this.FB_Scroll_Prev = new PhotoManagerClient.FlashButton();
             this.GB_Slideshow = new System.Windows.Forms.GroupBox();
+            this.FB_Slideshow_Reset = new PhotoManagerClient.FlashButton();
+            this.FB_Slideshow_Start = new PhotoManagerClient.FlashButton();
+            this.FB_Slideshow_Add = new PhotoManagerClient.FlashButton();
             this.GB_Image = new System.Windows.Forms.GroupBox();
+            this.FB_Image_Show = new PhotoManagerClient.FlashButton();
+            this.FB_Image_Remove = new PhotoManagerClient.FlashButton();
+            this.FB_Image_Edit = new PhotoManagerClient.FlashButton();
+            this.FB_Image_Add = new PhotoManagerClient.FlashButton();
             this.TP_Filters = new System.Windows.Forms.TabPage();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.FB_AjouterPhoto = new PhotoManagerClient.FlashButton();
-            this.FB_EditionPhoto = new PhotoManagerClient.FlashButton();
-            this.FB_SupprimerPhoto = new PhotoManagerClient.FlashButton();
+            this.GB_Filters = new System.Windows.Forms.GroupBox();
+            this.RB_Users = new System.Windows.Forms.RadioButton();
+            this.RB_Date = new System.Windows.Forms.RadioButton();
+            this.CB_HideMyPhotos = new System.Windows.Forms.CheckBox();
+            this.RB_Keyword = new System.Windows.Forms.RadioButton();
+            this.GB_Blacklist = new System.Windows.Forms.GroupBox();
+            this.FB_Blacklist_Reset = new PhotoManagerClient.FlashButton();
+            this.FB_Blacklist_Add = new PhotoManagerClient.FlashButton();
+            this.CBX_BlackList = new System.Windows.Forms.ComboBox();
             this.FB_ToolTips = new System.Windows.Forms.ToolTip(this.components);
-            this.PhotoBrowser = new PhotoManagerClient.PhotosBrowser();
             this.FileDialog = new System.Windows.Forms.OpenFileDialog();
             this.FolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
-            this.FB_Telecharger = new PhotoManagerClient.FlashButton();
-            this.FB_DefilementGauche = new PhotoManagerClient.FlashButton();
-            this.FB_DefilementDroite = new PhotoManagerClient.FlashButton();
-            this.FB_ResetDiapo = new PhotoManagerClient.FlashButton();
-            this.FB_StartDiapo = new PhotoManagerClient.FlashButton();
-            this.FB_DiapoAddPhoto = new PhotoManagerClient.FlashButton();
-            this.FB_Info = new PhotoManagerClient.FlashButton();
-            this.flashButton12 = new PhotoManagerClient.FlashButton();
-            this.flashButton11 = new PhotoManagerClient.FlashButton();
-            this.photosBrowser1 = new PhotoManagerClient.PhotosBrowser();
-            this.flashButton1 = new PhotoManagerClient.FlashButton();
-            this.flashButton2 = new PhotoManagerClient.FlashButton();
-            this.flashButton3 = new PhotoManagerClient.FlashButton();
-            this.flashButton4 = new PhotoManagerClient.FlashButton();
-            this.flashButton5 = new PhotoManagerClient.FlashButton();
-            this.flashButton6 = new PhotoManagerClient.FlashButton();
-            this.flashButton7 = new PhotoManagerClient.FlashButton();
-            this.flashButton8 = new PhotoManagerClient.FlashButton();
-            this.flashButton9 = new PhotoManagerClient.FlashButton();
-            this.flashButton10 = new PhotoManagerClient.FlashButton();
-            this.flashButton13 = new PhotoManagerClient.FlashButton();
-            this.flashButton14 = new PhotoManagerClient.FlashButton();
+            this.PhotoBrowser = new PhotoManagerClient.PhotosBrowser();
             this.MS_Account.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FileWatcher)).BeginInit();
             this.TBC_PhotoManager.SuspendLayout();
@@ -105,35 +92,35 @@
             this.GB_Slideshow.SuspendLayout();
             this.GB_Image.SuspendLayout();
             this.TP_Filters.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox5.SuspendLayout();
+            this.GB_Filters.SuspendLayout();
+            this.GB_Blacklist.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dateTimePicker2
+            // DTP_End
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(366, 46);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(176, 22);
-            this.dateTimePicker2.TabIndex = 9;
+            this.DTP_End.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTP_End.Location = new System.Drawing.Point(366, 46);
+            this.DTP_End.Name = "DTP_End";
+            this.DTP_End.Size = new System.Drawing.Size(176, 22);
+            this.DTP_End.TabIndex = 9;
             // 
-            // label1
+            // LBL_DateText
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(344, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 16);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "à";
+            this.LBL_DateText.AutoSize = true;
+            this.LBL_DateText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_DateText.Location = new System.Drawing.Point(344, 50);
+            this.LBL_DateText.Name = "LBL_DateText";
+            this.LBL_DateText.Size = new System.Drawing.Size(16, 16);
+            this.LBL_DateText.TabIndex = 8;
+            this.LBL_DateText.Text = "à";
             // 
-            // dateTimePicker1
+            // DTP_Start
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(366, 21);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(176, 22);
-            this.dateTimePicker1.TabIndex = 7;
+            this.DTP_Start.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTP_Start.Location = new System.Drawing.Point(366, 21);
+            this.DTP_Start.Name = "DTP_Start";
+            this.DTP_Start.Size = new System.Drawing.Size(176, 22);
+            this.DTP_Start.TabIndex = 7;
             // 
             // CBX_Keywords
             // 
@@ -317,55 +304,215 @@
             // 
             // GB_Others
             // 
-            this.GB_Others.Controls.Add(this.flashButton10);
-            this.GB_Others.Location = new System.Drawing.Point(553, 6);
+            this.GB_Others.Controls.Add(this.FB_Other_Download);
+            this.GB_Others.Location = new System.Drawing.Point(544, 6);
             this.GB_Others.Name = "GB_Others";
-            this.GB_Others.Size = new System.Drawing.Size(562, 75);
+            this.GB_Others.Size = new System.Drawing.Size(571, 75);
             this.GB_Others.TabIndex = 11;
             this.GB_Others.TabStop = false;
             this.GB_Others.Text = "Autres options";
             // 
+            // FB_Other_Download
+            // 
+            this.FB_Other_Download.BackgroundImage = global::Client_PM.Properties.Resources.Download_Neutral;
+            this.FB_Other_Download.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FB_Other_Download.ClickedImage = global::Client_PM.Properties.Resources.Download_Clicked;
+            this.FB_Other_Download.DisabledImage = global::Client_PM.Properties.Resources.Download_Disabled;
+            this.FB_Other_Download.Image = ((System.Drawing.Image)(resources.GetObject("FB_Other_Download.Image")));
+            this.FB_Other_Download.Location = new System.Drawing.Point(13, 26);
+            this.FB_Other_Download.Margin = new System.Windows.Forms.Padding(10);
+            this.FB_Other_Download.Name = "FB_Other_Download";
+            this.FB_Other_Download.NeutralImage = global::Client_PM.Properties.Resources.Download_Neutral;
+            this.FB_Other_Download.OverImage = global::Client_PM.Properties.Resources.Download_Over;
+            this.FB_Other_Download.Size = new System.Drawing.Size(36, 36);
+            this.FB_Other_Download.TabIndex = 0;
+            this.FB_Other_Download.UseVisualStyleBackColor = true;
+            // 
             // GB_Scroll
             // 
-            this.GB_Scroll.Controls.Add(this.flashButton6);
-            this.GB_Scroll.Controls.Add(this.flashButton5);
-            this.GB_Scroll.Location = new System.Drawing.Point(239, 6);
+            this.GB_Scroll.Controls.Add(this.FB_Scroll_Next);
+            this.GB_Scroll.Controls.Add(this.FB_Scroll_Prev);
+            this.GB_Scroll.Location = new System.Drawing.Point(243, 6);
             this.GB_Scroll.Name = "GB_Scroll";
-            this.GB_Scroll.Size = new System.Drawing.Size(114, 75);
+            this.GB_Scroll.Size = new System.Drawing.Size(116, 75);
             this.GB_Scroll.TabIndex = 10;
             this.GB_Scroll.TabStop = false;
             this.GB_Scroll.Text = "Défilement";
             // 
+            // FB_Scroll_Next
+            // 
+            this.FB_Scroll_Next.BackgroundImage = global::Client_PM.Properties.Resources.Next_Neutral;
+            this.FB_Scroll_Next.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FB_Scroll_Next.ClickedImage = global::Client_PM.Properties.Resources.Next_Clicked;
+            this.FB_Scroll_Next.DisabledImage = global::Client_PM.Properties.Resources.Next_Disabled;
+            this.FB_Scroll_Next.Image = ((System.Drawing.Image)(resources.GetObject("FB_Scroll_Next.Image")));
+            this.FB_Scroll_Next.Location = new System.Drawing.Point(69, 26);
+            this.FB_Scroll_Next.Margin = new System.Windows.Forms.Padding(10);
+            this.FB_Scroll_Next.Name = "FB_Scroll_Next";
+            this.FB_Scroll_Next.NeutralImage = global::Client_PM.Properties.Resources.Next_Neutral;
+            this.FB_Scroll_Next.OverImage = global::Client_PM.Properties.Resources.Next_Over;
+            this.FB_Scroll_Next.Size = new System.Drawing.Size(36, 36);
+            this.FB_Scroll_Next.TabIndex = 1;
+            this.FB_Scroll_Next.UseVisualStyleBackColor = true;
+            // 
+            // FB_Scroll_Prev
+            // 
+            this.FB_Scroll_Prev.BackgroundImage = global::Client_PM.Properties.Resources.Previous_Neutral;
+            this.FB_Scroll_Prev.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FB_Scroll_Prev.ClickedImage = global::Client_PM.Properties.Resources.Previous_Clicked;
+            this.FB_Scroll_Prev.DisabledImage = global::Client_PM.Properties.Resources.Previous_Disabled;
+            this.FB_Scroll_Prev.Image = ((System.Drawing.Image)(resources.GetObject("FB_Scroll_Prev.Image")));
+            this.FB_Scroll_Prev.Location = new System.Drawing.Point(13, 26);
+            this.FB_Scroll_Prev.Margin = new System.Windows.Forms.Padding(10);
+            this.FB_Scroll_Prev.Name = "FB_Scroll_Prev";
+            this.FB_Scroll_Prev.NeutralImage = global::Client_PM.Properties.Resources.Previous_Neutral;
+            this.FB_Scroll_Prev.OverImage = global::Client_PM.Properties.Resources.Previous_Over;
+            this.FB_Scroll_Prev.Size = new System.Drawing.Size(36, 36);
+            this.FB_Scroll_Prev.TabIndex = 0;
+            this.FB_Scroll_Prev.UseVisualStyleBackColor = true;
+            // 
             // GB_Slideshow
             // 
-            this.GB_Slideshow.Controls.Add(this.flashButton9);
-            this.GB_Slideshow.Controls.Add(this.flashButton8);
-            this.GB_Slideshow.Controls.Add(this.flashButton7);
-            this.GB_Slideshow.Location = new System.Drawing.Point(359, 6);
+            this.GB_Slideshow.Controls.Add(this.FB_Slideshow_Reset);
+            this.GB_Slideshow.Controls.Add(this.FB_Slideshow_Start);
+            this.GB_Slideshow.Controls.Add(this.FB_Slideshow_Add);
+            this.GB_Slideshow.Location = new System.Drawing.Point(365, 6);
             this.GB_Slideshow.Name = "GB_Slideshow";
-            this.GB_Slideshow.Size = new System.Drawing.Size(188, 75);
+            this.GB_Slideshow.Size = new System.Drawing.Size(173, 75);
             this.GB_Slideshow.TabIndex = 8;
             this.GB_Slideshow.TabStop = false;
             this.GB_Slideshow.Text = "Diaporama";
             // 
+            // FB_Slideshow_Reset
+            // 
+            this.FB_Slideshow_Reset.BackgroundImage = global::Client_PM.Properties.Resources.Reset_Neutral;
+            this.FB_Slideshow_Reset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FB_Slideshow_Reset.ClickedImage = global::Client_PM.Properties.Resources.Reset_Clicked;
+            this.FB_Slideshow_Reset.DisabledImage = global::Client_PM.Properties.Resources.Reset_Disabled;
+            this.FB_Slideshow_Reset.Image = ((System.Drawing.Image)(resources.GetObject("FB_Slideshow_Reset.Image")));
+            this.FB_Slideshow_Reset.Location = new System.Drawing.Point(125, 26);
+            this.FB_Slideshow_Reset.Margin = new System.Windows.Forms.Padding(10);
+            this.FB_Slideshow_Reset.Name = "FB_Slideshow_Reset";
+            this.FB_Slideshow_Reset.NeutralImage = global::Client_PM.Properties.Resources.Reset_Neutral;
+            this.FB_Slideshow_Reset.OverImage = global::Client_PM.Properties.Resources.Reset_Over;
+            this.FB_Slideshow_Reset.Size = new System.Drawing.Size(36, 36);
+            this.FB_Slideshow_Reset.TabIndex = 2;
+            this.FB_Slideshow_Reset.UseVisualStyleBackColor = true;
+            // 
+            // FB_Slideshow_Start
+            // 
+            this.FB_Slideshow_Start.BackgroundImage = global::Client_PM.Properties.Resources.Start_Neutral;
+            this.FB_Slideshow_Start.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FB_Slideshow_Start.ClickedImage = global::Client_PM.Properties.Resources.Start_Clicked;
+            this.FB_Slideshow_Start.DisabledImage = global::Client_PM.Properties.Resources.Start_Disabled;
+            this.FB_Slideshow_Start.Image = ((System.Drawing.Image)(resources.GetObject("FB_Slideshow_Start.Image")));
+            this.FB_Slideshow_Start.Location = new System.Drawing.Point(69, 26);
+            this.FB_Slideshow_Start.Margin = new System.Windows.Forms.Padding(10);
+            this.FB_Slideshow_Start.Name = "FB_Slideshow_Start";
+            this.FB_Slideshow_Start.NeutralImage = global::Client_PM.Properties.Resources.Start_Neutral;
+            this.FB_Slideshow_Start.OverImage = global::Client_PM.Properties.Resources.Start_Over;
+            this.FB_Slideshow_Start.Size = new System.Drawing.Size(36, 36);
+            this.FB_Slideshow_Start.TabIndex = 1;
+            this.FB_Slideshow_Start.UseVisualStyleBackColor = true;
+            // 
+            // FB_Slideshow_Add
+            // 
+            this.FB_Slideshow_Add.BackgroundImage = global::Client_PM.Properties.Resources.AddToSlide_Neutral;
+            this.FB_Slideshow_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FB_Slideshow_Add.ClickedImage = global::Client_PM.Properties.Resources.AddToSlide_Clicked;
+            this.FB_Slideshow_Add.DisabledImage = global::Client_PM.Properties.Resources.AddToSlide_Disabled;
+            this.FB_Slideshow_Add.Image = ((System.Drawing.Image)(resources.GetObject("FB_Slideshow_Add.Image")));
+            this.FB_Slideshow_Add.Location = new System.Drawing.Point(13, 26);
+            this.FB_Slideshow_Add.Margin = new System.Windows.Forms.Padding(10);
+            this.FB_Slideshow_Add.Name = "FB_Slideshow_Add";
+            this.FB_Slideshow_Add.NeutralImage = global::Client_PM.Properties.Resources.AddToSlide_Neutral;
+            this.FB_Slideshow_Add.OverImage = global::Client_PM.Properties.Resources.AddToSlide_Over;
+            this.FB_Slideshow_Add.Size = new System.Drawing.Size(36, 36);
+            this.FB_Slideshow_Add.TabIndex = 0;
+            this.FB_Slideshow_Add.UseVisualStyleBackColor = true;
+            // 
             // GB_Image
             // 
-            this.GB_Image.Controls.Add(this.flashButton4);
-            this.GB_Image.Controls.Add(this.flashButton3);
-            this.GB_Image.Controls.Add(this.flashButton2);
-            this.GB_Image.Controls.Add(this.flashButton1);
+            this.GB_Image.Controls.Add(this.FB_Image_Show);
+            this.GB_Image.Controls.Add(this.FB_Image_Remove);
+            this.GB_Image.Controls.Add(this.FB_Image_Edit);
+            this.GB_Image.Controls.Add(this.FB_Image_Add);
             this.GB_Image.Location = new System.Drawing.Point(6, 6);
             this.GB_Image.Name = "GB_Image";
-            this.GB_Image.Size = new System.Drawing.Size(220, 75);
+            this.GB_Image.Size = new System.Drawing.Size(231, 75);
             this.GB_Image.TabIndex = 7;
             this.GB_Image.TabStop = false;
             this.GB_Image.Text = "Image";
             // 
+            // FB_Image_Show
+            // 
+            this.FB_Image_Show.BackgroundImage = global::Client_PM.Properties.Resources.Show_Neutral;
+            this.FB_Image_Show.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FB_Image_Show.ClickedImage = global::Client_PM.Properties.Resources.Show_Clicked;
+            this.FB_Image_Show.DisabledImage = global::Client_PM.Properties.Resources.Show_Disabled;
+            this.FB_Image_Show.Image = ((System.Drawing.Image)(resources.GetObject("FB_Image_Show.Image")));
+            this.FB_Image_Show.Location = new System.Drawing.Point(181, 26);
+            this.FB_Image_Show.Margin = new System.Windows.Forms.Padding(10);
+            this.FB_Image_Show.Name = "FB_Image_Show";
+            this.FB_Image_Show.NeutralImage = global::Client_PM.Properties.Resources.Show_Neutral;
+            this.FB_Image_Show.OverImage = global::Client_PM.Properties.Resources.Show_Over;
+            this.FB_Image_Show.Size = new System.Drawing.Size(36, 36);
+            this.FB_Image_Show.TabIndex = 3;
+            this.FB_Image_Show.UseVisualStyleBackColor = true;
+            // 
+            // FB_Image_Remove
+            // 
+            this.FB_Image_Remove.BackgroundImage = global::Client_PM.Properties.Resources.Delete_Neutral;
+            this.FB_Image_Remove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FB_Image_Remove.ClickedImage = global::Client_PM.Properties.Resources.Delete_Clicked;
+            this.FB_Image_Remove.DisabledImage = global::Client_PM.Properties.Resources.Delete_Disabled;
+            this.FB_Image_Remove.Image = ((System.Drawing.Image)(resources.GetObject("FB_Image_Remove.Image")));
+            this.FB_Image_Remove.Location = new System.Drawing.Point(125, 26);
+            this.FB_Image_Remove.Margin = new System.Windows.Forms.Padding(10);
+            this.FB_Image_Remove.Name = "FB_Image_Remove";
+            this.FB_Image_Remove.NeutralImage = global::Client_PM.Properties.Resources.Delete_Neutral;
+            this.FB_Image_Remove.OverImage = global::Client_PM.Properties.Resources.Delete_Over;
+            this.FB_Image_Remove.Size = new System.Drawing.Size(36, 36);
+            this.FB_Image_Remove.TabIndex = 2;
+            this.FB_Image_Remove.UseVisualStyleBackColor = true;
+            // 
+            // FB_Image_Edit
+            // 
+            this.FB_Image_Edit.BackgroundImage = global::Client_PM.Properties.Resources.Edit_Neutral;
+            this.FB_Image_Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FB_Image_Edit.ClickedImage = global::Client_PM.Properties.Resources.Edit_Clicked;
+            this.FB_Image_Edit.DisabledImage = global::Client_PM.Properties.Resources.Edit_Disabled;
+            this.FB_Image_Edit.Image = ((System.Drawing.Image)(resources.GetObject("FB_Image_Edit.Image")));
+            this.FB_Image_Edit.Location = new System.Drawing.Point(69, 26);
+            this.FB_Image_Edit.Margin = new System.Windows.Forms.Padding(10);
+            this.FB_Image_Edit.Name = "FB_Image_Edit";
+            this.FB_Image_Edit.NeutralImage = global::Client_PM.Properties.Resources.Edit_Neutral;
+            this.FB_Image_Edit.OverImage = global::Client_PM.Properties.Resources.Edit_Over;
+            this.FB_Image_Edit.Size = new System.Drawing.Size(36, 36);
+            this.FB_Image_Edit.TabIndex = 1;
+            this.FB_Image_Edit.UseVisualStyleBackColor = true;
+            // 
+            // FB_Image_Add
+            // 
+            this.FB_Image_Add.BackgroundImage = global::Client_PM.Properties.Resources.Add_Neutral;
+            this.FB_Image_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FB_Image_Add.ClickedImage = global::Client_PM.Properties.Resources.Add_Clicked;
+            this.FB_Image_Add.DisabledImage = global::Client_PM.Properties.Resources.Add_Disabled;
+            this.FB_Image_Add.Image = ((System.Drawing.Image)(resources.GetObject("FB_Image_Add.Image")));
+            this.FB_Image_Add.Location = new System.Drawing.Point(13, 26);
+            this.FB_Image_Add.Margin = new System.Windows.Forms.Padding(10);
+            this.FB_Image_Add.Name = "FB_Image_Add";
+            this.FB_Image_Add.NeutralImage = global::Client_PM.Properties.Resources.Add_Neutral;
+            this.FB_Image_Add.OverImage = global::Client_PM.Properties.Resources.Add_Over;
+            this.FB_Image_Add.Size = new System.Drawing.Size(36, 36);
+            this.FB_Image_Add.TabIndex = 0;
+            this.FB_Image_Add.UseVisualStyleBackColor = true;
+            // 
             // TP_Filters
             // 
             this.TP_Filters.BackColor = System.Drawing.Color.White;
-            this.TP_Filters.Controls.Add(this.groupBox6);
-            this.TP_Filters.Controls.Add(this.groupBox5);
+            this.TP_Filters.Controls.Add(this.GB_Filters);
+            this.TP_Filters.Controls.Add(this.GB_Blacklist);
             this.TP_Filters.Location = new System.Drawing.Point(4, 29);
             this.TP_Filters.Name = "TP_Filters";
             this.TP_Filters.Padding = new System.Windows.Forms.Padding(3);
@@ -374,153 +521,125 @@
             this.TP_Filters.Text = "Filtres";
             this.TP_Filters.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // groupBox6
+            // GB_Filters
             // 
-            this.groupBox6.Controls.Add(this.radioButton1);
-            this.groupBox6.Controls.Add(this.CBX_Keywords);
-            this.groupBox6.Controls.Add(this.radioButton3);
-            this.groupBox6.Controls.Add(this.checkBox4);
-            this.groupBox6.Controls.Add(this.dateTimePicker1);
-            this.groupBox6.Controls.Add(this.radioButton2);
-            this.groupBox6.Controls.Add(this.CBX_UsersList);
-            this.groupBox6.Controls.Add(this.label1);
-            this.groupBox6.Controls.Add(this.dateTimePicker2);
-            this.groupBox6.Location = new System.Drawing.Point(6, 6);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(755, 75);
-            this.groupBox6.TabIndex = 15;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Filtres sur l\'image";
+            this.GB_Filters.Controls.Add(this.RB_Users);
+            this.GB_Filters.Controls.Add(this.CBX_Keywords);
+            this.GB_Filters.Controls.Add(this.RB_Date);
+            this.GB_Filters.Controls.Add(this.CB_HideMyPhotos);
+            this.GB_Filters.Controls.Add(this.DTP_Start);
+            this.GB_Filters.Controls.Add(this.RB_Keyword);
+            this.GB_Filters.Controls.Add(this.CBX_UsersList);
+            this.GB_Filters.Controls.Add(this.LBL_DateText);
+            this.GB_Filters.Controls.Add(this.DTP_End);
+            this.GB_Filters.Location = new System.Drawing.Point(6, 6);
+            this.GB_Filters.Name = "GB_Filters";
+            this.GB_Filters.Size = new System.Drawing.Size(755, 75);
+            this.GB_Filters.TabIndex = 15;
+            this.GB_Filters.TabStop = false;
+            this.GB_Filters.Text = "Filtres";
             // 
-            // radioButton1
+            // RB_Users
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(6, 22);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(92, 20);
-            this.radioButton1.TabIndex = 11;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Utilisateurs";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.RB_Users.AutoSize = true;
+            this.RB_Users.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RB_Users.Location = new System.Drawing.Point(6, 22);
+            this.RB_Users.Name = "RB_Users";
+            this.RB_Users.Size = new System.Drawing.Size(92, 20);
+            this.RB_Users.TabIndex = 11;
+            this.RB_Users.TabStop = true;
+            this.RB_Users.Text = "Utilisateurs";
+            this.RB_Users.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // RB_Date
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(305, 21);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(55, 20);
-            this.radioButton3.TabIndex = 13;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Date";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.RB_Date.AutoSize = true;
+            this.RB_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RB_Date.Location = new System.Drawing.Point(305, 21);
+            this.RB_Date.Name = "RB_Date";
+            this.RB_Date.Size = new System.Drawing.Size(55, 20);
+            this.RB_Date.TabIndex = 13;
+            this.RB_Date.TabStop = true;
+            this.RB_Date.Text = "Date";
+            this.RB_Date.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // CB_HideMyPhotos
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox4.Location = new System.Drawing.Point(559, 35);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(190, 20);
-            this.checkBox4.TabIndex = 10;
-            this.checkBox4.Text = "Ne pas afficher mes photos";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.CB_HideMyPhotos.AutoSize = true;
+            this.CB_HideMyPhotos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CB_HideMyPhotos.Location = new System.Drawing.Point(559, 35);
+            this.CB_HideMyPhotos.Name = "CB_HideMyPhotos";
+            this.CB_HideMyPhotos.Size = new System.Drawing.Size(190, 20);
+            this.CB_HideMyPhotos.TabIndex = 10;
+            this.CB_HideMyPhotos.Text = "Ne pas afficher mes photos";
+            this.CB_HideMyPhotos.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // RB_Keyword
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(6, 48);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(86, 20);
-            this.radioButton2.TabIndex = 12;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Mots-Clés";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.RB_Keyword.AutoSize = true;
+            this.RB_Keyword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RB_Keyword.Location = new System.Drawing.Point(6, 48);
+            this.RB_Keyword.Name = "RB_Keyword";
+            this.RB_Keyword.Size = new System.Drawing.Size(79, 20);
+            this.RB_Keyword.TabIndex = 12;
+            this.RB_Keyword.TabStop = true;
+            this.RB_Keyword.Text = "Mots-Clé";
+            this.RB_Keyword.UseVisualStyleBackColor = true;
             // 
-            // groupBox5
+            // GB_Blacklist
             // 
-            this.groupBox5.Controls.Add(this.flashButton14);
-            this.groupBox5.Controls.Add(this.flashButton13);
-            this.groupBox5.Controls.Add(this.comboBox1);
-            this.groupBox5.Location = new System.Drawing.Point(768, 6);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(347, 81);
-            this.groupBox5.TabIndex = 14;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Liste noire";
+            this.GB_Blacklist.Controls.Add(this.FB_Blacklist_Reset);
+            this.GB_Blacklist.Controls.Add(this.FB_Blacklist_Add);
+            this.GB_Blacklist.Controls.Add(this.CBX_BlackList);
+            this.GB_Blacklist.Location = new System.Drawing.Point(768, 6);
+            this.GB_Blacklist.Name = "GB_Blacklist";
+            this.GB_Blacklist.Size = new System.Drawing.Size(347, 75);
+            this.GB_Blacklist.TabIndex = 14;
+            this.GB_Blacklist.TabStop = false;
+            this.GB_Blacklist.Text = "Liste noire";
             // 
-            // comboBox1
+            // FB_Blacklist_Reset
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 33);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(167, 24);
-            this.comboBox1.TabIndex = 0;
+            this.FB_Blacklist_Reset.BackgroundImage = global::Client_PM.Properties.Resources.Reset_Neutral;
+            this.FB_Blacklist_Reset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FB_Blacklist_Reset.ClickedImage = global::Client_PM.Properties.Resources.Reset_Clicked;
+            this.FB_Blacklist_Reset.DisabledImage = global::Client_PM.Properties.Resources.Reset_Disabled;
+            this.FB_Blacklist_Reset.Image = ((System.Drawing.Image)(resources.GetObject("FB_Blacklist_Reset.Image")));
+            this.FB_Blacklist_Reset.Location = new System.Drawing.Point(242, 25);
+            this.FB_Blacklist_Reset.Margin = new System.Windows.Forms.Padding(10);
+            this.FB_Blacklist_Reset.Name = "FB_Blacklist_Reset";
+            this.FB_Blacklist_Reset.NeutralImage = global::Client_PM.Properties.Resources.Reset_Neutral;
+            this.FB_Blacklist_Reset.OverImage = global::Client_PM.Properties.Resources.Reset_Over;
+            this.FB_Blacklist_Reset.Size = new System.Drawing.Size(36, 36);
+            this.FB_Blacklist_Reset.TabIndex = 2;
+            this.FB_Blacklist_Reset.Text = "flashButton14";
+            this.FB_Blacklist_Reset.UseVisualStyleBackColor = true;
             // 
-            // FB_AjouterPhoto
+            // FB_Blacklist_Add
             // 
-            this.FB_AjouterPhoto.BackColor = System.Drawing.Color.Transparent;
-            this.FB_AjouterPhoto.BackgroundImage = global::Client_PM.Properties.Resources.Add_Neutral;
-            this.FB_AjouterPhoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FB_AjouterPhoto.ClickedImage = null;
-            this.FB_AjouterPhoto.DisabledImage = null;
-            this.FB_AjouterPhoto.Image = ((System.Drawing.Image)(resources.GetObject("FB_AjouterPhoto.Image")));
-            this.FB_AjouterPhoto.Location = new System.Drawing.Point(6, 32);
-            this.FB_AjouterPhoto.Margin = new System.Windows.Forms.Padding(7, 3, 7, 3);
-            this.FB_AjouterPhoto.Name = "FB_AjouterPhoto";
-            this.FB_AjouterPhoto.NeutralImage = null;
-            this.FB_AjouterPhoto.OverImage = null;
-            this.FB_AjouterPhoto.Size = new System.Drawing.Size(36, 36);
-            this.FB_AjouterPhoto.TabIndex = 3;
-            this.FB_AjouterPhoto.UseVisualStyleBackColor = false;
-            this.FB_AjouterPhoto.Click += new System.EventHandler(this.FB_AjouterPhoto_Click);
+            this.FB_Blacklist_Add.BackgroundImage = global::Client_PM.Properties.Resources.Add_Neutral;
+            this.FB_Blacklist_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FB_Blacklist_Add.ClickedImage = global::Client_PM.Properties.Resources.Add_Clicked;
+            this.FB_Blacklist_Add.DisabledImage = global::Client_PM.Properties.Resources.Add_Disabled;
+            this.FB_Blacklist_Add.Image = ((System.Drawing.Image)(resources.GetObject("FB_Blacklist_Add.Image")));
+            this.FB_Blacklist_Add.Location = new System.Drawing.Point(186, 25);
+            this.FB_Blacklist_Add.Margin = new System.Windows.Forms.Padding(10);
+            this.FB_Blacklist_Add.Name = "FB_Blacklist_Add";
+            this.FB_Blacklist_Add.NeutralImage = global::Client_PM.Properties.Resources.Add_Neutral;
+            this.FB_Blacklist_Add.OverImage = global::Client_PM.Properties.Resources.Add_Over;
+            this.FB_Blacklist_Add.Size = new System.Drawing.Size(36, 36);
+            this.FB_Blacklist_Add.TabIndex = 1;
+            this.FB_Blacklist_Add.Text = "flashButton13";
+            this.FB_Blacklist_Add.UseVisualStyleBackColor = true;
             // 
-            // FB_EditionPhoto
+            // CBX_BlackList
             // 
-            this.FB_EditionPhoto.BackgroundImage = global::Client_PM.Properties.Resources.Edit_Neutral;
-            this.FB_EditionPhoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FB_EditionPhoto.ClickedImage = null;
-            this.FB_EditionPhoto.DisabledImage = null;
-            this.FB_EditionPhoto.Image = ((System.Drawing.Image)(resources.GetObject("FB_EditionPhoto.Image")));
-            this.FB_EditionPhoto.Location = new System.Drawing.Point(61, 32);
-            this.FB_EditionPhoto.Margin = new System.Windows.Forms.Padding(7, 3, 7, 3);
-            this.FB_EditionPhoto.Name = "FB_EditionPhoto";
-            this.FB_EditionPhoto.NeutralImage = null;
-            this.FB_EditionPhoto.OverImage = null;
-            this.FB_EditionPhoto.Size = new System.Drawing.Size(36, 36);
-            this.FB_EditionPhoto.TabIndex = 5;
-            this.FB_EditionPhoto.UseVisualStyleBackColor = true;
-            // 
-            // FB_SupprimerPhoto
-            // 
-            this.FB_SupprimerPhoto.BackgroundImage = global::Client_PM.Properties.Resources.Delete_Neutral;
-            this.FB_SupprimerPhoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FB_SupprimerPhoto.ClickedImage = null;
-            this.FB_SupprimerPhoto.DisabledImage = null;
-            this.FB_SupprimerPhoto.Image = ((System.Drawing.Image)(resources.GetObject("FB_SupprimerPhoto.Image")));
-            this.FB_SupprimerPhoto.Location = new System.Drawing.Point(118, 32);
-            this.FB_SupprimerPhoto.Margin = new System.Windows.Forms.Padding(7, 3, 7, 3);
-            this.FB_SupprimerPhoto.Name = "FB_SupprimerPhoto";
-            this.FB_SupprimerPhoto.NeutralImage = null;
-            this.FB_SupprimerPhoto.OverImage = null;
-            this.FB_SupprimerPhoto.Size = new System.Drawing.Size(36, 36);
-            this.FB_SupprimerPhoto.TabIndex = 4;
-            this.FB_SupprimerPhoto.UseVisualStyleBackColor = true;
-            // 
-            // PhotoBrowser
-            // 
-            this.PhotoBrowser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PhotoBrowser.Location = new System.Drawing.Point(12, 149);
-            this.PhotoBrowser.Name = "PhotoBrowser";
-            this.PhotoBrowser.Placement = PhotoManagerClient.PhotoBrowserPlacement.Left;
-            this.PhotoBrowser.SelectedPhoto = null;
-            this.PhotoBrowser.Size = new System.Drawing.Size(1129, 513);
-            this.PhotoBrowser.TabIndex = 0;
+            this.CBX_BlackList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBX_BlackList.FormattingEnabled = true;
+            this.CBX_BlackList.Location = new System.Drawing.Point(6, 33);
+            this.CBX_BlackList.Name = "CBX_BlackList";
+            this.CBX_BlackList.Size = new System.Drawing.Size(167, 24);
+            this.CBX_BlackList.TabIndex = 0;
             // 
             // FileDialog
             // 
@@ -531,360 +650,21 @@
             // 
             this.FolderBrowser.Description = "Pour le télégargement d\'une image";
             // 
-            // FB_Telecharger
+            // PhotoBrowser
             // 
-            this.FB_Telecharger.BackgroundImage = global::Client_PM.Properties.Resources.Download;
-            this.FB_Telecharger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FB_Telecharger.ClickedImage = null;
-            this.FB_Telecharger.DisabledImage = null;
-            this.FB_Telecharger.Image = ((System.Drawing.Image)(resources.GetObject("FB_Telecharger.Image")));
-            this.FB_Telecharger.Location = new System.Drawing.Point(6, 30);
-            this.FB_Telecharger.Name = "FB_Telecharger";
-            this.FB_Telecharger.NeutralImage = null;
-            this.FB_Telecharger.OverImage = null;
-            this.FB_Telecharger.Size = new System.Drawing.Size(36, 36);
-            this.FB_Telecharger.TabIndex = 12;
-            this.FB_Telecharger.Text = "flashButton8";
-            this.FB_Telecharger.UseVisualStyleBackColor = true;
-            // 
-            // FB_DefilementGauche
-            // 
-            this.FB_DefilementGauche.BackgroundImage = global::Client_PM.Properties.Resources.Previous;
-            this.FB_DefilementGauche.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FB_DefilementGauche.ClickedImage = null;
-            this.FB_DefilementGauche.DisabledImage = null;
-            this.FB_DefilementGauche.Image = ((System.Drawing.Image)(resources.GetObject("FB_DefilementGauche.Image")));
-            this.FB_DefilementGauche.Location = new System.Drawing.Point(7, 32);
-            this.FB_DefilementGauche.Name = "FB_DefilementGauche";
-            this.FB_DefilementGauche.NeutralImage = null;
-            this.FB_DefilementGauche.OverImage = null;
-            this.FB_DefilementGauche.Size = new System.Drawing.Size(36, 36);
-            this.FB_DefilementGauche.TabIndex = 8;
-            this.FB_DefilementGauche.Text = "flashButton7";
-            this.FB_DefilementGauche.UseVisualStyleBackColor = true;
-            // 
-            // FB_DefilementDroite
-            // 
-            this.FB_DefilementDroite.BackgroundImage = global::Client_PM.Properties.Resources.Next;
-            this.FB_DefilementDroite.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FB_DefilementDroite.ClickedImage = null;
-            this.FB_DefilementDroite.DisabledImage = null;
-            this.FB_DefilementDroite.Image = ((System.Drawing.Image)(resources.GetObject("FB_DefilementDroite.Image")));
-            this.FB_DefilementDroite.Location = new System.Drawing.Point(69, 32);
-            this.FB_DefilementDroite.Name = "FB_DefilementDroite";
-            this.FB_DefilementDroite.NeutralImage = null;
-            this.FB_DefilementDroite.OverImage = null;
-            this.FB_DefilementDroite.Size = new System.Drawing.Size(36, 36);
-            this.FB_DefilementDroite.TabIndex = 7;
-            this.FB_DefilementDroite.Text = "flashButton5";
-            this.FB_DefilementDroite.UseVisualStyleBackColor = true;
-            // 
-            // FB_ResetDiapo
-            // 
-            this.FB_ResetDiapo.BackgroundImage = global::Client_PM.Properties.Resources.Return_Neutral;
-            this.FB_ResetDiapo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FB_ResetDiapo.ClickedImage = null;
-            this.FB_ResetDiapo.DisabledImage = null;
-            this.FB_ResetDiapo.Image = ((System.Drawing.Image)(resources.GetObject("FB_ResetDiapo.Image")));
-            this.FB_ResetDiapo.Location = new System.Drawing.Point(134, 30);
-            this.FB_ResetDiapo.Name = "FB_ResetDiapo";
-            this.FB_ResetDiapo.NeutralImage = null;
-            this.FB_ResetDiapo.OverImage = null;
-            this.FB_ResetDiapo.Size = new System.Drawing.Size(36, 36);
-            this.FB_ResetDiapo.TabIndex = 13;
-            this.FB_ResetDiapo.Text = "flashButton9";
-            this.FB_ResetDiapo.UseVisualStyleBackColor = true;
-            // 
-            // FB_StartDiapo
-            // 
-            this.FB_StartDiapo.BackgroundImage = global::Client_PM.Properties.Resources.Start;
-            this.FB_StartDiapo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FB_StartDiapo.ClickedImage = null;
-            this.FB_StartDiapo.DisabledImage = null;
-            this.FB_StartDiapo.Image = ((System.Drawing.Image)(resources.GetObject("FB_StartDiapo.Image")));
-            this.FB_StartDiapo.Location = new System.Drawing.Point(72, 30);
-            this.FB_StartDiapo.Name = "FB_StartDiapo";
-            this.FB_StartDiapo.NeutralImage = null;
-            this.FB_StartDiapo.OverImage = null;
-            this.FB_StartDiapo.Size = new System.Drawing.Size(40, 40);
-            this.FB_StartDiapo.TabIndex = 14;
-            this.FB_StartDiapo.Text = "flashButton10";
-            this.FB_StartDiapo.UseVisualStyleBackColor = true;
-            // 
-            // FB_DiapoAddPhoto
-            // 
-            this.FB_DiapoAddPhoto.BackgroundImage = global::Client_PM.Properties.Resources.Add_Neutral;
-            this.FB_DiapoAddPhoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FB_DiapoAddPhoto.ClickedImage = null;
-            this.FB_DiapoAddPhoto.DisabledImage = null;
-            this.FB_DiapoAddPhoto.Image = ((System.Drawing.Image)(resources.GetObject("FB_DiapoAddPhoto.Image")));
-            this.FB_DiapoAddPhoto.Location = new System.Drawing.Point(17, 32);
-            this.FB_DiapoAddPhoto.Name = "FB_DiapoAddPhoto";
-            this.FB_DiapoAddPhoto.NeutralImage = null;
-            this.FB_DiapoAddPhoto.OverImage = null;
-            this.FB_DiapoAddPhoto.Size = new System.Drawing.Size(36, 36);
-            this.FB_DiapoAddPhoto.TabIndex = 3;
-            this.FB_DiapoAddPhoto.Text = "flashButton6";
-            this.FB_DiapoAddPhoto.UseVisualStyleBackColor = true;
-            this.FB_DiapoAddPhoto.Click += new System.EventHandler(this.flashButton6_Click);
-            // 
-            // FB_Info
-            // 
-            this.FB_Info.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FB_Info.BackgroundImage")));
-            this.FB_Info.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FB_Info.ClickedImage = null;
-            this.FB_Info.DisabledImage = null;
-            this.FB_Info.Image = ((System.Drawing.Image)(resources.GetObject("FB_Info.Image")));
-            this.FB_Info.Location = new System.Drawing.Point(177, 32);
-            this.FB_Info.Name = "FB_Info";
-            this.FB_Info.NeutralImage = null;
-            this.FB_Info.OverImage = null;
-            this.FB_Info.Size = new System.Drawing.Size(36, 36);
-            this.FB_Info.TabIndex = 6;
-            this.FB_Info.Text = "flashButton4";
-            this.FB_Info.UseVisualStyleBackColor = true;
-            // 
-            // flashButton12
-            // 
-            this.flashButton12.BackgroundImage = global::Client_PM.Properties.Resources.Reset_Neutral;
-            this.flashButton12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton12.ClickedImage = global::Client_PM.Properties.Resources.Reset_Clicked;
-            this.flashButton12.DisabledImage = global::Client_PM.Properties.Resources.Reset_Disabled;
-            this.flashButton12.Image = ((System.Drawing.Image)(resources.GetObject("flashButton12.Image")));
-            this.flashButton12.Location = new System.Drawing.Point(280, 23);
-            this.flashButton12.Margin = new System.Windows.Forms.Padding(10);
-            this.flashButton12.Name = "flashButton12";
-            this.flashButton12.NeutralImage = global::Client_PM.Properties.Resources.Reset_Neutral;
-            this.flashButton12.OverImage = global::Client_PM.Properties.Resources.Reset_Hover;
-            this.flashButton12.Size = new System.Drawing.Size(40, 40);
-            this.flashButton12.TabIndex = 3;
-            this.flashButton12.Text = "flashButton12";
-            this.flashButton12.UseVisualStyleBackColor = true;
-            // 
-            // flashButton11
-            // 
-            this.flashButton11.BackgroundImage = global::Client_PM.Properties.Resources.Add_Neutral;
-            this.flashButton11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton11.ClickedImage = global::Client_PM.Properties.Resources.Add_Clicked;
-            this.flashButton11.DisabledImage = global::Client_PM.Properties.Resources.Add_Disabled;
-            this.flashButton11.Image = ((System.Drawing.Image)(resources.GetObject("flashButton11.Image")));
-            this.flashButton11.Location = new System.Drawing.Point(220, 23);
-            this.flashButton11.Margin = new System.Windows.Forms.Padding(10);
-            this.flashButton11.Name = "flashButton11";
-            this.flashButton11.NeutralImage = global::Client_PM.Properties.Resources.Add_Neutral;
-            this.flashButton11.OverImage = global::Client_PM.Properties.Resources.Add_Hover;
-            this.flashButton11.Size = new System.Drawing.Size(40, 40);
-            this.flashButton11.TabIndex = 2;
-            this.flashButton11.Text = "flashButton11";
-            this.flashButton11.UseVisualStyleBackColor = true;
-            // 
-            // photosBrowser1
-            // 
-            this.photosBrowser1.Location = new System.Drawing.Point(13, 150);
-            this.photosBrowser1.Name = "photosBrowser1";
-            this.photosBrowser1.Placement = PhotoManagerClient.PhotoBrowserPlacement.Left;
-            this.photosBrowser1.SelectedPhoto = null;
-            this.photosBrowser1.Size = new System.Drawing.Size(1124, 512);
-            this.photosBrowser1.TabIndex = 5;
-            // 
-            // flashButton1
-            // 
-            this.flashButton1.BackgroundImage = global::Client_PM.Properties.Resources.Add_Neutral;
-            this.flashButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton1.ClickedImage = null;
-            this.flashButton1.DisabledImage = null;
-            this.flashButton1.Image = ((System.Drawing.Image)(resources.GetObject("flashButton1.Image")));
-            this.flashButton1.Location = new System.Drawing.Point(7, 26);
-            this.flashButton1.Name = "flashButton1";
-            this.flashButton1.NeutralImage = null;
-            this.flashButton1.OverImage = null;
-            this.flashButton1.Size = new System.Drawing.Size(36, 36);
-            this.flashButton1.TabIndex = 0;
-            this.flashButton1.Text = "flashButton1";
-            this.flashButton1.UseVisualStyleBackColor = true;
-            // 
-            // flashButton2
-            // 
-            this.flashButton2.BackgroundImage = global::Client_PM.Properties.Resources.Edit_Neutral;
-            this.flashButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton2.ClickedImage = null;
-            this.flashButton2.DisabledImage = null;
-            this.flashButton2.Image = ((System.Drawing.Image)(resources.GetObject("flashButton2.Image")));
-            this.flashButton2.Location = new System.Drawing.Point(50, 26);
-            this.flashButton2.Name = "flashButton2";
-            this.flashButton2.NeutralImage = null;
-            this.flashButton2.OverImage = null;
-            this.flashButton2.Size = new System.Drawing.Size(36, 36);
-            this.flashButton2.TabIndex = 1;
-            this.flashButton2.Text = "flashButton2";
-            this.flashButton2.UseVisualStyleBackColor = true;
-            // 
-            // flashButton3
-            // 
-            this.flashButton3.BackgroundImage = global::Client_PM.Properties.Resources.Delete_Neutral;
-            this.flashButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton3.ClickedImage = null;
-            this.flashButton3.DisabledImage = null;
-            this.flashButton3.Image = ((System.Drawing.Image)(resources.GetObject("flashButton3.Image")));
-            this.flashButton3.Location = new System.Drawing.Point(93, 26);
-            this.flashButton3.Name = "flashButton3";
-            this.flashButton3.NeutralImage = null;
-            this.flashButton3.OverImage = null;
-            this.flashButton3.Size = new System.Drawing.Size(36, 36);
-            this.flashButton3.TabIndex = 2;
-            this.flashButton3.Text = "flashButton3";
-            this.flashButton3.UseVisualStyleBackColor = true;
-            // 
-            // flashButton4
-            // 
-            this.flashButton4.BackgroundImage = global::Client_PM.Properties.Resources.Show_Neutral;
-            this.flashButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton4.ClickedImage = null;
-            this.flashButton4.DisabledImage = null;
-            this.flashButton4.Image = ((System.Drawing.Image)(resources.GetObject("flashButton4.Image")));
-            this.flashButton4.Location = new System.Drawing.Point(136, 26);
-            this.flashButton4.Name = "flashButton4";
-            this.flashButton4.NeutralImage = null;
-            this.flashButton4.OverImage = null;
-            this.flashButton4.Size = new System.Drawing.Size(36, 36);
-            this.flashButton4.TabIndex = 3;
-            this.flashButton4.Text = "flashButton4";
-            this.flashButton4.UseVisualStyleBackColor = true;
-            // 
-            // flashButton5
-            // 
-            this.flashButton5.BackgroundImage = global::Client_PM.Properties.Resources.Previous_Neutral;
-            this.flashButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton5.ClickedImage = null;
-            this.flashButton5.DisabledImage = null;
-            this.flashButton5.Image = ((System.Drawing.Image)(resources.GetObject("flashButton5.Image")));
-            this.flashButton5.Location = new System.Drawing.Point(7, 26);
-            this.flashButton5.Name = "flashButton5";
-            this.flashButton5.NeutralImage = null;
-            this.flashButton5.OverImage = null;
-            this.flashButton5.Size = new System.Drawing.Size(36, 36);
-            this.flashButton5.TabIndex = 0;
-            this.flashButton5.Text = "flashButton5";
-            this.flashButton5.UseVisualStyleBackColor = true;
-            // 
-            // flashButton6
-            // 
-            this.flashButton6.BackgroundImage = global::Client_PM.Properties.Resources.Next_Neutral;
-            this.flashButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton6.ClickedImage = null;
-            this.flashButton6.DisabledImage = null;
-            this.flashButton6.Image = ((System.Drawing.Image)(resources.GetObject("flashButton6.Image")));
-            this.flashButton6.Location = new System.Drawing.Point(67, 26);
-            this.flashButton6.Name = "flashButton6";
-            this.flashButton6.NeutralImage = null;
-            this.flashButton6.OverImage = null;
-            this.flashButton6.Size = new System.Drawing.Size(36, 36);
-            this.flashButton6.TabIndex = 1;
-            this.flashButton6.Text = "flashButton6";
-            this.flashButton6.UseVisualStyleBackColor = true;
-            // 
-            // flashButton7
-            // 
-            this.flashButton7.BackgroundImage = global::Client_PM.Properties.Resources.AddToSlide_Neutral;
-            this.flashButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton7.ClickedImage = null;
-            this.flashButton7.DisabledImage = null;
-            this.flashButton7.Image = ((System.Drawing.Image)(resources.GetObject("flashButton7.Image")));
-            this.flashButton7.Location = new System.Drawing.Point(7, 26);
-            this.flashButton7.Name = "flashButton7";
-            this.flashButton7.NeutralImage = null;
-            this.flashButton7.OverImage = null;
-            this.flashButton7.Size = new System.Drawing.Size(36, 36);
-            this.flashButton7.TabIndex = 0;
-            this.flashButton7.Text = "flashButton7";
-            this.flashButton7.UseVisualStyleBackColor = true;
-            // 
-            // flashButton8
-            // 
-            this.flashButton8.BackgroundImage = global::Client_PM.Properties.Resources.Add_Neutral;
-            this.flashButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton8.ClickedImage = null;
-            this.flashButton8.DisabledImage = null;
-            this.flashButton8.Image = ((System.Drawing.Image)(resources.GetObject("flashButton8.Image")));
-            this.flashButton8.Location = new System.Drawing.Point(65, 26);
-            this.flashButton8.Name = "flashButton8";
-            this.flashButton8.NeutralImage = null;
-            this.flashButton8.OverImage = null;
-            this.flashButton8.Size = new System.Drawing.Size(36, 36);
-            this.flashButton8.TabIndex = 1;
-            this.flashButton8.Text = "flashButton8";
-            this.flashButton8.UseVisualStyleBackColor = true;
-            // 
-            // flashButton9
-            // 
-            this.flashButton9.BackgroundImage = global::Client_PM.Properties.Resources.Reset_Neutral;
-            this.flashButton9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton9.ClickedImage = null;
-            this.flashButton9.DisabledImage = null;
-            this.flashButton9.Image = ((System.Drawing.Image)(resources.GetObject("flashButton9.Image")));
-            this.flashButton9.Location = new System.Drawing.Point(127, 26);
-            this.flashButton9.Name = "flashButton9";
-            this.flashButton9.NeutralImage = null;
-            this.flashButton9.OverImage = null;
-            this.flashButton9.Size = new System.Drawing.Size(36, 36);
-            this.flashButton9.TabIndex = 2;
-            this.flashButton9.Text = "flashButton9";
-            this.flashButton9.UseVisualStyleBackColor = true;
-            // 
-            // flashButton10
-            // 
-            this.flashButton10.BackgroundImage = global::Client_PM.Properties.Resources.Download_Neutral;
-            this.flashButton10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton10.ClickedImage = null;
-            this.flashButton10.DisabledImage = null;
-            this.flashButton10.Image = ((System.Drawing.Image)(resources.GetObject("flashButton10.Image")));
-            this.flashButton10.Location = new System.Drawing.Point(16, 26);
-            this.flashButton10.Name = "flashButton10";
-            this.flashButton10.NeutralImage = null;
-            this.flashButton10.OverImage = null;
-            this.flashButton10.Size = new System.Drawing.Size(36, 36);
-            this.flashButton10.TabIndex = 0;
-            this.flashButton10.Text = "flashButton10";
-            this.flashButton10.UseVisualStyleBackColor = true;
-            // 
-            // flashButton13
-            // 
-            this.flashButton13.BackgroundImage = global::Client_PM.Properties.Resources.Add_Neutral;
-            this.flashButton13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton13.ClickedImage = null;
-            this.flashButton13.DisabledImage = null;
-            this.flashButton13.Image = ((System.Drawing.Image)(resources.GetObject("flashButton13.Image")));
-            this.flashButton13.Location = new System.Drawing.Point(191, 22);
-            this.flashButton13.Name = "flashButton13";
-            this.flashButton13.NeutralImage = null;
-            this.flashButton13.OverImage = null;
-            this.flashButton13.Size = new System.Drawing.Size(36, 36);
-            this.flashButton13.TabIndex = 1;
-            this.flashButton13.Text = "flashButton13";
-            this.flashButton13.UseVisualStyleBackColor = true;
-            // 
-            // flashButton14
-            // 
-            this.flashButton14.BackgroundImage = global::Client_PM.Properties.Resources.Reset_Neutral;
-            this.flashButton14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton14.ClickedImage = null;
-            this.flashButton14.DisabledImage = null;
-            this.flashButton14.Image = ((System.Drawing.Image)(resources.GetObject("flashButton14.Image")));
-            this.flashButton14.Location = new System.Drawing.Point(260, 22);
-            this.flashButton14.Name = "flashButton14";
-            this.flashButton14.NeutralImage = null;
-            this.flashButton14.OverImage = null;
-            this.flashButton14.Size = new System.Drawing.Size(36, 36);
-            this.flashButton14.TabIndex = 2;
-            this.flashButton14.Text = "flashButton14";
-            this.flashButton14.UseVisualStyleBackColor = true;
+            this.PhotoBrowser.Location = new System.Drawing.Point(13, 150);
+            this.PhotoBrowser.Name = "PhotoBrowser";
+            this.PhotoBrowser.Placement = PhotoManagerClient.PhotoBrowserPlacement.Left;
+            this.PhotoBrowser.SelectedPhoto = null;
+            this.PhotoBrowser.Size = new System.Drawing.Size(1124, 512);
+            this.PhotoBrowser.TabIndex = 5;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1153, 674);
-            this.Controls.Add(this.photosBrowser1);
+            this.Controls.Add(this.PhotoBrowser);
             this.Controls.Add(this.TBC_PhotoManager);
             this.Controls.Add(this.MS_Account);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -905,9 +685,9 @@
             this.GB_Slideshow.ResumeLayout(false);
             this.GB_Image.ResumeLayout(false);
             this.TP_Filters.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
+            this.GB_Filters.ResumeLayout(false);
+            this.GB_Filters.PerformLayout();
+            this.GB_Blacklist.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -915,7 +695,6 @@
 
         #endregion
 
-        private PhotoManagerClient.PhotosBrowser PhotoBrowser;
         private System.Windows.Forms.MenuStrip MS_Account;
         private System.Windows.Forms.ToolStripMenuItem TSMI_Account;
         private System.Windows.Forms.ToolStripMenuItem MI_Account_Login;
@@ -927,59 +706,48 @@
         private System.Windows.Forms.ToolStripMenuItem TSMI_Blacklist;
         private System.Windows.Forms.ToolStripMenuItem TSMI_Help;
         private System.Windows.Forms.ToolStripMenuItem TSMI_About;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker DTP_End;
+        private System.Windows.Forms.Label LBL_DateText;
+        private System.Windows.Forms.DateTimePicker DTP_Start;
         private System.Windows.Forms.ComboBox CBX_Keywords;
         private System.IO.FileSystemWatcher FileWatcher;
         private System.Windows.Forms.ToolStripMenuItem MI_Blacklist_Add;
         private System.Windows.Forms.ToolStripMenuItem MI_Blacklist_Show;
-        private PhotoManagerClient.FlashButton FB_EditionPhoto;
-        private PhotoManagerClient.FlashButton FB_SupprimerPhoto;
-        private PhotoManagerClient.FlashButton FB_AjouterPhoto;
-        private PhotoManagerClient.FlashButton FB_Info;
         private System.Windows.Forms.ToolStripMenuItem MI_Display;
         private System.Windows.Forms.ToolStripMenuItem MI_Display_Up;
         private System.Windows.Forms.ToolStripMenuItem MI_Display_Down;
         private System.Windows.Forms.ToolStripMenuItem MI_Display_Left;
         private System.Windows.Forms.ToolStripMenuItem MI_Display_Right;
-        private PhotoManagerClient.FlashButton FB_DiapoAddPhoto;
         private System.Windows.Forms.TabControl TBC_PhotoManager;
         private System.Windows.Forms.TabPage TP_Photos;
         private System.Windows.Forms.TabPage TP_Filters;
         private System.Windows.Forms.GroupBox GB_Slideshow;
         private System.Windows.Forms.GroupBox GB_Image;
-        private PhotoManagerClient.FlashButton FB_DefilementGauche;
-        private PhotoManagerClient.FlashButton FB_DefilementDroite;
         private System.Windows.Forms.GroupBox GB_Others;
         private System.Windows.Forms.GroupBox GB_Scroll;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private PhotoManagerClient.FlashButton FB_Telecharger;
+        private System.Windows.Forms.CheckBox CB_HideMyPhotos;
+        private System.Windows.Forms.GroupBox GB_Blacklist;
+        private System.Windows.Forms.RadioButton RB_Date;
+        private System.Windows.Forms.RadioButton RB_Keyword;
+        private System.Windows.Forms.RadioButton RB_Users;
         private System.Windows.Forms.ToolTip FB_ToolTips;
-        private PhotoManagerClient.FlashButton FB_ResetDiapo;
-        private PhotoManagerClient.FlashButton FB_StartDiapo;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private PhotoManagerClient.FlashButton flashButton12;
-        private PhotoManagerClient.FlashButton flashButton11;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.GroupBox GB_Filters;
+
+        private System.Windows.Forms.ComboBox CBX_BlackList;
         private System.Windows.Forms.OpenFileDialog FileDialog;
         private System.Windows.Forms.FolderBrowserDialog FolderBrowser;
-        private PhotoManagerClient.PhotosBrowser photosBrowser1;
-        private PhotoManagerClient.FlashButton flashButton10;
-        private PhotoManagerClient.FlashButton flashButton6;
-        private PhotoManagerClient.FlashButton flashButton5;
-        private PhotoManagerClient.FlashButton flashButton9;
-        private PhotoManagerClient.FlashButton flashButton8;
-        private PhotoManagerClient.FlashButton flashButton7;
-        private PhotoManagerClient.FlashButton flashButton4;
-        private PhotoManagerClient.FlashButton flashButton3;
-        private PhotoManagerClient.FlashButton flashButton2;
-        private PhotoManagerClient.FlashButton flashButton1;
-        private PhotoManagerClient.FlashButton flashButton14;
-        private PhotoManagerClient.FlashButton flashButton13;
+        private PhotoManagerClient.PhotosBrowser PhotoBrowser;
+        private PhotoManagerClient.FlashButton FB_Other_Download;
+        private PhotoManagerClient.FlashButton FB_Scroll_Next;
+        private PhotoManagerClient.FlashButton FB_Scroll_Prev;
+        private PhotoManagerClient.FlashButton FB_Slideshow_Reset;
+        private PhotoManagerClient.FlashButton FB_Slideshow_Start;
+        private PhotoManagerClient.FlashButton FB_Slideshow_Add;
+        private PhotoManagerClient.FlashButton FB_Image_Show;
+        private PhotoManagerClient.FlashButton FB_Image_Remove;
+        private PhotoManagerClient.FlashButton FB_Image_Edit;
+        private PhotoManagerClient.FlashButton FB_Image_Add;
+        private PhotoManagerClient.FlashButton FB_Blacklist_Reset;
+        private PhotoManagerClient.FlashButton FB_Blacklist_Add;
     }
 }

@@ -124,11 +124,11 @@
   <data name="AddToSlide_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddToSlide_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AddToSlide_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AddToSlide_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="AddToSlide_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddToSlide_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AddToSlide_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddToSlide_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Add_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,11 +136,11 @@
   <data name="Add_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Add_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Add_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Add_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Add_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Delete_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Delete_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,11 +148,11 @@
   <data name="Delete_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Delete_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Delete_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Delete_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Delete_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Delete_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Delete_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Delete_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Download" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,11 +163,11 @@
   <data name="Download_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Download_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Download_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Download_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Download_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Download_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Download_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Download_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Edit_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Edit_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,11 +175,11 @@
   <data name="Edit_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Edit_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Edit_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Edit_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Edit_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Edit_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Edit_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Edit_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Hide_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hide_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,11 +187,11 @@
   <data name="Hide_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hide_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Hide_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Hide_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Hide_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hide_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hide_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hide_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Next" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,11 +202,11 @@
   <data name="Next_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Next_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Next_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Next_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Next_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Next_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Next_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Next_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Previous" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Previous.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,11 +217,11 @@
   <data name="Previous_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Previous_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Previous_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Previous_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Previous_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Previous_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Previous_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Previous_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Remove_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Remove_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,11 +229,11 @@
   <data name="Remove_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Remove_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Remove_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Remove_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Remove_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Remove_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Remove_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Remove_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Reset_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Reset_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,14 +241,11 @@
   <data name="Reset_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Reset_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Reset_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Reset_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Reset_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Reset_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Return_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Return_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Reset_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Reset_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,14 +256,11 @@
   <data name="Settings_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Settings_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Settings_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Settings_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Settings_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Settings_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Show" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Show.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Settings_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Settings_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Show_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Show_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -274,14 +268,11 @@
   <data name="Show_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Show_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Show_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Show_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Show_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Show_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Start.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Show_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Show_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Start_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Start_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -289,10 +280,10 @@
   <data name="Start_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Start_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Start_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Start_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Start_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Start_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Start_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Start_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

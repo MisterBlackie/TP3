@@ -34,7 +34,6 @@ namespace Client_PM
         private void Update_UI()
         {
             //MI_Account_Profil.Enabled = Logged_User != null;
-
             ChangerEtatBouton();
         }
 
@@ -57,19 +56,17 @@ namespace Client_PM
 
         private void ChangerEtatBouton()
         {
-            FB_AjouterPhoto.Enabled = Logged_User != null;
-            FB_EditionPhoto.Enabled = Logged_User != null;
-            FB_SupprimerPhoto.Enabled = Logged_User != null;
-            FB_Info.Enabled = Logged_User != null;
+            FB_Image_Add.Enabled = Logged_User != null;
+            FB_Image_Edit.Enabled = Logged_User != null;
+            FB_Image_Remove.Enabled = Logged_User != null;
+            FB_Image_Show.Enabled = Logged_User != null;
 
-            FB_DefilementDroite.Enabled = Logged_User != null;
-            FB_DefilementGauche.Enabled = Logged_User != null;
+            FB_Scroll_Prev.Enabled = Logged_User != null;
+            FB_Scroll_Next.Enabled = Logged_User != null;
 
-            FB_DiapoAddPhoto.Enabled = Logged_User != null;
-            FB_StartDiapo.Enabled = Logged_User != null;
-            FB_ResetDiapo.Enabled = Logged_User != null;
-
-            FB_Telecharger.Enabled = Logged_User != null;
+            FB_Slideshow_Add.Enabled = Logged_User != null;
+            FB_Slideshow_Start.Enabled = Logged_User != null;
+            FB_Slideshow_Reset.Enabled = Logged_User != null;
         }
         private void LoadPhoto()
         {

@@ -83,9 +83,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Add_Hover {
+        internal static System.Drawing.Bitmap Add_Neutral {
             get {
-                object obj = ResourceManager.GetObject("Add_Hover", resourceCulture);
+                object obj = ResourceManager.GetObject("Add_Neutral", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Add_Neutral {
+        internal static System.Drawing.Bitmap Add_Over {
             get {
-                object obj = ResourceManager.GetObject("Add_Neutral", resourceCulture);
+                object obj = ResourceManager.GetObject("Add_Over", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap AddToSlide_Hover {
+        internal static System.Drawing.Bitmap AddToSlide_Neutral {
             get {
-                object obj = ResourceManager.GetObject("AddToSlide_Hover", resourceCulture);
+                object obj = ResourceManager.GetObject("AddToSlide_Neutral", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap AddToSlide_Neutral {
+        internal static System.Drawing.Bitmap AddToSlide_Over {
             get {
-                object obj = ResourceManager.GetObject("AddToSlide_Neutral", resourceCulture);
+                object obj = ResourceManager.GetObject("AddToSlide_Over", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Delete_Hover {
+        internal static System.Drawing.Bitmap Delete_Neutral {
             get {
-                object obj = ResourceManager.GetObject("Delete_Hover", resourceCulture);
+                object obj = ResourceManager.GetObject("Delete_Neutral", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Delete_Neutral {
+        internal static System.Drawing.Bitmap Delete_Over {
             get {
-                object obj = ResourceManager.GetObject("Delete_Neutral", resourceCulture);
+                object obj = ResourceManager.GetObject("Delete_Over", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +213,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Download_Hover {
+        internal static System.Drawing.Bitmap Download_Neutral {
             get {
-                object obj = ResourceManager.GetObject("Download_Hover", resourceCulture);
+                object obj = ResourceManager.GetObject("Download_Neutral", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +223,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Download_Neutral {
+        internal static System.Drawing.Bitmap Download_Over {
             get {
-                object obj = ResourceManager.GetObject("Download_Neutral", resourceCulture);
+                object obj = ResourceManager.GetObject("Download_Over", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,9 +253,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Edit_Hover {
+        internal static System.Drawing.Bitmap Edit_Neutral {
             get {
-                object obj = ResourceManager.GetObject("Edit_Hover", resourceCulture);
+                object obj = ResourceManager.GetObject("Edit_Neutral", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,9 +263,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Edit_Neutral {
+        internal static System.Drawing.Bitmap Edit_Over {
             get {
-                object obj = ResourceManager.GetObject("Edit_Neutral", resourceCulture);
+                object obj = ResourceManager.GetObject("Edit_Over", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,9 +293,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Hide_Hover {
+        internal static System.Drawing.Bitmap Hide_Neutral {
             get {
-                object obj = ResourceManager.GetObject("Hide_Hover", resourceCulture);
+                object obj = ResourceManager.GetObject("Hide_Neutral", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,9 +303,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Hide_Neutral {
+        internal static System.Drawing.Bitmap Hide_Over {
             get {
-                object obj = ResourceManager.GetObject("Hide_Neutral", resourceCulture);
+                object obj = ResourceManager.GetObject("Hide_Over", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -343,9 +343,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Next_Hover {
+        internal static System.Drawing.Bitmap Next_Neutral {
             get {
-                object obj = ResourceManager.GetObject("Next_Hover", resourceCulture);
+                object obj = ResourceManager.GetObject("Next_Neutral", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -353,9 +353,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Next_Neutral {
+        internal static System.Drawing.Bitmap Next_Over {
             get {
-                object obj = ResourceManager.GetObject("Next_Neutral", resourceCulture);
+                object obj = ResourceManager.GetObject("Next_Over", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -393,9 +393,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Previous_Hover {
+        internal static System.Drawing.Bitmap Previous_Neutral {
             get {
-                object obj = ResourceManager.GetObject("Previous_Hover", resourceCulture);
+                object obj = ResourceManager.GetObject("Previous_Neutral", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -403,9 +403,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Previous_Neutral {
+        internal static System.Drawing.Bitmap Previous_Over {
             get {
-                object obj = ResourceManager.GetObject("Previous_Neutral", resourceCulture);
+                object obj = ResourceManager.GetObject("Previous_Over", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -433,9 +433,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Remove_Hover {
+        internal static System.Drawing.Bitmap Remove_Neutral {
             get {
-                object obj = ResourceManager.GetObject("Remove_Hover", resourceCulture);
+                object obj = ResourceManager.GetObject("Remove_Neutral", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -443,9 +443,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Remove_Neutral {
+        internal static System.Drawing.Bitmap Remove_Over {
             get {
-                object obj = ResourceManager.GetObject("Remove_Neutral", resourceCulture);
+                object obj = ResourceManager.GetObject("Remove_Over", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -473,16 +473,6 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Reset_Hover {
-            get {
-                object obj = ResourceManager.GetObject("Reset_Hover", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Reset_Neutral {
             get {
                 object obj = ResourceManager.GetObject("Reset_Neutral", resourceCulture);
@@ -493,9 +483,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Return_Neutral {
+        internal static System.Drawing.Bitmap Reset_Over {
             get {
-                object obj = ResourceManager.GetObject("Return_Neutral", resourceCulture);
+                object obj = ResourceManager.GetObject("Reset_Over", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -533,16 +523,6 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Settings_Hover {
-            get {
-                object obj = ResourceManager.GetObject("Settings_Hover", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Settings_Neutral {
             get {
                 object obj = ResourceManager.GetObject("Settings_Neutral", resourceCulture);
@@ -553,9 +533,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Show {
+        internal static System.Drawing.Bitmap Settings_Over {
             get {
-                object obj = ResourceManager.GetObject("Show", resourceCulture);
+                object obj = ResourceManager.GetObject("Settings_Over", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -583,16 +563,6 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Show_Hover {
-            get {
-                object obj = ResourceManager.GetObject("Show_Hover", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Show_Neutral {
             get {
                 object obj = ResourceManager.GetObject("Show_Neutral", resourceCulture);
@@ -603,9 +573,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Start {
+        internal static System.Drawing.Bitmap Show_Over {
             get {
-                object obj = ResourceManager.GetObject("Start", resourceCulture);
+                object obj = ResourceManager.GetObject("Show_Over", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -633,9 +603,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Start_Hover {
+        internal static System.Drawing.Bitmap Start_Neutral {
             get {
-                object obj = ResourceManager.GetObject("Start_Hover", resourceCulture);
+                object obj = ResourceManager.GetObject("Start_Neutral", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -643,9 +613,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Start_Neutral {
+        internal static System.Drawing.Bitmap Start_Over {
             get {
-                object obj = ResourceManager.GetObject("Start_Neutral", resourceCulture);
+                object obj = ResourceManager.GetObject("Start_Over", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
