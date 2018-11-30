@@ -27,7 +27,6 @@ namespace Client_PM
             ValidationProvider = new ValidationProvider(this, Submit_Task);
             ValidationProvider.AddControlToValidate(TBX_UserName, Validate_UserName, Validate_UserName_OnSubmit);
             ValidationProvider.AddControlToValidate(TBX_Password, Validate_Password, Validate_Password_OnSubmit);
-
             LoadSettings();
         }
 
@@ -35,6 +34,7 @@ namespace Client_PM
         {
             if (!Properties.Settings.Default.First_Use)
             {
+                CBX_SeSouvenir.Checked = Properties.Settings.Default.Username != "";
                 TBX_UserName.Text = Properties.Settings.Default.Username;
                 TBX_Password.Text = Properties.Settings.Default.Password;
             }
@@ -46,10 +46,12 @@ namespace Client_PM
             {
                 Properties.Settings.Default.Username = TBX_UserName.Text;
                 Properties.Settings.Default.Password = TBX_Password.Text;
-
                 Properties.Settings.Default.First_Use = false;
-
                 Properties.Settings.Default.Save();
+            }
+            else
+            {
+                Properties.Settings.Default.Reset();
             }
         }
 
