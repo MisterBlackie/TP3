@@ -294,7 +294,6 @@
             this.TBC_PhotoManager.SelectedIndex = 0;
             this.TBC_PhotoManager.Size = new System.Drawing.Size(1129, 120);
             this.TBC_PhotoManager.TabIndex = 4;
-            this.TBC_PhotoManager.SelectedIndexChanged += new System.EventHandler(this.TBC_PhotoManager_SelectedIndexChanged);
             // 
             // TP_Photos
             // 
@@ -569,6 +568,8 @@
             this.FB_Slideshow_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.FB_Slideshow_Add.ClickedImage = global::Client_PM.Properties.Resources.AddToSlide_Clicked;
             this.FB_Slideshow_Add.DisabledImage = global::Client_PM.Properties.Resources.AddToSlide_Disabled;
+            this.FB_Slideshow_Add.Enabled = false;
+            this.FB_Slideshow_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FB_Slideshow_Add.Image = ((System.Drawing.Image)(resources.GetObject("FB_Slideshow_Add.Image")));
             this.FB_Slideshow_Add.Location = new System.Drawing.Point(13, 26);
             this.FB_Slideshow_Add.Margin = new System.Windows.Forms.Padding(10);
@@ -707,7 +708,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(1169, 713);
             this.Name = "MainForm";
-            this.Text = "Photo manager client application";
+            this.Text = "Photo Manager Client";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.MS_Account.ResumeLayout(false);

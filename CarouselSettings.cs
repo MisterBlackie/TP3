@@ -14,23 +14,23 @@ namespace Client_PM
     public partial class CarouselSettings : Form
     {
 
-        ListeSettings Settings { get; set; }
+        ListeSettings Settings = new ListeSettings();
 
         public CarouselSettings()
         {
             InitializeComponent();
+            Settings.VitesseCarousel = -1;
         }
 
         private void SetBaseValue()
         {
-            // Les valeurs de base:
-            Settings.DefilementAleatoire = false;
-            TrackBarVitesse.Value = 10;
+            Settings.VitesseCarousel = 10;
         }
 
         private void CarouselSettings_Load(object sender, EventArgs e)
         {
-            SetBaseValue();
+            if (Settings.VitesseCarousel == -1)
+                SetBaseValue();
         }
 
         private void CB_DefilementAleatoire_CheckedChanged(object sender, EventArgs e)

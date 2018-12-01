@@ -49,10 +49,10 @@
             this.FB_Settings.OverImage = global::Client_PM.Properties.Resources.Settings_Over;
             this.FB_Settings.Size = new System.Drawing.Size(36, 36);
             this.FB_Settings.TabIndex = 3;
-            this.FB_Settings.Text = "flashButton1";
+            this.FB_Settings.Text = "Options";
             this.FB_Settings.UseVisualStyleBackColor = false;
             this.FB_Settings.Click += new System.EventHandler(this.FB_Settings_Click);
-            this.FB_Settings.Paint += new System.Windows.Forms.PaintEventHandler(this.flashButton1_Paint);
+            this.FB_Settings.Paint += new System.Windows.Forms.PaintEventHandler(this.FB_Settings_Paint);
             // 
             // imageBox1
             // 

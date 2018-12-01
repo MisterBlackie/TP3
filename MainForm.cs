@@ -17,6 +17,10 @@ namespace Client_PM
         PhotoFilter PhotoFilter = null;
         bool Initializing = true;
         InfoPhoto DLG;
+        List<Photo> Slideshow = new List<Photo>();
+        List<int> Blacklist = new List<int>();
+        bool AddToSlideMode = true;     //True: Ajout  -  False - Retrait
+        bool AddToBlacklistMode = true; //True: Ajout  -  False - Retrait
         public MainForm()
         {
             InitializeComponent();
@@ -81,18 +85,28 @@ namespace Client_PM
 
         private void FB_Slideshow_Add_Click(object sender, EventArgs e)
         {
-
+            if (AddToSlideMode)
+            {
+                AddToSlideshow();
+            }
+            else
+            {
+                RemoveFromSlideshow();
+            }
+            UpdateAddSlideShow();
         }
 
         private void FB_Slideshow_Start_Click(object sender, EventArgs e)
         {
-            Carousel dlg = new Carousel();
-            dlg.Show();
+            Carousel DLG = new Carousel();
+            DLG.PhotoList = Slideshow;
+            DLG.Show();
         }
 
         private void FB_Slideshow_Reset_Click(object sender, EventArgs e)
         {
-
+            ResetSlideshow();
+            UpdateAddSlideShow();
         }
 
         private void FB_Other_Download_Click(object sender, EventArgs e)
@@ -102,7 +116,7 @@ namespace Client_PM
 
         private void FB_Blacklist_Add_Click(object sender, EventArgs e)
         {
-
+            //AddToBlacklist(); //Pas terminé.
         }
 
         private void FB_Blacklist_Reset_Click(object sender, EventArgs e)
@@ -237,6 +251,7 @@ namespace Client_PM
         private void PhotoBrowser_SelectedChanged(object sender, EventArgs e)
         {
             FB_Image_Show.Enabled = PhotoBrowser.SelectedPhoto != null;
+            UpdateAddSlideShow();
             if (PhotoBrowser.SelectedPhoto != null && PhotoBrowser.SelectedPhoto.OwnerId == Logged_User.Id)
             {
                 FB_Image_Edit.Enabled = true;
@@ -311,6 +326,7 @@ namespace Client_PM
 
         private void ShowPhoto()
         {
+            //Modifier la façon de savoir si l'image et en mode show ou hide.
             if (FB_Image_Show.Text == "")
             {
                 FB_Image_Show.Text = " ";
@@ -344,7 +360,6 @@ namespace Client_PM
             FB_Scroll_Next.Enabled = Logged_User != null;
 
             //SlideShow
-            FB_Slideshow_Add.Enabled = Logged_User != null;
             FB_Slideshow_Start.Enabled = Logged_User != null;
             FB_Slideshow_Reset.Enabled = Logged_User != null;
 
@@ -361,8 +376,10 @@ namespace Client_PM
             foreach (User user in PhotoFilter.UsersList)
             {
                 if (user.Name != null)
+                {
                     CBX_UsersList.Items.Add(user);
-                CBX_BlackList.Items.Add(user);
+                    CBX_BlackList.Items.Add(user);
+                }
             }
             CBX_UsersList.SelectedIndex = 1;
         }
@@ -396,11 +413,103 @@ namespace Client_PM
             DTP_End.Enabled = Logged_User != null;
             CB_HideMyPhotos.Enabled = Logged_User != null;
         }
-        #endregion
 
-        private void TBC_PhotoManager_SelectedIndexChanged(object sender, EventArgs e)
+        private void AddToSlideshow()
         {
-
+            bool AlreadyInSlideshow = false;
+            foreach (Photo Image in Slideshow)
+            {
+                AlreadyInSlideshow = AlreadyInSlideshow || Image == PhotoBrowser.SelectedPhoto; //Si l'image est déjà présente dans le slideshow.
+            }
+            if (!AlreadyInSlideshow)
+                Slideshow.Add(PhotoBrowser.SelectedPhoto);
         }
+
+        private void ResetSlideshow()
+        {
+            Slideshow.Clear();
+        }
+
+        private void UpdateAddSlideShow()
+        {
+            bool AlreadyInSlideshow = false;
+            FB_Slideshow_Add.Enabled = PhotoBrowser.SelectedPhoto != null;
+            if (PhotoBrowser.SelectedPhoto != null)
+            {
+                foreach (Photo Image in Slideshow)
+                {
+                    if (Image == PhotoBrowser.SelectedPhoto)
+                    {
+                        AlreadyInSlideshow = true;
+                        AddToSlideMode = false;
+                        //Les images utilisé sont temporaire jusqu'à ce que l'image adéquate soit faite.
+                        FB_Slideshow_Add.BackgroundImage = Properties.Resources.Remove_Neutral;
+                        FB_Slideshow_Add.ClickedImage = Properties.Resources.Remove_Clicked;
+                        FB_Slideshow_Add.DisabledImage = Properties.Resources.Remove_Disabled;
+                        FB_Slideshow_Add.NeutralImage = Properties.Resources.Remove_Neutral;
+                        FB_Slideshow_Add.OverImage = Properties.Resources.Remove_Over;
+                    }
+                }
+                if (!AlreadyInSlideshow)
+                {
+                    AddToSlideMode = true;
+                    FB_Slideshow_Add.BackgroundImage = Properties.Resources.AddToSlide_Neutral;
+                    FB_Slideshow_Add.ClickedImage = Properties.Resources.AddToSlide_Clicked;
+                    FB_Slideshow_Add.DisabledImage = Properties.Resources.AddToSlide_Disabled;
+                    FB_Slideshow_Add.NeutralImage = Properties.Resources.AddToSlide_Neutral;
+                    FB_Slideshow_Add.OverImage = Properties.Resources.AddToSlide_Over;
+                }
+            }
+        }
+
+        private void RemoveFromSlideshow()
+        {
+            foreach (Photo Image in Slideshow)
+            {
+                if (Image == PhotoBrowser.SelectedPhoto)
+                {
+                    Slideshow.Remove(Image);
+                    break;
+                }
+
+            }
+        }
+
+        private void AddToBlacklist()
+        {
+            if (CBX_BlackList.SelectedIndex > 0)
+            {
+                foreach (User User in PhotoFilter.UsersList)
+                {
+                    if (User.Name == CBX_BlackList.SelectedText)
+                    {
+                        Blacklist.Add(User.Id);
+                        CBX_BlackList.SelectedIndex = -1;
+                        CBX_BlackList.Text = "";
+                    }
+                }
+            }
+            else
+            {
+                if (PhotoBrowser.SelectedPhoto != null)
+                {
+                    Blacklist.Add(PhotoBrowser.SelectedPhoto.OwnerId);
+                }
+            }
+        }
+
+        private void UpdateAddBlacklist()
+        {
+            FB_Blacklist_Add.Enabled = PhotoBrowser.SelectedPhoto != null || CBX_BlackList.SelectedIndex > 0;
+
+            foreach (int User in Blacklist)
+            {
+                if (PhotoBrowser.SelectedPhoto != null && User == PhotoBrowser.SelectedPhoto.OwnerId)
+                {
+
+                }
+            }
+        }
+        #endregion
     }
 }

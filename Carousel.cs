@@ -13,7 +13,7 @@ namespace Client_PM
 {
     public partial class Carousel : Form
     {
-        public List<Photo> PhotoListe { get; set; }
+        public List<Photo> PhotoList { get; set; }
 
         public Carousel()
         {
@@ -61,17 +61,7 @@ namespace Client_PM
 
         private void paramètresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CarouselSettings DLG = new CarouselSettings();
-            DLG.Show();
-        }
-
-        private void flashButton1_Paint(object sender, PaintEventArgs e)
-        {
-            Bitmap bmp = Properties.Resources.Settings;
-            bmp.MakeTransparent(Color.White);
-            int x = (FB_Settings.Width - bmp.Width) / 2;
-            int y = (FB_Settings.Height - bmp.Height) / 2;
-            e.Graphics.DrawImage(bmp, x, y);
+            OpenSettings();
         }
 
         private void Carousel_KeyDown(object sender, KeyEventArgs e)
@@ -85,7 +75,23 @@ namespace Client_PM
 
         private void FB_Settings_Click(object sender, EventArgs e)
         {
-            Refresh();
+            OpenSettings();
+            //Refresh();
+        }
+
+        private void OpenSettings()
+        {
+            CarouselSettings DLG = new CarouselSettings();
+            DLG.Show();
+        }
+
+        private void FB_Settings_Paint(object sender, PaintEventArgs e)
+        {
+            Bitmap bmp = Properties.Resources.Settings;
+            bmp.MakeTransparent(Color.White);
+            int x = (FB_Settings.Width - bmp.Width) / 2;
+            int y = (FB_Settings.Height - bmp.Height) / 2;
+            e.Graphics.DrawImage(bmp, x, y);
         }
     }
 }
