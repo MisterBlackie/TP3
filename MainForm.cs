@@ -16,12 +16,13 @@ namespace Client_PM
         User Logged_User = null;
         PhotoFilter PhotoFilter = null;
         bool Initializing = true;
+        InfoPhoto DLG;
         public MainForm()
         {
             InitializeComponent();
             Text = "Photo Manager Client - Not connected";
         }
-        
+
         private void MainForm_Shown(object sender, EventArgs e)
         {
             // Get server attention...
@@ -51,7 +52,7 @@ namespace Client_PM
 
         private void FB_Image_Edit_Click(object sender, EventArgs e)
         {
-
+            EditPhoto();
         }
 
         private void FB_Image_Remove_Click(object sender, EventArgs e)
@@ -65,7 +66,7 @@ namespace Client_PM
 
         private void FB_Image_Show_Click(object sender, EventArgs e)
         {
-
+            ShowPhoto();
         }
 
         private void FB_Scroll_Prev_Click(object sender, EventArgs e)
@@ -235,15 +236,16 @@ namespace Client_PM
         #region Events
         private void PhotoBrowser_SelectedChanged(object sender, EventArgs e)
         {
-            if (PhotoBrowser.SelectedPhoto != null && PhotoBrowser.SelectedPhoto.OwnerId != Logged_User.Id)
-            {
-                FB_Image_Edit.Enabled = false;
-                FB_Image_Remove.Enabled = false;
-            }
-            else
+            FB_Image_Show.Enabled = PhotoBrowser.SelectedPhoto != null;
+            if (PhotoBrowser.SelectedPhoto != null && PhotoBrowser.SelectedPhoto.OwnerId == Logged_User.Id)
             {
                 FB_Image_Edit.Enabled = true;
                 FB_Image_Remove.Enabled = true;
+            }
+            else
+            {
+                FB_Image_Edit.Enabled = false;
+                FB_Image_Remove.Enabled = false;
             }
         }
         #endregion
@@ -286,12 +288,49 @@ namespace Client_PM
 
         private void AddPhoto()
         {
-            AddPhoto DLG = new AddPhoto();
+            AddEditPhoto DLG = new AddEditPhoto(false);
 
             if (DLG.ShowDialog() == DialogResult.OK)
             {
                 DLG.Photo.OwnerId = Logged_User.Id;
                 DBPhotosWebServices.CreatePhoto(DLG.Photo);
+                LoadPhoto();
+            }
+        }
+
+        private void EditPhoto()
+        {
+            AddEditPhoto DLG = new AddEditPhoto(true);
+            DLG.Photo = PhotoBrowser.SelectedPhoto;
+            if (DLG.ShowDialog() == DialogResult.OK)
+            {
+                DBPhotosWebServices.UpdatePhoto(DLG.Photo);
+                LoadPhoto();
+            }
+        }
+
+        private void ShowPhoto()
+        {
+            if (FB_Image_Show.Text == "")
+            {
+                FB_Image_Show.Text = " ";
+                DLG = new InfoPhoto();
+                DLG.Photo = PhotoBrowser.SelectedPhoto;
+                DLG.User = DBPhotosWebServices.GetUser(PhotoBrowser.SelectedPhoto.OwnerId).ToString();
+                DLG.Show();
+                FB_Image_Show.ClickedImage = Properties.Resources.Hide_Clicked;
+                FB_Image_Show.DisabledImage = Properties.Resources.Hide_Disabled;
+                FB_Image_Show.NeutralImage = Properties.Resources.Hide_Neutral;
+                FB_Image_Show.OverImage = Properties.Resources.Hide_Over;
+            }
+            else
+            {
+                FB_Image_Show.Text = "";
+                DLG.Close();
+                FB_Image_Show.ClickedImage = Properties.Resources.Show_Clicked;
+                FB_Image_Show.DisabledImage = Properties.Resources.Show_Disabled;
+                FB_Image_Show.NeutralImage = Properties.Resources.Show_Neutral;
+                FB_Image_Show.OverImage = Properties.Resources.Show_Over;
             }
         }
 
@@ -299,9 +338,6 @@ namespace Client_PM
         {
             //Image
             FB_Image_Add.Enabled = Logged_User != null;
-            FB_Image_Edit.Enabled = Logged_User != null;
-            FB_Image_Remove.Enabled = Logged_User != null;
-            FB_Image_Show.Enabled = Logged_User != null;
 
             //Scroll
             FB_Scroll_Prev.Enabled = Logged_User != null;
@@ -362,5 +398,9 @@ namespace Client_PM
         }
         #endregion
 
+        private void TBC_PhotoManager_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

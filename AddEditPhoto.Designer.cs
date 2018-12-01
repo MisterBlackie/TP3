@@ -1,6 +1,6 @@
 ﻿namespace Client_PM
 {
-    partial class AddPhoto
+    partial class AddEditPhoto
     {
         /// <summary>
         /// Required designer variable.
@@ -29,35 +29,35 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LBL_Desc = new System.Windows.Forms.Label();
             this.RTB_Description = new System.Windows.Forms.RichTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.TB_Keywords = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.RBTN_EstPrivee = new System.Windows.Forms.RadioButton();
-            this.TB_Titre = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.LBL_Keywords = new System.Windows.Forms.Label();
+            this.TBX_Keywords = new System.Windows.Forms.TextBox();
+            this.GB_Info = new System.Windows.Forms.GroupBox();
+            this.RB_Private = new System.Windows.Forms.RadioButton();
+            this.TBX_Title = new System.Windows.Forms.TextBox();
+            this.LBL_Title = new System.Windows.Forms.Label();
             this.BTN_Cancel = new System.Windows.Forms.Button();
             this.BTN_Ajout = new System.Windows.Forms.Button();
             this.BTN_Selectionner = new System.Windows.Forms.Button();
             this.FileDialog = new System.Windows.Forms.OpenFileDialog();
             this.ImageBox = new PhotoManagerClient.ImageBox();
-            this.groupBox1.SuspendLayout();
+            this.GB_Info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // LBL_Desc
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.LBL_Desc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 101);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 25);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Description:";
+            this.LBL_Desc.AutoSize = true;
+            this.LBL_Desc.Location = new System.Drawing.Point(16, 101);
+            this.LBL_Desc.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.LBL_Desc.Name = "LBL_Desc";
+            this.LBL_Desc.Size = new System.Drawing.Size(93, 20);
+            this.LBL_Desc.TabIndex = 10;
+            this.LBL_Desc.Text = "Description:";
             // 
             // RTB_Description
             // 
@@ -70,87 +70,87 @@
             this.RTB_Description.TabIndex = 3;
             this.RTB_Description.Text = "";
             // 
-            // label2
+            // LBL_Keywords
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.LBL_Keywords.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 229);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 25);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Mot-clé:";
+            this.LBL_Keywords.AutoSize = true;
+            this.LBL_Keywords.Location = new System.Drawing.Point(16, 229);
+            this.LBL_Keywords.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LBL_Keywords.Name = "LBL_Keywords";
+            this.LBL_Keywords.Size = new System.Drawing.Size(73, 20);
+            this.LBL_Keywords.TabIndex = 11;
+            this.LBL_Keywords.Text = "Mot-clés:";
             // 
-            // TB_Keywords
+            // TBX_Keywords
             // 
-            this.TB_Keywords.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TBX_Keywords.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TB_Keywords.Location = new System.Drawing.Point(19, 251);
-            this.TB_Keywords.Margin = new System.Windows.Forms.Padding(2);
-            this.TB_Keywords.Name = "TB_Keywords";
-            this.TB_Keywords.Size = new System.Drawing.Size(337, 30);
-            this.TB_Keywords.TabIndex = 4;
+            this.TBX_Keywords.Location = new System.Drawing.Point(19, 251);
+            this.TBX_Keywords.Margin = new System.Windows.Forms.Padding(2);
+            this.TBX_Keywords.Name = "TBX_Keywords";
+            this.TBX_Keywords.Size = new System.Drawing.Size(337, 26);
+            this.TBX_Keywords.TabIndex = 4;
             // 
-            // groupBox1
+            // GB_Info
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.GB_Info.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.RBTN_EstPrivee);
-            this.groupBox1.Controls.Add(this.TB_Titre);
-            this.groupBox1.Controls.Add(this.TB_Keywords);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.RTB_Description);
-            this.groupBox1.Location = new System.Drawing.Point(12, 255);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(373, 307);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Information";
+            this.GB_Info.Controls.Add(this.RB_Private);
+            this.GB_Info.Controls.Add(this.TBX_Title);
+            this.GB_Info.Controls.Add(this.TBX_Keywords);
+            this.GB_Info.Controls.Add(this.LBL_Title);
+            this.GB_Info.Controls.Add(this.LBL_Keywords);
+            this.GB_Info.Controls.Add(this.LBL_Desc);
+            this.GB_Info.Controls.Add(this.RTB_Description);
+            this.GB_Info.Location = new System.Drawing.Point(12, 255);
+            this.GB_Info.Margin = new System.Windows.Forms.Padding(2);
+            this.GB_Info.Name = "GB_Info";
+            this.GB_Info.Padding = new System.Windows.Forms.Padding(2);
+            this.GB_Info.Size = new System.Drawing.Size(373, 307);
+            this.GB_Info.TabIndex = 2;
+            this.GB_Info.TabStop = false;
+            this.GB_Info.Text = "Informations";
             // 
-            // RBTN_EstPrivee
+            // RB_Private
             // 
-            this.RBTN_EstPrivee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.RB_Private.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.RBTN_EstPrivee.AutoSize = true;
-            this.RBTN_EstPrivee.Location = new System.Drawing.Point(249, 60);
-            this.RBTN_EstPrivee.Name = "RBTN_EstPrivee";
-            this.RBTN_EstPrivee.Size = new System.Drawing.Size(88, 29);
-            this.RBTN_EstPrivee.TabIndex = 2;
-            this.RBTN_EstPrivee.TabStop = true;
-            this.RBTN_EstPrivee.Text = "Privée";
-            this.RBTN_EstPrivee.UseVisualStyleBackColor = true;
+            this.RB_Private.AutoSize = true;
+            this.RB_Private.Location = new System.Drawing.Point(267, 60);
+            this.RB_Private.Name = "RB_Private";
+            this.RB_Private.Size = new System.Drawing.Size(70, 24);
+            this.RB_Private.TabIndex = 2;
+            this.RB_Private.TabStop = true;
+            this.RB_Private.Text = "Privée";
+            this.RB_Private.UseVisualStyleBackColor = true;
             // 
-            // TB_Titre
+            // TBX_Title
             // 
-            this.TB_Titre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TBX_Title.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TB_Titre.Location = new System.Drawing.Point(19, 59);
-            this.TB_Titre.Margin = new System.Windows.Forms.Padding(2);
-            this.TB_Titre.Name = "TB_Titre";
-            this.TB_Titre.Size = new System.Drawing.Size(215, 30);
-            this.TB_Titre.TabIndex = 1;
+            this.TBX_Title.Location = new System.Drawing.Point(19, 59);
+            this.TBX_Title.Margin = new System.Windows.Forms.Padding(2);
+            this.TBX_Title.Name = "TBX_Title";
+            this.TBX_Title.Size = new System.Drawing.Size(215, 26);
+            this.TBX_Title.TabIndex = 1;
             // 
-            // label3
+            // LBL_Title
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.LBL_Title.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 37);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 25);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Titre:";
+            this.LBL_Title.AutoSize = true;
+            this.LBL_Title.Location = new System.Drawing.Point(15, 37);
+            this.LBL_Title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LBL_Title.Name = "LBL_Title";
+            this.LBL_Title.Size = new System.Drawing.Size(44, 20);
+            this.LBL_Title.TabIndex = 9;
+            this.LBL_Title.Text = "Titre:";
             // 
             // BTN_Cancel
             // 
@@ -200,7 +200,7 @@
             this.ImageBox.ControlToolTipText = "You can either drag & drop, paste image from clipboard or choose an image file wi" +
     "th context menu.";
             this.ImageBox.ImportImageText = "Import image from file...";
-            this.ImageBox.Location = new System.Drawing.Point(14, 14);
+            this.ImageBox.Location = new System.Drawing.Point(12, 13);
             this.ImageBox.Margin = new System.Windows.Forms.Padding(5);
             this.ImageBox.Name = "ImageBox";
             this.ImageBox.OpenFileDialogTitle = "Please choose image an file";
@@ -210,26 +210,27 @@
             this.ImageBox.TabStop = false;
             this.ImageBox.BackgroundImageChanged += new System.EventHandler(this.ImageBox_BackgroundImageChanged);
             // 
-            // AJoutPhoto
+            // AddEditPhoto
             // 
             this.AcceptButton = this.BTN_Ajout;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BTN_Cancel;
             this.ClientSize = new System.Drawing.Size(402, 613);
             this.Controls.Add(this.BTN_Selectionner);
             this.Controls.Add(this.BTN_Ajout);
             this.Controls.Add(this.BTN_Cancel);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.GB_Info);
             this.Controls.Add(this.ImageBox);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MinimumSize = new System.Drawing.Size(418, 652);
-            this.Name = "AJoutPhoto";
+            this.Name = "AddEditPhoto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ajout d\'une photo";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Load += new System.EventHandler(this.AddEditPhoto_Load);
+            this.GB_Info.ResumeLayout(false);
+            this.GB_Info.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageBox)).EndInit();
             this.ResumeLayout(false);
 
@@ -238,14 +239,14 @@
         #endregion
 
         private PhotoManagerClient.ImageBox ImageBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LBL_Desc;
         private System.Windows.Forms.RichTextBox RTB_Description;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TB_Keywords;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton RBTN_EstPrivee;
-        private System.Windows.Forms.TextBox TB_Titre;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LBL_Keywords;
+        private System.Windows.Forms.TextBox TBX_Keywords;
+        private System.Windows.Forms.GroupBox GB_Info;
+        private System.Windows.Forms.RadioButton RB_Private;
+        private System.Windows.Forms.TextBox TBX_Title;
+        private System.Windows.Forms.Label LBL_Title;
         private System.Windows.Forms.Button BTN_Cancel;
         private System.Windows.Forms.Button BTN_Ajout;
         private System.Windows.Forms.Button BTN_Selectionner;

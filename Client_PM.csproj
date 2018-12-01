@@ -64,11 +64,11 @@
     <Compile Include="A propos.Designer.cs">
       <DependentUpon>A propos.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddPhoto.cs">
+    <Compile Include="AddEditPhoto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddPhoto.Designer.cs">
-      <DependentUpon>AddPhoto.cs</DependentUpon>
+    <Compile Include="AddEditPhoto.Designer.cs">
+      <DependentUpon>AddEditPhoto.cs</DependentUpon>
     </Compile>
     <Compile Include="Carousel.cs">
       <SubType>Form</SubType>
@@ -93,6 +93,12 @@
     </Compile>
     <Compile Include="DLG_Login.Designer.cs">
       <DependentUpon>DLG_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoPhoto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoPhoto.Designer.cs">
+      <DependentUpon>InfoPhoto.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -127,8 +133,8 @@
     <EmbeddedResource Include="A propos.resx">
       <DependentUpon>A propos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddPhoto.resx">
-      <DependentUpon>AddPhoto.cs</DependentUpon>
+    <EmbeddedResource Include="AddEditPhoto.resx">
+      <DependentUpon>AddEditPhoto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Carousel.resx">
       <DependentUpon>Carousel.cs</DependentUpon>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DLG_Login.resx">
       <DependentUpon>DLG_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoPhoto.resx">
+      <DependentUpon>InfoPhoto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

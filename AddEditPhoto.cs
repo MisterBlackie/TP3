@@ -11,20 +11,20 @@ using Validation;
 
 namespace Client_PM
 {
-    public partial class AddPhoto : Form
+    public partial class AddEditPhoto : Form
     {
         public PhotoManagerClient.Photo Photo { get; set; }
-
         private ValidationProvider ValidationProvider;
+        bool EditingMode = false;
 
-        public AddPhoto()
+        public AddEditPhoto(bool Editing)
         {
             Photo = new PhotoManagerClient.Photo();
+            EditingMode = Editing;
+
             InitializeComponent();
             ValidationProvider = new ValidationProvider(this);
-
-
-            ValidationProvider.AddControlToValidate(TB_Titre, TB_Titre_Validation);
+            ValidationProvider.AddControlToValidate(TBX_Title, TB_Titre_Validation);
             ValidationProvider.AddControlToValidate(ImageBox, ImageValidation);
         }
 
@@ -34,7 +34,7 @@ namespace Client_PM
         private bool TB_Titre_Validation(ref string Message)
         {
             Message = "Le titre ne doit pas être vide.";
-            return TB_Titre.Text != "";
+            return TBX_Title.Text != "";
         }
 
         private bool ImageValidation(ref string Message)
@@ -44,7 +44,7 @@ namespace Client_PM
         }
         /*
          *  Fin méthode de validation
-         */ 
+         */
         private void BTN_Selectionner_Click(object sender, EventArgs e)
         {
             if (FileDialog.ShowDialog() == DialogResult.OK)
@@ -67,7 +67,7 @@ namespace Client_PM
             if (Image != null)
             {
                 if (ChangerImageBox) // Ce cas sera faux seulement si nous changeons l'image de par l'image box
-                   ImageBox.BackgroundImage = Image;
+                    ImageBox.BackgroundImage = Image;
 
                 Photo.SetImage(Image);
             }
@@ -75,16 +75,29 @@ namespace Client_PM
 
         private void BTN_Ajout_Click(object sender, EventArgs e)
         {
-            Photo.Title = TB_Titre.Text;
+            Photo.Title = TBX_Title.Text;
             Photo.Description = RTB_Description.Text;
-            Photo.Keywords = TB_Keywords.Text;
-            Photo.Shared = !RBTN_EstPrivee.Checked;
+            Photo.Keywords = TBX_Keywords.Text; //Devrait permettre plus qu'un mot clé...
+            Photo.Shared = !RB_Private.Checked;
         }
 
         private void ImageBox_BackgroundImageChanged(object sender, EventArgs e)
         {
             Image Image = ImageBox.BackgroundImage; // On ne peut pas envoyer une référence à une propriété...
             ChangerImage(ref Image, false);
+        }
+
+        private void AddEditPhoto_Load(object sender, EventArgs e)
+        {
+            if (EditingMode)
+            {
+                BTN_Ajout.Text = "Modifier";
+                ImageBox.BackgroundImage = Photo.GetOriginalImage();
+                TBX_Title.Text = Photo.Title;
+                RTB_Description.Text = Photo.Description;
+                TBX_Keywords.Text = Photo.Keywords;
+                RB_Private.Checked = !Photo.Shared;
+            }
         }
     }
 }

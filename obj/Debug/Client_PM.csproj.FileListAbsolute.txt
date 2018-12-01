@@ -22,4 +22,5 @@ C:\Users\Gabriel\Documents\GitHub\TP3\obj\Debug\Client_PM.csproj.CoreCompileInpu
 C:\Users\Gabriel\Documents\GitHub\TP3\obj\Debug\Client_PM.csproj.CopyComplete
 C:\Users\Gabriel\Documents\GitHub\TP3\obj\Debug\Client_PM.exe
 C:\Users\Gabriel\Documents\GitHub\TP3\obj\Debug\Client_PM.pdb
-C:\Users\Gabriel\Documents\GitHub\TP3\obj\Debug\Client_PM.AddPhoto.resources
+C:\Users\Gabriel\Documents\GitHub\TP3\obj\Debug\Client_PM.AddEditPhoto.resources
+C:\Users\Gabriel\Documents\GitHub\TP3\obj\Debug\Client_PM.InfoPhoto.resources
