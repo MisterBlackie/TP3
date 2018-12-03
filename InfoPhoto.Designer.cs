@@ -50,7 +50,7 @@
             this.LBL_Title.Location = new System.Drawing.Point(7, 32);
             this.LBL_Title.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.LBL_Title.Name = "LBL_Title";
-            this.LBL_Title.Size = new System.Drawing.Size(40, 20);
+            this.LBL_Title.Size = new System.Drawing.Size(51, 25);
             this.LBL_Title.TabIndex = 1;
             this.LBL_Title.Text = "Titre";
             // 
@@ -60,7 +60,7 @@
             this.LBL_Description.Location = new System.Drawing.Point(7, 160);
             this.LBL_Description.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.LBL_Description.Name = "LBL_Description";
-            this.LBL_Description.Size = new System.Drawing.Size(89, 20);
+            this.LBL_Description.Size = new System.Drawing.Size(109, 25);
             this.LBL_Description.TabIndex = 2;
             this.LBL_Description.Text = "Description";
             // 
@@ -70,7 +70,7 @@
             this.TBX_Title.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TBX_Title.Name = "TBX_Title";
             this.TBX_Title.ReadOnly = true;
-            this.TBX_Title.Size = new System.Drawing.Size(231, 26);
+            this.TBX_Title.Size = new System.Drawing.Size(231, 30);
             this.TBX_Title.TabIndex = 3;
             // 
             // RTB_Description
@@ -88,7 +88,7 @@
             this.LBL_Author.Location = new System.Drawing.Point(7, 72);
             this.LBL_Author.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.LBL_Author.Name = "LBL_Author";
-            this.LBL_Author.Size = new System.Drawing.Size(57, 20);
+            this.LBL_Author.Size = new System.Drawing.Size(70, 25);
             this.LBL_Author.TabIndex = 5;
             this.LBL_Author.Text = "Auteur";
             // 
@@ -97,7 +97,7 @@
             this.TBX_Author.Location = new System.Drawing.Point(148, 69);
             this.TBX_Author.Name = "TBX_Author";
             this.TBX_Author.ReadOnly = true;
-            this.TBX_Author.Size = new System.Drawing.Size(231, 26);
+            this.TBX_Author.Size = new System.Drawing.Size(231, 30);
             this.TBX_Author.TabIndex = 6;
             // 
             // TBX_Keywords
@@ -105,7 +105,7 @@
             this.TBX_Keywords.Location = new System.Drawing.Point(148, 243);
             this.TBX_Keywords.Name = "TBX_Keywords";
             this.TBX_Keywords.ReadOnly = true;
-            this.TBX_Keywords.Size = new System.Drawing.Size(231, 26);
+            this.TBX_Keywords.Size = new System.Drawing.Size(231, 30);
             this.TBX_Keywords.TabIndex = 7;
             // 
             // LBL_Keywords
@@ -114,7 +114,7 @@
             this.LBL_Keywords.Location = new System.Drawing.Point(7, 246);
             this.LBL_Keywords.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.LBL_Keywords.Name = "LBL_Keywords";
-            this.LBL_Keywords.Size = new System.Drawing.Size(80, 20);
+            this.LBL_Keywords.Size = new System.Drawing.Size(102, 25);
             this.LBL_Keywords.TabIndex = 8;
             this.LBL_Keywords.Text = "Mots-Clés";
             // 
@@ -134,7 +134,7 @@
             this.LBL_CreationDate.Location = new System.Drawing.Point(7, 112);
             this.LBL_CreationDate.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.LBL_CreationDate.Name = "LBL_CreationDate";
-            this.LBL_CreationDate.Size = new System.Drawing.Size(127, 20);
+            this.LBL_CreationDate.Size = new System.Drawing.Size(154, 25);
             this.LBL_CreationDate.TabIndex = 10;
             this.LBL_CreationDate.Text = "Date de création";
             // 
@@ -143,7 +143,7 @@
             this.TBX_CreationDate.Location = new System.Drawing.Point(148, 109);
             this.TBX_CreationDate.Name = "TBX_CreationDate";
             this.TBX_CreationDate.ReadOnly = true;
-            this.TBX_CreationDate.Size = new System.Drawing.Size(231, 26);
+            this.TBX_CreationDate.Size = new System.Drawing.Size(231, 30);
             this.TBX_CreationDate.TabIndex = 11;
             // 
             // groupBox1
@@ -167,7 +167,7 @@
             // 
             // InfoPhoto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(998, 292);
             this.Controls.Add(this.groupBox1);
@@ -177,6 +177,7 @@
             this.Name = "InfoPhoto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InfoPhoto";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.InfoPhoto_FormClosed);
             this.Load += new System.EventHandler(this.InfoPhoto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).EndInit();
             this.groupBox1.ResumeLayout(false);

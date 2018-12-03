@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,6 +18,7 @@ namespace Client_PM
         PhotoFilter PhotoFilter = null;
         bool Initializing = true;
         InfoPhoto DLG;
+        public bool IsInfoOpen = false;
         List<Photo> Slideshow = new List<Photo>();
         List<int> Blacklist = new List<int>();
         bool AddToSlideMode = true;     //True: Ajout  -  False - Retrait
@@ -342,16 +344,17 @@ namespace Client_PM
             }
         }
 
-        private void ShowPhoto()
+        public void ShowPhoto()
         {
             //Modifier la façon de savoir si l'image et en mode show ou hide.
-            if (FB_Image_Show.Text == "")
+            if (!IsInfoOpen)
             {
-                FB_Image_Show.Text = " ";
-                DLG = new InfoPhoto();
+                IsInfoOpen = true;
+                DLG = new InfoPhoto(this);
                 DLG.Photo = PhotoBrowser.SelectedPhoto;
                 DLG.User = DBPhotosWebServices.GetUser(PhotoBrowser.SelectedPhoto.OwnerId).ToString();
                 DLG.Show();
+                FB_Image_Show.BackgroundImage = Properties.Resources.Hide_Neutral;
                 FB_Image_Show.ClickedImage = Properties.Resources.Hide_Clicked;
                 FB_Image_Show.DisabledImage = Properties.Resources.Hide_Disabled;
                 FB_Image_Show.NeutralImage = Properties.Resources.Hide_Neutral;
@@ -359,12 +362,17 @@ namespace Client_PM
             }
             else
             {
-                FB_Image_Show.Text = "";
-                DLG.Close();
+                if (!DLG.IsClosing)
+                {
+                    DLG.Close();
+                }
+                FB_Image_Show.BackgroundImage = Properties.Resources.Show_Neutral;
                 FB_Image_Show.ClickedImage = Properties.Resources.Show_Clicked;
                 FB_Image_Show.DisabledImage = Properties.Resources.Show_Disabled;
                 FB_Image_Show.NeutralImage = Properties.Resources.Show_Neutral;
                 FB_Image_Show.OverImage = Properties.Resources.Show_Over;
+                FB_Image_Show.Refresh();
+                IsInfoOpen = false;
             }
         }
 
