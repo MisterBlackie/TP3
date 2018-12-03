@@ -42,17 +42,6 @@ namespace Client_PM
             UpdateFlashButtons();
         }
 
-        private void OpenSlideShow()
-        {
-            Carousel DLG = new Carousel();
-            if (Slideshow.Count != 0)
-                DLG.PhotoList = Slideshow;
-            else
-                DLG.PhotoList = DBPhotosWebServices.GetFilteredPhotos(PhotoFilter);
-
-            DLG.Show();
-        }
-
         private void MainForm_Load(object sender, EventArgs e)
         {
             UpdateFlashButtons();
@@ -120,7 +109,7 @@ namespace Client_PM
 
         private void FB_Other_Download_Click(object sender, EventArgs e)
         {
-
+            DownloadSelectedImage();
         }
 
         private void FB_Blacklist_Add_Click(object sender, EventArgs e)
@@ -261,15 +250,35 @@ namespace Client_PM
         {
             FB_Image_Show.Enabled = PhotoBrowser.SelectedPhoto != null;
             UpdateAddSlideShow();
-            if (PhotoBrowser.SelectedPhoto != null && PhotoBrowser.SelectedPhoto.OwnerId == Logged_User.Id)
+
+            if (PhotoBrowser.SelectedPhoto != null)
             {
-                FB_Image_Edit.Enabled = true;
-                FB_Image_Remove.Enabled = true;
+                if (PhotoBrowser.SelectedPhoto.OwnerId == Logged_User.Id)
+                {
+                    FB_Image_Edit.Enabled = true;
+                    FB_Image_Remove.Enabled = true;
+                }
+
+                FB_Other_Download.Enabled = true;
             }
             else
             {
                 FB_Image_Edit.Enabled = false;
                 FB_Image_Remove.Enabled = false;
+                FB_Other_Download.Enabled = false;
+            }
+        }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.H)
+            {
+                if (TBC_PhotoManager.Visible)
+                    CloseTabs();
+                else
+                    OpenTabs();
+
+                e.Handled = true;
             }
         }
         #endregion
@@ -373,7 +382,7 @@ namespace Client_PM
             FB_Slideshow_Reset.Enabled = Logged_User != null;
 
             //Others
-            FB_Other_Download.Enabled = Logged_User != null;
+            FB_Other_Download.Enabled = PhotoBrowser.SelectedPhoto != null;
 
             //Blacklist
             FB_Blacklist_Add.Enabled = Logged_User != null;
@@ -410,7 +419,7 @@ namespace Client_PM
         private void UpdateControls()
         {
             MI_Account_Profile.Enabled = Logged_User != null;
-            MI_Account_Login.Enabled = !(Logged_User != null);
+            MI_Account_Login.Enabled = Logged_User == null;
             TSMI_Blacklist.Enabled = Logged_User != null;
             RB_Users.Enabled = Logged_User != null;
             RB_Keyword.Enabled = Logged_User != null;
@@ -516,6 +525,52 @@ namespace Client_PM
                 {
 
                 }
+            }
+        }
+
+        private void OpenSlideShow()
+        {
+            Carousel DLG = new Carousel();
+            if (Slideshow.Count != 0)
+                DLG.PhotoList = Slideshow;
+            else
+                DLG.PhotoList = DBPhotosWebServices.GetFilteredPhotos(PhotoFilter);
+
+            DLG.Show();
+        }
+
+        private void CloseTabs()
+        {
+            TBC_PhotoManager.Visible = false;
+            PhotoBrowser.Location = TBC_PhotoManager.Location;
+            PhotoBrowser.Size = new Size(TBC_PhotoManager.Size.Width, ClientSize.Height - 37);
+            Refresh();
+       
+        }
+
+        private void OpenTabs()
+        {
+            TBC_PhotoManager.Visible = true;
+            PhotoBrowser.Location = new Point(TBC_PhotoManager.Location.X, TBC_PhotoManager.Size.Height + 30);
+            PhotoBrowser.Size = new Size(TBC_PhotoManager.Size.Width, ClientSize.Height - TBC_PhotoManager.Height - 40);
+            Refresh();
+        }
+
+        private void DownloadSelectedImage()
+        {
+            try
+            {
+                if (PhotoBrowser.SelectedPhoto != null)
+                {
+                    if (FolderBrowser.ShowDialog() == DialogResult.OK)
+                    {
+                        PhotoBrowser.SelectedPhoto.GetOriginalImage().Save(FolderBrowser.SelectedPath + "/" + PhotoBrowser.SelectedPhoto.Title + ".png", System.Drawing.Imaging.ImageFormat.Png);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
         #endregion

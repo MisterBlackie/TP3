@@ -56,9 +56,19 @@
             this.TBC_PhotoManager = new System.Windows.Forms.TabControl();
             this.TP_Photos = new System.Windows.Forms.TabPage();
             this.GB_Others = new System.Windows.Forms.GroupBox();
+            this.FB_Other_Download = new PhotoManagerClient.FlashButton();
             this.GB_Scroll = new System.Windows.Forms.GroupBox();
+            this.FB_Scroll_Next = new PhotoManagerClient.FlashButton();
+            this.FB_Scroll_Prev = new PhotoManagerClient.FlashButton();
             this.GB_Slideshow = new System.Windows.Forms.GroupBox();
+            this.FB_Slideshow_Reset = new PhotoManagerClient.FlashButton();
+            this.FB_Slideshow_Start = new PhotoManagerClient.FlashButton();
+            this.FB_Slideshow_Add = new PhotoManagerClient.FlashButton();
             this.GB_Image = new System.Windows.Forms.GroupBox();
+            this.FB_Image_Show = new PhotoManagerClient.FlashButton();
+            this.FB_Image_Remove = new PhotoManagerClient.FlashButton();
+            this.FB_Image_Edit = new PhotoManagerClient.FlashButton();
+            this.FB_Image_Add = new PhotoManagerClient.FlashButton();
             this.TP_Filters = new System.Windows.Forms.TabPage();
             this.GB_Filters = new System.Windows.Forms.GroupBox();
             this.RB_Users = new System.Windows.Forms.RadioButton();
@@ -66,23 +76,13 @@
             this.CB_HideMyPhotos = new System.Windows.Forms.CheckBox();
             this.RB_Keyword = new System.Windows.Forms.RadioButton();
             this.GB_Blacklist = new System.Windows.Forms.GroupBox();
+            this.FB_Blacklist_Reset = new PhotoManagerClient.FlashButton();
+            this.FB_Blacklist_Add = new PhotoManagerClient.FlashButton();
             this.CBX_BlackList = new System.Windows.Forms.ComboBox();
             this.FB_ToolTips = new System.Windows.Forms.ToolTip(this.components);
             this.FileDialog = new System.Windows.Forms.OpenFileDialog();
             this.FolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.PhotoBrowser = new PhotoManagerClient.PhotosBrowser();
-            this.FB_Other_Download = new PhotoManagerClient.FlashButton();
-            this.FB_Scroll_Next = new PhotoManagerClient.FlashButton();
-            this.FB_Scroll_Prev = new PhotoManagerClient.FlashButton();
-            this.FB_Slideshow_Reset = new PhotoManagerClient.FlashButton();
-            this.FB_Slideshow_Start = new PhotoManagerClient.FlashButton();
-            this.FB_Slideshow_Add = new PhotoManagerClient.FlashButton();
-            this.FB_Image_Show = new PhotoManagerClient.FlashButton();
-            this.FB_Image_Remove = new PhotoManagerClient.FlashButton();
-            this.FB_Image_Edit = new PhotoManagerClient.FlashButton();
-            this.FB_Image_Add = new PhotoManagerClient.FlashButton();
-            this.FB_Blacklist_Reset = new PhotoManagerClient.FlashButton();
-            this.FB_Blacklist_Add = new PhotoManagerClient.FlashButton();
             this.MS_Account.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FileWatcher)).BeginInit();
             this.TBC_PhotoManager.SuspendLayout();
@@ -101,7 +101,7 @@
             this.DTP_End.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTP_End.Location = new System.Drawing.Point(366, 46);
             this.DTP_End.Name = "DTP_End";
-            this.DTP_End.Size = new System.Drawing.Size(176, 22);
+            this.DTP_End.Size = new System.Drawing.Size(176, 26);
             this.DTP_End.TabIndex = 9;
             // 
             // LBL_DateText
@@ -110,7 +110,7 @@
             this.LBL_DateText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_DateText.Location = new System.Drawing.Point(344, 50);
             this.LBL_DateText.Name = "LBL_DateText";
-            this.LBL_DateText.Size = new System.Drawing.Size(16, 16);
+            this.LBL_DateText.Size = new System.Drawing.Size(18, 20);
             this.LBL_DateText.TabIndex = 8;
             this.LBL_DateText.Text = "à";
             // 
@@ -119,7 +119,7 @@
             this.DTP_Start.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTP_Start.Location = new System.Drawing.Point(366, 21);
             this.DTP_Start.Name = "DTP_Start";
-            this.DTP_Start.Size = new System.Drawing.Size(176, 22);
+            this.DTP_Start.Size = new System.Drawing.Size(176, 26);
             this.DTP_Start.TabIndex = 7;
             // 
             // CBX_Keywords
@@ -128,7 +128,7 @@
             this.CBX_Keywords.FormattingEnabled = true;
             this.CBX_Keywords.Location = new System.Drawing.Point(104, 48);
             this.CBX_Keywords.Name = "CBX_Keywords";
-            this.CBX_Keywords.Size = new System.Drawing.Size(195, 24);
+            this.CBX_Keywords.Size = new System.Drawing.Size(195, 28);
             this.CBX_Keywords.TabIndex = 0;
             this.CBX_Keywords.SelectedIndexChanged += new System.EventHandler(this.CBX_Keywords_SelectedIndexChanged);
             // 
@@ -138,7 +138,7 @@
             this.CBX_UsersList.FormattingEnabled = true;
             this.CBX_UsersList.Location = new System.Drawing.Point(104, 20);
             this.CBX_UsersList.Name = "CBX_UsersList";
-            this.CBX_UsersList.Size = new System.Drawing.Size(195, 24);
+            this.CBX_UsersList.Size = new System.Drawing.Size(195, 28);
             this.CBX_UsersList.TabIndex = 0;
             this.CBX_UsersList.SelectedIndexChanged += new System.EventHandler(this.CBX_UsersList_SelectedIndexChanged);
             // 
@@ -153,7 +153,7 @@
             this.TSMI_About});
             this.MS_Account.Location = new System.Drawing.Point(0, 0);
             this.MS_Account.Name = "MS_Account";
-            this.MS_Account.Size = new System.Drawing.Size(1153, 24);
+            this.MS_Account.Size = new System.Drawing.Size(1153, 28);
             this.MS_Account.TabIndex = 2;
             this.MS_Account.Text = "menuStrip1";
             // 
@@ -165,34 +165,34 @@
             this.Mi_Account_Create,
             this.MI_Account_Exit});
             this.TSMI_Account.Name = "TSMI_Account";
-            this.TSMI_Account.Size = new System.Drawing.Size(62, 20);
+            this.TSMI_Account.Size = new System.Drawing.Size(74, 24);
             this.TSMI_Account.Text = "Compte";
             // 
             // MI_Account_Login
             // 
             this.MI_Account_Login.Name = "MI_Account_Login";
-            this.MI_Account_Login.Size = new System.Drawing.Size(166, 22);
+            this.MI_Account_Login.Size = new System.Drawing.Size(198, 26);
             this.MI_Account_Login.Text = "Connexion";
             this.MI_Account_Login.Click += new System.EventHandler(this.MI_Account_Login_Click);
             // 
             // MI_Account_Profile
             // 
             this.MI_Account_Profile.Name = "MI_Account_Profile";
-            this.MI_Account_Profile.Size = new System.Drawing.Size(166, 22);
+            this.MI_Account_Profile.Size = new System.Drawing.Size(198, 26);
             this.MI_Account_Profile.Text = "Profil";
             this.MI_Account_Profile.Click += new System.EventHandler(this.MI_Account_Profile_Click);
             // 
             // Mi_Account_Create
             // 
             this.Mi_Account_Create.Name = "Mi_Account_Create";
-            this.Mi_Account_Create.Size = new System.Drawing.Size(166, 22);
+            this.Mi_Account_Create.Size = new System.Drawing.Size(198, 26);
             this.Mi_Account_Create.Text = "Nouveau compte";
             this.Mi_Account_Create.Click += new System.EventHandler(this.Mi_Account_Create_Click);
             // 
             // MI_Account_Exit
             // 
             this.MI_Account_Exit.Name = "MI_Account_Exit";
-            this.MI_Account_Exit.Size = new System.Drawing.Size(166, 22);
+            this.MI_Account_Exit.Size = new System.Drawing.Size(198, 26);
             this.MI_Account_Exit.Text = "Déconnexion";
             this.MI_Account_Exit.Click += new System.EventHandler(this.MI_Account_Exit_Click);
             // 
@@ -201,7 +201,7 @@
             this.TSMI_Photos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MI_Display});
             this.TSMI_Photos.Name = "TSMI_Photos";
-            this.TSMI_Photos.Size = new System.Drawing.Size(56, 20);
+            this.TSMI_Photos.Size = new System.Drawing.Size(66, 24);
             this.TSMI_Photos.Text = "Photos";
             // 
             // MI_Display
@@ -212,34 +212,34 @@
             this.MI_Display_Left,
             this.MI_Display_Right});
             this.MI_Display.Name = "MI_Display";
-            this.MI_Display.Size = new System.Drawing.Size(125, 22);
+            this.MI_Display.Size = new System.Drawing.Size(148, 26);
             this.MI_Display.Text = "Affichage";
             // 
             // MI_Display_Up
             // 
             this.MI_Display_Up.Name = "MI_Display_Up";
-            this.MI_Display_Up.Size = new System.Drawing.Size(114, 22);
+            this.MI_Display_Up.Size = new System.Drawing.Size(133, 26);
             this.MI_Display_Up.Text = "Haut";
             this.MI_Display_Up.Click += new System.EventHandler(this.MI_Display_Up_Click);
             // 
             // MI_Display_Down
             // 
             this.MI_Display_Down.Name = "MI_Display_Down";
-            this.MI_Display_Down.Size = new System.Drawing.Size(114, 22);
+            this.MI_Display_Down.Size = new System.Drawing.Size(133, 26);
             this.MI_Display_Down.Text = "Bas";
             this.MI_Display_Down.Click += new System.EventHandler(this.MI_Display_Down_Click);
             // 
             // MI_Display_Left
             // 
             this.MI_Display_Left.Name = "MI_Display_Left";
-            this.MI_Display_Left.Size = new System.Drawing.Size(114, 22);
+            this.MI_Display_Left.Size = new System.Drawing.Size(133, 26);
             this.MI_Display_Left.Text = "Gauche";
             this.MI_Display_Left.Click += new System.EventHandler(this.MI_Display_Left_Click);
             // 
             // MI_Display_Right
             // 
             this.MI_Display_Right.Name = "MI_Display_Right";
-            this.MI_Display_Right.Size = new System.Drawing.Size(114, 22);
+            this.MI_Display_Right.Size = new System.Drawing.Size(133, 26);
             this.MI_Display_Right.Text = "Droite";
             this.MI_Display_Right.Click += new System.EventHandler(this.MI_Display_Right_Click);
             // 
@@ -249,34 +249,34 @@
             this.MI_Blacklist_Add,
             this.MI_Blacklist_Show});
             this.TSMI_Blacklist.Name = "TSMI_Blacklist";
-            this.TSMI_Blacklist.Size = new System.Drawing.Size(75, 20);
+            this.TSMI_Blacklist.Size = new System.Drawing.Size(92, 24);
             this.TSMI_Blacklist.Text = "Liste Noire";
             // 
             // MI_Blacklist_Add
             // 
             this.MI_Blacklist_Add.Name = "MI_Blacklist_Add";
-            this.MI_Blacklist_Add.Size = new System.Drawing.Size(152, 22);
+            this.MI_Blacklist_Add.Size = new System.Drawing.Size(183, 26);
             this.MI_Blacklist_Add.Text = "Ajouter";
             this.MI_Blacklist_Add.Click += new System.EventHandler(this.MI_Blacklist_Add_Click);
             // 
             // MI_Blacklist_Show
             // 
             this.MI_Blacklist_Show.Name = "MI_Blacklist_Show";
-            this.MI_Blacklist_Show.Size = new System.Drawing.Size(152, 22);
+            this.MI_Blacklist_Show.Size = new System.Drawing.Size(183, 26);
             this.MI_Blacklist_Show.Text = "Afficher la liste";
             this.MI_Blacklist_Show.Click += new System.EventHandler(this.MI_Blacklist_Show_Click);
             // 
             // TSMI_Help
             // 
             this.TSMI_Help.Name = "TSMI_Help";
-            this.TSMI_Help.Size = new System.Drawing.Size(43, 20);
+            this.TSMI_Help.Size = new System.Drawing.Size(52, 24);
             this.TSMI_Help.Text = "Aide";
             this.TSMI_Help.Click += new System.EventHandler(this.TSMI_Help_Click);
             // 
             // TSMI_About
             // 
             this.TSMI_About.Name = "TSMI_About";
-            this.TSMI_About.Size = new System.Drawing.Size(67, 20);
+            this.TSMI_About.Size = new System.Drawing.Size(82, 24);
             this.TSMI_About.Text = "À propos";
             this.TSMI_About.Click += new System.EventHandler(this.TSMI_About_Click);
             // 
@@ -287,6 +287,8 @@
             // 
             // TBC_PhotoManager
             // 
+            this.TBC_PhotoManager.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TBC_PhotoManager.Controls.Add(this.TP_Photos);
             this.TBC_PhotoManager.Controls.Add(this.TP_Filters);
             this.TBC_PhotoManager.Location = new System.Drawing.Point(12, 27);
@@ -302,175 +304,22 @@
             this.TP_Photos.Controls.Add(this.GB_Scroll);
             this.TP_Photos.Controls.Add(this.GB_Slideshow);
             this.TP_Photos.Controls.Add(this.GB_Image);
-            this.TP_Photos.Location = new System.Drawing.Point(4, 29);
+            this.TP_Photos.Location = new System.Drawing.Point(4, 34);
             this.TP_Photos.Name = "TP_Photos";
             this.TP_Photos.Padding = new System.Windows.Forms.Padding(3);
-            this.TP_Photos.Size = new System.Drawing.Size(1121, 87);
+            this.TP_Photos.Size = new System.Drawing.Size(1121, 82);
             this.TP_Photos.TabIndex = 0;
             this.TP_Photos.Text = "Photos";
             // 
             // GB_Others
             // 
             this.GB_Others.Controls.Add(this.FB_Other_Download);
-            this.GB_Others.Location = new System.Drawing.Point(544, 6);
+            this.GB_Others.Location = new System.Drawing.Point(563, 6);
             this.GB_Others.Name = "GB_Others";
-            this.GB_Others.Size = new System.Drawing.Size(571, 75);
+            this.GB_Others.Size = new System.Drawing.Size(552, 75);
             this.GB_Others.TabIndex = 11;
             this.GB_Others.TabStop = false;
             this.GB_Others.Text = "Autres options";
-            // 
-            // GB_Scroll
-            // 
-            this.GB_Scroll.Controls.Add(this.FB_Scroll_Next);
-            this.GB_Scroll.Controls.Add(this.FB_Scroll_Prev);
-            this.GB_Scroll.Location = new System.Drawing.Point(243, 6);
-            this.GB_Scroll.Name = "GB_Scroll";
-            this.GB_Scroll.Size = new System.Drawing.Size(116, 75);
-            this.GB_Scroll.TabIndex = 10;
-            this.GB_Scroll.TabStop = false;
-            this.GB_Scroll.Text = "Défilement";
-            // 
-            // GB_Slideshow
-            // 
-            this.GB_Slideshow.Controls.Add(this.FB_Slideshow_Reset);
-            this.GB_Slideshow.Controls.Add(this.FB_Slideshow_Start);
-            this.GB_Slideshow.Controls.Add(this.FB_Slideshow_Add);
-            this.GB_Slideshow.Location = new System.Drawing.Point(365, 6);
-            this.GB_Slideshow.Name = "GB_Slideshow";
-            this.GB_Slideshow.Size = new System.Drawing.Size(173, 75);
-            this.GB_Slideshow.TabIndex = 8;
-            this.GB_Slideshow.TabStop = false;
-            this.GB_Slideshow.Text = "Diaporama";
-            // 
-            // GB_Image
-            // 
-            this.GB_Image.Controls.Add(this.FB_Image_Show);
-            this.GB_Image.Controls.Add(this.FB_Image_Remove);
-            this.GB_Image.Controls.Add(this.FB_Image_Edit);
-            this.GB_Image.Controls.Add(this.FB_Image_Add);
-            this.GB_Image.Location = new System.Drawing.Point(6, 6);
-            this.GB_Image.Name = "GB_Image";
-            this.GB_Image.Size = new System.Drawing.Size(231, 75);
-            this.GB_Image.TabIndex = 7;
-            this.GB_Image.TabStop = false;
-            this.GB_Image.Text = "Image";
-            // 
-            // TP_Filters
-            // 
-            this.TP_Filters.BackColor = System.Drawing.Color.White;
-            this.TP_Filters.Controls.Add(this.GB_Filters);
-            this.TP_Filters.Controls.Add(this.GB_Blacklist);
-            this.TP_Filters.Location = new System.Drawing.Point(4, 29);
-            this.TP_Filters.Name = "TP_Filters";
-            this.TP_Filters.Padding = new System.Windows.Forms.Padding(3);
-            this.TP_Filters.Size = new System.Drawing.Size(1121, 87);
-            this.TP_Filters.TabIndex = 1;
-            this.TP_Filters.Text = "Filtres";
-            // 
-            // GB_Filters
-            // 
-            this.GB_Filters.Controls.Add(this.RB_Users);
-            this.GB_Filters.Controls.Add(this.CBX_Keywords);
-            this.GB_Filters.Controls.Add(this.RB_Date);
-            this.GB_Filters.Controls.Add(this.CB_HideMyPhotos);
-            this.GB_Filters.Controls.Add(this.DTP_Start);
-            this.GB_Filters.Controls.Add(this.RB_Keyword);
-            this.GB_Filters.Controls.Add(this.CBX_UsersList);
-            this.GB_Filters.Controls.Add(this.LBL_DateText);
-            this.GB_Filters.Controls.Add(this.DTP_End);
-            this.GB_Filters.Location = new System.Drawing.Point(6, 6);
-            this.GB_Filters.Name = "GB_Filters";
-            this.GB_Filters.Size = new System.Drawing.Size(755, 75);
-            this.GB_Filters.TabIndex = 15;
-            this.GB_Filters.TabStop = false;
-            this.GB_Filters.Text = "Filtres";
-            // 
-            // RB_Users
-            // 
-            this.RB_Users.AutoSize = true;
-            this.RB_Users.Checked = true;
-            this.RB_Users.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RB_Users.Location = new System.Drawing.Point(6, 22);
-            this.RB_Users.Name = "RB_Users";
-            this.RB_Users.Size = new System.Drawing.Size(92, 20);
-            this.RB_Users.TabIndex = 11;
-            this.RB_Users.TabStop = true;
-            this.RB_Users.Text = "Utilisateurs";
-            this.RB_Users.UseVisualStyleBackColor = true;
-            // 
-            // RB_Date
-            // 
-            this.RB_Date.AutoSize = true;
-            this.RB_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RB_Date.Location = new System.Drawing.Point(305, 21);
-            this.RB_Date.Name = "RB_Date";
-            this.RB_Date.Size = new System.Drawing.Size(55, 20);
-            this.RB_Date.TabIndex = 13;
-            this.RB_Date.Text = "Date";
-            this.RB_Date.UseVisualStyleBackColor = true;
-            // 
-            // CB_HideMyPhotos
-            // 
-            this.CB_HideMyPhotos.AutoSize = true;
-            this.CB_HideMyPhotos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CB_HideMyPhotos.Location = new System.Drawing.Point(559, 35);
-            this.CB_HideMyPhotos.Name = "CB_HideMyPhotos";
-            this.CB_HideMyPhotos.Size = new System.Drawing.Size(190, 20);
-            this.CB_HideMyPhotos.TabIndex = 10;
-            this.CB_HideMyPhotos.Text = "Ne pas afficher mes photos";
-            this.CB_HideMyPhotos.UseVisualStyleBackColor = true;
-            this.CB_HideMyPhotos.CheckedChanged += new System.EventHandler(this.CB_HideMyPhotos_CheckedChanged);
-            // 
-            // RB_Keyword
-            // 
-            this.RB_Keyword.AutoSize = true;
-            this.RB_Keyword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RB_Keyword.Location = new System.Drawing.Point(6, 48);
-            this.RB_Keyword.Name = "RB_Keyword";
-            this.RB_Keyword.Size = new System.Drawing.Size(79, 20);
-            this.RB_Keyword.TabIndex = 12;
-            this.RB_Keyword.Text = "Mots-Clé";
-            this.RB_Keyword.UseVisualStyleBackColor = true;
-            // 
-            // GB_Blacklist
-            // 
-            this.GB_Blacklist.Controls.Add(this.FB_Blacklist_Reset);
-            this.GB_Blacklist.Controls.Add(this.FB_Blacklist_Add);
-            this.GB_Blacklist.Controls.Add(this.CBX_BlackList);
-            this.GB_Blacklist.Location = new System.Drawing.Point(768, 6);
-            this.GB_Blacklist.Name = "GB_Blacklist";
-            this.GB_Blacklist.Size = new System.Drawing.Size(347, 75);
-            this.GB_Blacklist.TabIndex = 14;
-            this.GB_Blacklist.TabStop = false;
-            this.GB_Blacklist.Text = "Liste noire";
-            // 
-            // CBX_BlackList
-            // 
-            this.CBX_BlackList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CBX_BlackList.FormattingEnabled = true;
-            this.CBX_BlackList.Location = new System.Drawing.Point(6, 33);
-            this.CBX_BlackList.Name = "CBX_BlackList";
-            this.CBX_BlackList.Size = new System.Drawing.Size(167, 24);
-            this.CBX_BlackList.TabIndex = 0;
-            // 
-            // FileDialog
-            // 
-            this.FileDialog.FileName = "openFileDialog1";
-            this.FileDialog.Title = "Choisir un avatar...";
-            // 
-            // FolderBrowser
-            // 
-            this.FolderBrowser.Description = "Pour le télégargement d\'une image";
-            // 
-            // PhotoBrowser
-            // 
-            this.PhotoBrowser.Location = new System.Drawing.Point(13, 150);
-            this.PhotoBrowser.Name = "PhotoBrowser";
-            this.PhotoBrowser.Placement = PhotoManagerClient.PhotoBrowserPlacement.Left;
-            this.PhotoBrowser.SelectedPhoto = null;
-            this.PhotoBrowser.Size = new System.Drawing.Size(1124, 512);
-            this.PhotoBrowser.TabIndex = 5;
-            this.PhotoBrowser.SelectedChanged += new PhotoManagerClient.PhotosBrowser.SelectedChangedHandler(this.PhotoBrowser_SelectedChanged);
             // 
             // FB_Other_Download
             // 
@@ -490,6 +339,17 @@
             this.FB_Other_Download.UseVisualStyleBackColor = true;
             this.FB_Other_Download.Click += new System.EventHandler(this.FB_Other_Download_Click);
             // 
+            // GB_Scroll
+            // 
+            this.GB_Scroll.Controls.Add(this.FB_Scroll_Next);
+            this.GB_Scroll.Controls.Add(this.FB_Scroll_Prev);
+            this.GB_Scroll.Location = new System.Drawing.Point(243, 6);
+            this.GB_Scroll.Name = "GB_Scroll";
+            this.GB_Scroll.Size = new System.Drawing.Size(135, 75);
+            this.GB_Scroll.TabIndex = 10;
+            this.GB_Scroll.TabStop = false;
+            this.GB_Scroll.Text = "Défilement";
+            // 
             // FB_Scroll_Next
             // 
             this.FB_Scroll_Next.BackgroundImage = global::Client_PM.Properties.Resources.Next_Neutral;
@@ -497,7 +357,7 @@
             this.FB_Scroll_Next.ClickedImage = global::Client_PM.Properties.Resources.Next_Clicked;
             this.FB_Scroll_Next.DisabledImage = global::Client_PM.Properties.Resources.Next_Disabled;
             this.FB_Scroll_Next.Image = ((System.Drawing.Image)(resources.GetObject("FB_Scroll_Next.Image")));
-            this.FB_Scroll_Next.Location = new System.Drawing.Point(69, 26);
+            this.FB_Scroll_Next.Location = new System.Drawing.Point(76, 30);
             this.FB_Scroll_Next.Margin = new System.Windows.Forms.Padding(10);
             this.FB_Scroll_Next.Name = "FB_Scroll_Next";
             this.FB_Scroll_Next.NeutralImage = global::Client_PM.Properties.Resources.Next_Neutral;
@@ -515,7 +375,7 @@
             this.FB_Scroll_Prev.ClickedImage = global::Client_PM.Properties.Resources.Previous_Clicked;
             this.FB_Scroll_Prev.DisabledImage = global::Client_PM.Properties.Resources.Previous_Disabled;
             this.FB_Scroll_Prev.Image = ((System.Drawing.Image)(resources.GetObject("FB_Scroll_Prev.Image")));
-            this.FB_Scroll_Prev.Location = new System.Drawing.Point(13, 26);
+            this.FB_Scroll_Prev.Location = new System.Drawing.Point(20, 30);
             this.FB_Scroll_Prev.Margin = new System.Windows.Forms.Padding(10);
             this.FB_Scroll_Prev.Name = "FB_Scroll_Prev";
             this.FB_Scroll_Prev.NeutralImage = global::Client_PM.Properties.Resources.Previous_Neutral;
@@ -525,6 +385,18 @@
             this.FB_ToolTips.SetToolTip(this.FB_Scroll_Prev, "Image précédente");
             this.FB_Scroll_Prev.UseVisualStyleBackColor = true;
             this.FB_Scroll_Prev.Click += new System.EventHandler(this.FB_Scroll_Prev_Click);
+            // 
+            // GB_Slideshow
+            // 
+            this.GB_Slideshow.Controls.Add(this.FB_Slideshow_Reset);
+            this.GB_Slideshow.Controls.Add(this.FB_Slideshow_Start);
+            this.GB_Slideshow.Controls.Add(this.FB_Slideshow_Add);
+            this.GB_Slideshow.Location = new System.Drawing.Point(384, 6);
+            this.GB_Slideshow.Name = "GB_Slideshow";
+            this.GB_Slideshow.Size = new System.Drawing.Size(173, 75);
+            this.GB_Slideshow.TabIndex = 8;
+            this.GB_Slideshow.TabStop = false;
+            this.GB_Slideshow.Text = "Diaporama";
             // 
             // FB_Slideshow_Reset
             // 
@@ -581,6 +453,19 @@
             this.FB_ToolTips.SetToolTip(this.FB_Slideshow_Add, "Ajouter une image au diaporama");
             this.FB_Slideshow_Add.UseVisualStyleBackColor = true;
             this.FB_Slideshow_Add.Click += new System.EventHandler(this.FB_Slideshow_Add_Click);
+            // 
+            // GB_Image
+            // 
+            this.GB_Image.Controls.Add(this.FB_Image_Show);
+            this.GB_Image.Controls.Add(this.FB_Image_Remove);
+            this.GB_Image.Controls.Add(this.FB_Image_Edit);
+            this.GB_Image.Controls.Add(this.FB_Image_Add);
+            this.GB_Image.Location = new System.Drawing.Point(6, 6);
+            this.GB_Image.Name = "GB_Image";
+            this.GB_Image.Size = new System.Drawing.Size(231, 75);
+            this.GB_Image.TabIndex = 7;
+            this.GB_Image.TabStop = false;
+            this.GB_Image.Text = "Image";
             // 
             // FB_Image_Show
             // 
@@ -657,6 +542,95 @@
             this.FB_Image_Add.UseVisualStyleBackColor = true;
             this.FB_Image_Add.Click += new System.EventHandler(this.FB_Image_Add_Click);
             // 
+            // TP_Filters
+            // 
+            this.TP_Filters.BackColor = System.Drawing.Color.White;
+            this.TP_Filters.Controls.Add(this.GB_Filters);
+            this.TP_Filters.Controls.Add(this.GB_Blacklist);
+            this.TP_Filters.Location = new System.Drawing.Point(4, 34);
+            this.TP_Filters.Name = "TP_Filters";
+            this.TP_Filters.Padding = new System.Windows.Forms.Padding(3);
+            this.TP_Filters.Size = new System.Drawing.Size(1121, 82);
+            this.TP_Filters.TabIndex = 1;
+            this.TP_Filters.Text = "Filtres";
+            // 
+            // GB_Filters
+            // 
+            this.GB_Filters.Controls.Add(this.RB_Users);
+            this.GB_Filters.Controls.Add(this.CBX_Keywords);
+            this.GB_Filters.Controls.Add(this.RB_Date);
+            this.GB_Filters.Controls.Add(this.CB_HideMyPhotos);
+            this.GB_Filters.Controls.Add(this.DTP_Start);
+            this.GB_Filters.Controls.Add(this.RB_Keyword);
+            this.GB_Filters.Controls.Add(this.CBX_UsersList);
+            this.GB_Filters.Controls.Add(this.LBL_DateText);
+            this.GB_Filters.Controls.Add(this.DTP_End);
+            this.GB_Filters.Location = new System.Drawing.Point(6, 6);
+            this.GB_Filters.Name = "GB_Filters";
+            this.GB_Filters.Size = new System.Drawing.Size(755, 75);
+            this.GB_Filters.TabIndex = 15;
+            this.GB_Filters.TabStop = false;
+            this.GB_Filters.Text = "Filtres";
+            // 
+            // RB_Users
+            // 
+            this.RB_Users.AutoSize = true;
+            this.RB_Users.Checked = true;
+            this.RB_Users.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RB_Users.Location = new System.Drawing.Point(6, 22);
+            this.RB_Users.Name = "RB_Users";
+            this.RB_Users.Size = new System.Drawing.Size(115, 24);
+            this.RB_Users.TabIndex = 11;
+            this.RB_Users.TabStop = true;
+            this.RB_Users.Text = "Utilisateurs";
+            this.RB_Users.UseVisualStyleBackColor = true;
+            // 
+            // RB_Date
+            // 
+            this.RB_Date.AutoSize = true;
+            this.RB_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RB_Date.Location = new System.Drawing.Point(305, 21);
+            this.RB_Date.Name = "RB_Date";
+            this.RB_Date.Size = new System.Drawing.Size(66, 24);
+            this.RB_Date.TabIndex = 13;
+            this.RB_Date.Text = "Date";
+            this.RB_Date.UseVisualStyleBackColor = true;
+            // 
+            // CB_HideMyPhotos
+            // 
+            this.CB_HideMyPhotos.AutoSize = true;
+            this.CB_HideMyPhotos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CB_HideMyPhotos.Location = new System.Drawing.Point(559, 35);
+            this.CB_HideMyPhotos.Name = "CB_HideMyPhotos";
+            this.CB_HideMyPhotos.Size = new System.Drawing.Size(237, 24);
+            this.CB_HideMyPhotos.TabIndex = 10;
+            this.CB_HideMyPhotos.Text = "Ne pas afficher mes photos";
+            this.CB_HideMyPhotos.UseVisualStyleBackColor = true;
+            this.CB_HideMyPhotos.CheckedChanged += new System.EventHandler(this.CB_HideMyPhotos_CheckedChanged);
+            // 
+            // RB_Keyword
+            // 
+            this.RB_Keyword.AutoSize = true;
+            this.RB_Keyword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RB_Keyword.Location = new System.Drawing.Point(6, 48);
+            this.RB_Keyword.Name = "RB_Keyword";
+            this.RB_Keyword.Size = new System.Drawing.Size(98, 24);
+            this.RB_Keyword.TabIndex = 12;
+            this.RB_Keyword.Text = "Mots-Clé";
+            this.RB_Keyword.UseVisualStyleBackColor = true;
+            // 
+            // GB_Blacklist
+            // 
+            this.GB_Blacklist.Controls.Add(this.FB_Blacklist_Reset);
+            this.GB_Blacklist.Controls.Add(this.FB_Blacklist_Add);
+            this.GB_Blacklist.Controls.Add(this.CBX_BlackList);
+            this.GB_Blacklist.Location = new System.Drawing.Point(768, 6);
+            this.GB_Blacklist.Name = "GB_Blacklist";
+            this.GB_Blacklist.Size = new System.Drawing.Size(347, 75);
+            this.GB_Blacklist.TabIndex = 14;
+            this.GB_Blacklist.TabStop = false;
+            this.GB_Blacklist.Text = "Liste noire";
+            // 
             // FB_Blacklist_Reset
             // 
             this.FB_Blacklist_Reset.BackgroundImage = global::Client_PM.Properties.Resources.Reset_Neutral;
@@ -695,15 +669,47 @@
             this.FB_Blacklist_Add.UseVisualStyleBackColor = true;
             this.FB_Blacklist_Add.Click += new System.EventHandler(this.FB_Blacklist_Add_Click);
             // 
+            // CBX_BlackList
+            // 
+            this.CBX_BlackList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBX_BlackList.FormattingEnabled = true;
+            this.CBX_BlackList.Location = new System.Drawing.Point(6, 33);
+            this.CBX_BlackList.Name = "CBX_BlackList";
+            this.CBX_BlackList.Size = new System.Drawing.Size(167, 28);
+            this.CBX_BlackList.TabIndex = 0;
+            // 
+            // FileDialog
+            // 
+            this.FileDialog.FileName = "openFileDialog1";
+            this.FileDialog.Title = "Choisir un avatar...";
+            // 
+            // FolderBrowser
+            // 
+            this.FolderBrowser.Description = "Pour le télégargement d\'une image";
+            // 
+            // PhotoBrowser
+            // 
+            this.PhotoBrowser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PhotoBrowser.Location = new System.Drawing.Point(12, 150);
+            this.PhotoBrowser.Name = "PhotoBrowser";
+            this.PhotoBrowser.Placement = PhotoManagerClient.PhotoBrowserPlacement.Left;
+            this.PhotoBrowser.SelectedPhoto = null;
+            this.PhotoBrowser.Size = new System.Drawing.Size(1125, 512);
+            this.PhotoBrowser.TabIndex = 5;
+            this.PhotoBrowser.SelectedChanged += new PhotoManagerClient.PhotosBrowser.SelectedChangedHandler(this.PhotoBrowser_SelectedChanged);
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1153, 674);
             this.Controls.Add(this.PhotoBrowser);
             this.Controls.Add(this.TBC_PhotoManager);
             this.Controls.Add(this.MS_Account);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KeyPreview = true;
             this.MainMenuStrip = this.MS_Account;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(1169, 713);
@@ -711,6 +717,7 @@
             this.Text = "Photo Manager Client";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.MS_Account.ResumeLayout(false);
             this.MS_Account.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FileWatcher)).EndInit();
