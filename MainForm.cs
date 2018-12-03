@@ -42,6 +42,17 @@ namespace Client_PM
             UpdateFlashButtons();
         }
 
+        private void OpenSlideShow()
+        {
+            Carousel DLG = new Carousel();
+            if (Slideshow.Count != 0)
+                DLG.PhotoList = Slideshow;
+            else
+                DLG.PhotoList = DBPhotosWebServices.GetFilteredPhotos(PhotoFilter);
+
+            DLG.Show();
+        }
+
         private void MainForm_Load(object sender, EventArgs e)
         {
             UpdateFlashButtons();
@@ -98,9 +109,7 @@ namespace Client_PM
 
         private void FB_Slideshow_Start_Click(object sender, EventArgs e)
         {
-            Carousel DLG = new Carousel();
-            DLG.PhotoList = Slideshow;
-            DLG.Show();
+            OpenSlideShow();
         }
 
         private void FB_Slideshow_Reset_Click(object sender, EventArgs e)

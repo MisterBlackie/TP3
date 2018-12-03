@@ -16,21 +16,22 @@ namespace Client_PM
 
         ListeSettings Settings = new ListeSettings();
 
-        public CarouselSettings()
+        public CarouselSettings(ref ListeSettings Liste)
         {
             InitializeComponent();
-            Settings.VitesseCarousel = -1;
+
+            Settings = Liste;
         }
 
-        private void SetBaseValue()
+        private void SetValue()
         {
-            Settings.VitesseCarousel = 10;
+            TrackBarVitesse.Value = Settings.VitesseCarousel;
+            CB_DefilementAleatoire.Checked = Settings.DefilementAleatoire;
         }
 
         private void CarouselSettings_Load(object sender, EventArgs e)
         {
-            if (Settings.VitesseCarousel == -1)
-                SetBaseValue();
+            SetValue();
         }
 
         private void CB_DefilementAleatoire_CheckedChanged(object sender, EventArgs e)
@@ -40,18 +41,16 @@ namespace Client_PM
 
         private void TrackBarVitesse_ValueChanged(object sender, EventArgs e)
         {
+            if (TrackBarVitesse.Value == 0)
+                TrackBarVitesse.Value++;
+
             Settings.VitesseCarousel = TrackBarVitesse.Value;
         }
 
         private void BTN_Reset_Click(object sender, EventArgs e)
         {
-            SetBaseValue();
+            Settings.Reset();
+            SetValue();
         }
-    }
-
-    class ListeSettings
-    {
-        public bool DefilementAleatoire { get; set; }
-        public int VitesseCarousel { get; set; }
     }
 }
