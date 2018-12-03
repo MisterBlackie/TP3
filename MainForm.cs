@@ -109,7 +109,7 @@ namespace Client_PM
 
         private void FB_Other_Download_Click(object sender, EventArgs e)
         {
-
+            DownloadSelectedImage();
         }
 
         private void FB_Blacklist_Add_Click(object sender, EventArgs e)
@@ -250,15 +250,22 @@ namespace Client_PM
         {
             FB_Image_Show.Enabled = PhotoBrowser.SelectedPhoto != null;
             UpdateAddSlideShow();
-            if (PhotoBrowser.SelectedPhoto != null && PhotoBrowser.SelectedPhoto.OwnerId == Logged_User.Id)
+
+            if (PhotoBrowser.SelectedPhoto != null)
             {
-                FB_Image_Edit.Enabled = true;
-                FB_Image_Remove.Enabled = true;
+                if (PhotoBrowser.SelectedPhoto.OwnerId == Logged_User.Id)
+                {
+                    FB_Image_Edit.Enabled = true;
+                    FB_Image_Remove.Enabled = true;
+                }
+
+                FB_Other_Download.Enabled = true;
             }
             else
             {
                 FB_Image_Edit.Enabled = false;
                 FB_Image_Remove.Enabled = false;
+                FB_Other_Download.Enabled = false;
             }
         }
 
@@ -375,7 +382,7 @@ namespace Client_PM
             FB_Slideshow_Reset.Enabled = Logged_User != null;
 
             //Others
-            FB_Other_Download.Enabled = Logged_User != null;
+            FB_Other_Download.Enabled = PhotoBrowser.SelectedPhoto != null;
 
             //Blacklist
             FB_Blacklist_Add.Enabled = Logged_User != null;
@@ -412,7 +419,7 @@ namespace Client_PM
         private void UpdateControls()
         {
             MI_Account_Profile.Enabled = Logged_User != null;
-            MI_Account_Login.Enabled = !(Logged_User != null);
+            MI_Account_Login.Enabled = Logged_User == null;
             TSMI_Blacklist.Enabled = Logged_User != null;
             RB_Users.Enabled = Logged_User != null;
             RB_Keyword.Enabled = Logged_User != null;
@@ -548,6 +555,24 @@ namespace Client_PM
             PhotoBrowser.Location = new Point(TBC_PhotoManager.Location.X, TBC_PhotoManager.Size.Height + 30);
             PhotoBrowser.Size = new Size(TBC_PhotoManager.Size.Width, ClientSize.Height - TBC_PhotoManager.Height - 40);
             Refresh();
+        }
+
+        private void DownloadSelectedImage()
+        {
+            try
+            {
+                if (PhotoBrowser.SelectedPhoto != null)
+                {
+                    if (FolderBrowser.ShowDialog() == DialogResult.OK)
+                    {
+                        PhotoBrowser.SelectedPhoto.GetOriginalImage().Save(FolderBrowser.SelectedPath + "/" + PhotoBrowser.SelectedPhoto.Title + ".png", System.Drawing.Imaging.ImageFormat.Png);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         #endregion
     }
