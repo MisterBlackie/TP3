@@ -42,17 +42,6 @@ namespace Client_PM
             UpdateFlashButtons();
         }
 
-        private void OpenSlideShow()
-        {
-            Carousel DLG = new Carousel();
-            if (Slideshow.Count != 0)
-                DLG.PhotoList = Slideshow;
-            else
-                DLG.PhotoList = DBPhotosWebServices.GetFilteredPhotos(PhotoFilter);
-
-            DLG.Show();
-        }
-
         private void MainForm_Load(object sender, EventArgs e)
         {
             UpdateFlashButtons();
@@ -270,6 +259,19 @@ namespace Client_PM
             {
                 FB_Image_Edit.Enabled = false;
                 FB_Image_Remove.Enabled = false;
+            }
+        }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.H)
+            {
+                if (TBC_PhotoManager.Visible)
+                    CloseTabs();
+                else
+                    OpenTabs();
+
+                e.Handled = true;
             }
         }
         #endregion
@@ -518,6 +520,34 @@ namespace Client_PM
 
                 }
             }
+        }
+
+        private void OpenSlideShow()
+        {
+            Carousel DLG = new Carousel();
+            if (Slideshow.Count != 0)
+                DLG.PhotoList = Slideshow;
+            else
+                DLG.PhotoList = DBPhotosWebServices.GetFilteredPhotos(PhotoFilter);
+
+            DLG.Show();
+        }
+
+        private void CloseTabs()
+        {
+            TBC_PhotoManager.Visible = false;
+            PhotoBrowser.Location = TBC_PhotoManager.Location;
+            PhotoBrowser.Size = new Size(TBC_PhotoManager.Size.Width, ClientSize.Height - 37);
+            Refresh();
+       
+        }
+
+        private void OpenTabs()
+        {
+            TBC_PhotoManager.Visible = true;
+            PhotoBrowser.Location = new Point(TBC_PhotoManager.Location.X, TBC_PhotoManager.Size.Height + 30);
+            PhotoBrowser.Size = new Size(TBC_PhotoManager.Size.Width, ClientSize.Height - TBC_PhotoManager.Height - 40);
+            Refresh();
         }
         #endregion
     }
