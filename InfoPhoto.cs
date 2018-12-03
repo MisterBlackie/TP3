@@ -14,8 +14,14 @@ namespace Client_PM
     {
         public PhotoManagerClient.Photo Photo { get; set; }
         public string User { get; set; }
-        public InfoPhoto()
+        public bool IsClosing = false;
+        private MainForm Parent;
+        public InfoPhoto(MainForm Parent)
         {
+            if (Parent == null)
+                throw new Exception("Le formulaire parent ne doit pas être null");
+
+            this.Parent = Parent;
             InitializeComponent();
         }
 
@@ -33,6 +39,12 @@ namespace Client_PM
         private void BTN_Ok_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void InfoPhoto_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            IsClosing = true;
+            Parent.ShowPhoto();
         }
     }
 }
