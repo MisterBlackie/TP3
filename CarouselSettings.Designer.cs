@@ -38,10 +38,9 @@
             // CB_DefilementAleatoire
             // 
             this.CB_DefilementAleatoire.AutoSize = true;
-            this.CB_DefilementAleatoire.Location = new System.Drawing.Point(17, 16);
-            this.CB_DefilementAleatoire.Margin = new System.Windows.Forms.Padding(4);
+            this.CB_DefilementAleatoire.Location = new System.Drawing.Point(13, 13);
             this.CB_DefilementAleatoire.Name = "CB_DefilementAleatoire";
-            this.CB_DefilementAleatoire.Size = new System.Drawing.Size(156, 21);
+            this.CB_DefilementAleatoire.Size = new System.Drawing.Size(119, 17);
             this.CB_DefilementAleatoire.TabIndex = 0;
             this.CB_DefilementAleatoire.Text = "Défilement aléatoire";
             this.CB_DefilementAleatoire.UseVisualStyleBackColor = true;
@@ -49,10 +48,9 @@
             // 
             // BTN_Reset
             // 
-            this.BTN_Reset.Location = new System.Drawing.Point(155, 254);
-            this.BTN_Reset.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_Reset.Location = new System.Drawing.Point(116, 206);
             this.BTN_Reset.Name = "BTN_Reset";
-            this.BTN_Reset.Size = new System.Drawing.Size(100, 28);
+            this.BTN_Reset.Size = new System.Drawing.Size(75, 23);
             this.BTN_Reset.TabIndex = 1;
             this.BTN_Reset.Text = "Réinitialiser";
             this.BTN_Reset.UseVisualStyleBackColor = true;
@@ -61,31 +59,32 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 46);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(13, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 17);
+            this.label1.Size = new System.Drawing.Size(107, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Vitesse de défilement";
             // 
             // TrackBarVitesse
             // 
-            this.TrackBarVitesse.Location = new System.Drawing.Point(20, 76);
+            this.TrackBarVitesse.Location = new System.Drawing.Point(15, 62);
+            this.TrackBarVitesse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TrackBarVitesse.Minimum = 1;
             this.TrackBarVitesse.Name = "TrackBarVitesse";
-            this.TrackBarVitesse.Size = new System.Drawing.Size(193, 56);
+            this.TrackBarVitesse.Size = new System.Drawing.Size(145, 45);
             this.TrackBarVitesse.TabIndex = 3;
+            this.TrackBarVitesse.Value = 1;
             this.TrackBarVitesse.ValueChanged += new System.EventHandler(this.TrackBarVitesse_ValueChanged);
             // 
             // CarouselSettings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(265, 286);
+            this.ClientSize = new System.Drawing.Size(199, 232);
             this.Controls.Add(this.TrackBarVitesse);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BTN_Reset);
             this.Controls.Add(this.CB_DefilementAleatoire);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CarouselSettings";
             this.Text = "CarouselSettings";
             this.Load += new System.EventHandler(this.CarouselSettings_Load);

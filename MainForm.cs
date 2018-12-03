@@ -451,12 +451,11 @@ namespace Client_PM
                     {
                         AlreadyInSlideshow = true;
                         AddToSlideMode = false;
-                        //Les images utilisé sont temporaire jusqu'à ce que l'image adéquate soit faite.
-                        FB_Slideshow_Add.BackgroundImage = Properties.Resources.Remove_Neutral;
-                        FB_Slideshow_Add.ClickedImage = Properties.Resources.Remove_Clicked;
-                        FB_Slideshow_Add.DisabledImage = Properties.Resources.Remove_Disabled;
-                        FB_Slideshow_Add.NeutralImage = Properties.Resources.Remove_Neutral;
-                        FB_Slideshow_Add.OverImage = Properties.Resources.Remove_Over;
+                        FB_Slideshow_Add.BackgroundImage = Properties.Resources.RemoveFromSlide_Neutral;
+                        FB_Slideshow_Add.ClickedImage = Properties.Resources.RemoveFromSlide_Clicked;
+                        FB_Slideshow_Add.DisabledImage = Properties.Resources.RemoveFromSlide_Disabled;
+                        FB_Slideshow_Add.NeutralImage = Properties.Resources.RemoveFromSlide_Neutral;
+                        FB_Slideshow_Add.OverImage = Properties.Resources.RemoveFromSlide_Over;
                     }
                 }
                 if (!AlreadyInSlideshow)

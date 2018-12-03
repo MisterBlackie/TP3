@@ -29,73 +29,58 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Carousel));
-            this.FB_Settings = new PhotoManagerClient.FlashButton();
             this.Timer = new System.Windows.Forms.Timer(this.components);
-            this.PictureBox = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
+            this.MS_Carousel = new System.Windows.Forms.MenuStrip();
+            this.TSMI_Settings = new System.Windows.Forms.ToolStripMenuItem();
+            this.MS_Carousel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // FB_Settings
-            // 
-            this.FB_Settings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.FB_Settings.BackColor = System.Drawing.Color.Transparent;
-            this.FB_Settings.BackgroundImage = global::Client_PM.Properties.Resources.Settings_Neutral;
-            this.FB_Settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FB_Settings.ClickedImage = global::Client_PM.Properties.Resources.Settings_Clicked;
-            this.FB_Settings.DisabledImage = global::Client_PM.Properties.Resources.Settings_Disabled;
-            this.FB_Settings.ForeColor = System.Drawing.Color.Transparent;
-            this.FB_Settings.Image = ((System.Drawing.Image)(resources.GetObject("FB_Settings.Image")));
-            this.FB_Settings.Location = new System.Drawing.Point(1007, 12);
-            this.FB_Settings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.FB_Settings.Name = "FB_Settings";
-            this.FB_Settings.NeutralImage = global::Client_PM.Properties.Resources.Settings_Neutral;
-            this.FB_Settings.OverImage = global::Client_PM.Properties.Resources.Settings_Over;
-            this.FB_Settings.Size = new System.Drawing.Size(48, 44);
-            this.FB_Settings.TabIndex = 3;
-            this.FB_Settings.Text = "Options";
-            this.FB_Settings.UseVisualStyleBackColor = false;
-            this.FB_Settings.Click += new System.EventHandler(this.FB_Settings_Click);
-            this.FB_Settings.Paint += new System.Windows.Forms.PaintEventHandler(this.FB_Settings_Paint);
             // 
             // Timer
             // 
             this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
-            // PictureBox
+            // MS_Carousel
             // 
-            this.PictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PictureBox.BackColor = System.Drawing.Color.Gray;
-            this.PictureBox.Location = new System.Drawing.Point(2, 1);
-            this.PictureBox.Name = "PictureBox";
-            this.PictureBox.Size = new System.Drawing.Size(1064, 552);
-            this.PictureBox.TabIndex = 4;
-            this.PictureBox.TabStop = false;
+            this.MS_Carousel.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSMI_Settings});
+            this.MS_Carousel.Location = new System.Drawing.Point(0, 0);
+            this.MS_Carousel.Name = "MS_Carousel";
+            this.MS_Carousel.Size = new System.Drawing.Size(800, 24);
+            this.MS_Carousel.TabIndex = 4;
+            this.MS_Carousel.Text = "MS_Carousel";
+            // 
+            // TSMI_Settings
+            // 
+            this.TSMI_Settings.Name = "TSMI_Settings";
+            this.TSMI_Settings.Size = new System.Drawing.Size(61, 20);
+            this.TSMI_Settings.Text = "Options";
+            this.TSMI_Settings.Click += new System.EventHandler(this.TSMI_Settings_Click);
             // 
             // Carousel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.PictureBox);
-            this.Controls.Add(this.FB_Settings);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.MS_Carousel);
+            this.DoubleBuffered = true;
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MainMenuStrip = this.MS_Carousel;
             this.Name = "Carousel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diaporama";
-            this.Load += new System.EventHandler(this.Carousel_Load);
+            this.TransparencyKey = System.Drawing.Color.Transparent;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Carousel_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).EndInit();
+            this.MS_Carousel.ResumeLayout(false);
+            this.MS_Carousel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private PhotoManagerClient.FlashButton FB_Settings;
         private System.Windows.Forms.Timer Timer;
-        private System.Windows.Forms.PictureBox PictureBox;
+        private System.Windows.Forms.MenuStrip MS_Carousel;
+        private System.Windows.Forms.ToolStripMenuItem TSMI_Settings;
     }
 }
