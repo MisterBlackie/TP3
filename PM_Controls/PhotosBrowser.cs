@@ -206,7 +206,7 @@ namespace PhotoManagerClient
         /// Notez que les photos en place sont remplacées par celles de la liste.
         /// </summary>
         /// <param name="photos">Liste de photos à ajouter</param>
-        public void LoadPhotos(List<Photo> photos)
+        public void LoadPhotos(List<Photo> photos, List<int> blacklist)
         {
             SelectedPhoto = null;
             if (photos != null)
@@ -214,7 +214,8 @@ namespace PhotoManagerClient
                 PhotosList.Clear();
                 foreach (Photo photo in photos)
                 {
-                    PhotosList.AddPhoto(photo);
+                    if (!blacklist.Contains(photo.OwnerId))
+                        PhotosList.AddPhoto(photo);
                 }
             }
         }

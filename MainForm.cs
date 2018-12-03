@@ -88,13 +88,9 @@ namespace Client_PM
         private void FB_Slideshow_Add_Click(object sender, EventArgs e)
         {
             if (AddToSlideMode)
-            {
                 AddToSlideshow();
-            }
             else
-            {
                 RemoveFromSlideshow();
-            }
             UpdateAddSlideShow();
         }
 
@@ -116,12 +112,30 @@ namespace Client_PM
 
         private void FB_Blacklist_Add_Click(object sender, EventArgs e)
         {
-            //AddToBlacklist(); //Pas terminé.
+            if (AddToBlacklistMode)
+            {
+                AddToBlacklist();
+            }
+            else
+            {
+                RemoveFromBlacklist();
+            }
+            FB_Blacklist_Add.Enabled = false;
+            LoadPhoto();
+            UpdateBlacklistFB();
+            FB_Blacklist_Reset.Enabled = CBX_BlackList.Items.Count > 0;
         }
 
         private void FB_Blacklist_Reset_Click(object sender, EventArgs e)
         {
-
+            if (CBX_BlackList.Items.Count > 0)
+            {
+                CBX_BlackList.Items.Clear();
+                CBX_BlackList.ResetText();
+                Blacklist.Clear();
+                LoadPhoto();
+                FB_Blacklist_Reset.Enabled = CBX_BlackList.Items.Count > 0;
+            }
         }
         #endregion
 
@@ -178,7 +192,7 @@ namespace Client_PM
 
         private void MI_Blacklist_Add_Click(object sender, EventArgs e)
         {
-
+            TBC_PhotoManager.SelectTab(1);
         }
 
         private void MI_Blacklist_Show_Click(object sender, EventArgs e)
@@ -251,7 +265,9 @@ namespace Client_PM
         private void PhotoBrowser_SelectedChanged(object sender, EventArgs e)
         {
             FB_Image_Show.Enabled = PhotoBrowser.SelectedPhoto != null;
+            FB_Blacklist_Add.Enabled = PhotoBrowser.SelectedPhoto != null;
             UpdateAddSlideShow();
+            UpdateBlacklistFB();
 
             if (PhotoBrowser.SelectedPhoto != null)
             {
@@ -378,23 +394,13 @@ namespace Client_PM
 
         private void UpdateFlashButtons()
         {
-            //Image
             FB_Image_Add.Enabled = Logged_User != null;
-
-            //Scroll
             FB_Scroll_Prev.Enabled = Logged_User != null;
             FB_Scroll_Next.Enabled = Logged_User != null;
-
-            //SlideShow
             FB_Slideshow_Start.Enabled = Logged_User != null;
             FB_Slideshow_Reset.Enabled = Logged_User != null;
-
-            //Others
+            FB_Blacklist_Reset.Enabled = Logged_User != null && CBX_BlackList.Items.Count > 0;
             FB_Other_Download.Enabled = PhotoBrowser.SelectedPhoto != null;
-
-            //Blacklist
-            FB_Blacklist_Add.Enabled = Logged_User != null;
-            FB_Blacklist_Reset.Enabled = Logged_User != null;
         }
 
         private void Init_UsersList()
@@ -404,7 +410,6 @@ namespace Client_PM
                 if (user.Name != null)
                 {
                     CBX_UsersList.Items.Add(user);
-                    CBX_BlackList.Items.Add(user);
                 }
             }
             CBX_UsersList.SelectedIndex = 1;
@@ -420,7 +425,7 @@ namespace Client_PM
         private void LoadPhoto()
         {
             WaitSplash.Show(this, "Loading photos from server...");
-            PhotoBrowser.LoadPhotos(PhotoFilter.GetPhotos());
+            PhotoBrowser.LoadPhotos(PhotoFilter.GetPhotos(), Blacklist);
             WaitSplash.Hide();
         }
 
@@ -500,42 +505,6 @@ namespace Client_PM
             }
         }
 
-        private void AddToBlacklist()
-        {
-            if (CBX_BlackList.SelectedIndex > 0)
-            {
-                foreach (User User in PhotoFilter.UsersList)
-                {
-                    if (User.Name == CBX_BlackList.SelectedText)
-                    {
-                        Blacklist.Add(User.Id);
-                        CBX_BlackList.SelectedIndex = -1;
-                        CBX_BlackList.Text = "";
-                    }
-                }
-            }
-            else
-            {
-                if (PhotoBrowser.SelectedPhoto != null)
-                {
-                    Blacklist.Add(PhotoBrowser.SelectedPhoto.OwnerId);
-                }
-            }
-        }
-
-        private void UpdateAddBlacklist()
-        {
-            FB_Blacklist_Add.Enabled = PhotoBrowser.SelectedPhoto != null || CBX_BlackList.SelectedIndex > 0;
-
-            foreach (int User in Blacklist)
-            {
-                if (PhotoBrowser.SelectedPhoto != null && User == PhotoBrowser.SelectedPhoto.OwnerId)
-                {
-
-                }
-            }
-        }
-
         private void OpenSlideShow()
         {
             Carousel DLG = new Carousel();
@@ -581,6 +550,81 @@ namespace Client_PM
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void AddToBlacklist()
+        {
+            if (PhotoBrowser.SelectedPhoto != null)
+            {
+                User CurrentUser = DBPhotosWebServices.GetUser(PhotoBrowser.SelectedPhoto.OwnerId);
+                CBX_BlackList.Items.Add(CurrentUser);
+                Blacklist.Add(CurrentUser.Id);
+            }
+        }
+
+        private void RemoveFromBlacklist()
+        {
+            if (CBX_BlackList.SelectedIndex >= 0)
+            {
+                foreach(int Id in Blacklist)
+                {
+                    if (DBPhotosWebServices.GetUser(Id).Name == CBX_BlackList.SelectedItem.ToString())
+                    {
+                        CBX_BlackList.Items.Remove(CBX_BlackList.SelectedItem);
+                        Blacklist.Remove(Id);
+                        CBX_BlackList.ResetText();
+                        break;
+                    }
+                }
+            }
+        }
+
+        private void UpdateBlacklistFB()
+        {
+            bool AlreadyInBlacklist = false;
+
+            if (PhotoBrowser.SelectedPhoto != null)
+            {
+                User CurrentUser = DBPhotosWebServices.GetUser(PhotoBrowser.SelectedPhoto.OwnerId);
+                foreach (User User in CBX_BlackList.Items)
+                {
+                    if (CurrentUser == User)
+                        AlreadyInBlacklist = true;
+                }
+            }
+
+            if (!AlreadyInBlacklist)
+            {
+                AddToBlacklistMode = true;
+                FB_Blacklist_Add.ClickedImage = Properties.Resources.Add_Clicked;
+                FB_Blacklist_Add.DisabledImage = Properties.Resources.Add_Disabled;
+                FB_Blacklist_Add.NeutralImage = Properties.Resources.Add_Neutral;
+                FB_Blacklist_Add.OverImage = Properties.Resources.Add_Over;
+            }
+
+        }
         #endregion
+
+        private void CBX_BlackList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CBX_BlackList.SelectedIndex >= 0)
+            {
+                FB_Blacklist_Add.Enabled = true;
+                AddToBlacklistMode = false;
+                FB_Blacklist_Add.BackgroundImage = Properties.Resources.Remove_Neutral;
+                FB_Blacklist_Add.ClickedImage = Properties.Resources.Remove_Clicked;
+                FB_Blacklist_Add.DisabledImage = Properties.Resources.Remove_Disabled;
+                FB_Blacklist_Add.NeutralImage = Properties.Resources.Remove_Neutral;
+                FB_Blacklist_Add.OverImage = Properties.Resources.Remove_Over;
+            }
+            else
+            {
+                AddToBlacklistMode = true;
+                FB_Blacklist_Add.BackgroundImage = Properties.Resources.Add_Neutral;
+                FB_Blacklist_Add.ClickedImage = Properties.Resources.Add_Clicked;
+                FB_Blacklist_Add.DisabledImage = Properties.Resources.Add_Disabled;
+                FB_Blacklist_Add.NeutralImage = Properties.Resources.Add_Neutral;
+                FB_Blacklist_Add.OverImage = Properties.Resources.Add_Over;
+            }
+        }
     }
 }
