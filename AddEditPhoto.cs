@@ -52,8 +52,8 @@ namespace Client_PM
                 try
                 {
                     Image Image = Image.FromFile(FileDialog.FileName);
-
                     ChangerImage(ref Image);
+                    BTN_Rotate.Enabled = true;
                 }
                 catch (Exception ex)
                 {
@@ -98,6 +98,18 @@ namespace Client_PM
                 TBX_Keywords.Text = Photo.Keywords;
                 RB_Private.Checked = !Photo.Shared;
             }
+        }
+
+        private Image Rotate(Image BaseImage)
+        {
+            Image RotatedImage = (Image)BaseImage.Clone();
+            RotatedImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
+            return RotatedImage;
+        }
+
+        private void BTN_Rotate_Click(object sender, EventArgs e)
+        {
+            ImageBox.BackgroundImage = Rotate(ImageBox.BackgroundImage);
         }
     }
 }

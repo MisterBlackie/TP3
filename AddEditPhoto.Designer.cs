@@ -41,6 +41,7 @@
             this.BTN_Ajout = new System.Windows.Forms.Button();
             this.BTN_Selectionner = new System.Windows.Forms.Button();
             this.FileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.BTN_Rotate = new System.Windows.Forms.Button();
             this.ImageBox = new PhotoManagerClient.ImageBox();
             this.GB_Info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageBox)).BeginInit();
@@ -52,7 +53,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LBL_Desc.AutoSize = true;
-            this.LBL_Desc.Location = new System.Drawing.Point(16, 101);
+            this.LBL_Desc.Location = new System.Drawing.Point(16, 84);
             this.LBL_Desc.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LBL_Desc.Name = "LBL_Desc";
             this.LBL_Desc.Size = new System.Drawing.Size(93, 20);
@@ -63,7 +64,7 @@
             // 
             this.RTB_Description.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.RTB_Description.Location = new System.Drawing.Point(19, 123);
+            this.RTB_Description.Location = new System.Drawing.Point(19, 106);
             this.RTB_Description.Margin = new System.Windows.Forms.Padding(2);
             this.RTB_Description.Name = "RTB_Description";
             this.RTB_Description.Size = new System.Drawing.Size(337, 85);
@@ -76,7 +77,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LBL_Keywords.AutoSize = true;
-            this.LBL_Keywords.Location = new System.Drawing.Point(16, 229);
+            this.LBL_Keywords.Location = new System.Drawing.Point(15, 206);
             this.LBL_Keywords.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LBL_Keywords.Name = "LBL_Keywords";
             this.LBL_Keywords.Size = new System.Drawing.Size(73, 20);
@@ -88,7 +89,7 @@
             this.TBX_Keywords.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBX_Keywords.Location = new System.Drawing.Point(19, 251);
+            this.TBX_Keywords.Location = new System.Drawing.Point(19, 228);
             this.TBX_Keywords.Margin = new System.Windows.Forms.Padding(2);
             this.TBX_Keywords.Name = "TBX_Keywords";
             this.TBX_Keywords.Size = new System.Drawing.Size(337, 26);
@@ -106,11 +107,11 @@
             this.GB_Info.Controls.Add(this.LBL_Keywords);
             this.GB_Info.Controls.Add(this.LBL_Desc);
             this.GB_Info.Controls.Add(this.RTB_Description);
-            this.GB_Info.Location = new System.Drawing.Point(12, 255);
+            this.GB_Info.Location = new System.Drawing.Point(12, 281);
             this.GB_Info.Margin = new System.Windows.Forms.Padding(2);
             this.GB_Info.Name = "GB_Info";
             this.GB_Info.Padding = new System.Windows.Forms.Padding(2);
-            this.GB_Info.Size = new System.Drawing.Size(373, 307);
+            this.GB_Info.Size = new System.Drawing.Size(373, 270);
             this.GB_Info.TabIndex = 2;
             this.GB_Info.TabStop = false;
             this.GB_Info.Text = "Informations";
@@ -120,7 +121,7 @@
             this.RB_Private.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.RB_Private.AutoSize = true;
-            this.RB_Private.Location = new System.Drawing.Point(267, 60);
+            this.RB_Private.Location = new System.Drawing.Point(278, 44);
             this.RB_Private.Name = "RB_Private";
             this.RB_Private.Size = new System.Drawing.Size(70, 24);
             this.RB_Private.TabIndex = 2;
@@ -133,7 +134,7 @@
             this.TBX_Title.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBX_Title.Location = new System.Drawing.Point(19, 59);
+            this.TBX_Title.Location = new System.Drawing.Point(20, 43);
             this.TBX_Title.Margin = new System.Windows.Forms.Padding(2);
             this.TBX_Title.Name = "TBX_Title";
             this.TBX_Title.Size = new System.Drawing.Size(215, 26);
@@ -145,8 +146,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LBL_Title.AutoSize = true;
-            this.LBL_Title.Location = new System.Drawing.Point(15, 37);
-            this.LBL_Title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LBL_Title.Location = new System.Drawing.Point(16, 21);
+            this.LBL_Title.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LBL_Title.Name = "LBL_Title";
             this.LBL_Title.Size = new System.Drawing.Size(44, 20);
             this.LBL_Title.TabIndex = 9;
@@ -156,7 +157,7 @@
             // 
             this.BTN_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BTN_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Cancel.Location = new System.Drawing.Point(179, 567);
+            this.BTN_Cancel.Location = new System.Drawing.Point(194, 567);
             this.BTN_Cancel.Name = "BTN_Cancel";
             this.BTN_Cancel.Size = new System.Drawing.Size(95, 34);
             this.BTN_Cancel.TabIndex = 6;
@@ -167,7 +168,7 @@
             // 
             this.BTN_Ajout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BTN_Ajout.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.BTN_Ajout.Location = new System.Drawing.Point(290, 567);
+            this.BTN_Ajout.Location = new System.Drawing.Point(295, 567);
             this.BTN_Ajout.Name = "BTN_Ajout";
             this.BTN_Ajout.Size = new System.Drawing.Size(95, 34);
             this.BTN_Ajout.TabIndex = 7;
@@ -178,7 +179,7 @@
             // BTN_Selectionner
             // 
             this.BTN_Selectionner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BTN_Selectionner.Location = new System.Drawing.Point(14, 567);
+            this.BTN_Selectionner.Location = new System.Drawing.Point(12, 567);
             this.BTN_Selectionner.Name = "BTN_Selectionner";
             this.BTN_Selectionner.Size = new System.Drawing.Size(95, 34);
             this.BTN_Selectionner.TabIndex = 1;
@@ -189,6 +190,17 @@
             // FileDialog
             // 
             this.FileDialog.Title = "Sélectionner une photo...";
+            // 
+            // BTN_Rotate
+            // 
+            this.BTN_Rotate.Enabled = false;
+            this.BTN_Rotate.Location = new System.Drawing.Point(298, 251);
+            this.BTN_Rotate.Name = "BTN_Rotate";
+            this.BTN_Rotate.Size = new System.Drawing.Size(85, 25);
+            this.BTN_Rotate.TabIndex = 12;
+            this.BTN_Rotate.Text = "Rotation";
+            this.BTN_Rotate.UseVisualStyleBackColor = true;
+            this.BTN_Rotate.Click += new System.EventHandler(this.BTN_Rotate_Click);
             // 
             // ImageBox
             // 
@@ -217,6 +229,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BTN_Cancel;
             this.ClientSize = new System.Drawing.Size(402, 613);
+            this.Controls.Add(this.BTN_Rotate);
             this.Controls.Add(this.BTN_Selectionner);
             this.Controls.Add(this.BTN_Ajout);
             this.Controls.Add(this.BTN_Cancel);
@@ -251,5 +264,6 @@
         private System.Windows.Forms.Button BTN_Ajout;
         private System.Windows.Forms.Button BTN_Selectionner;
         private System.Windows.Forms.OpenFileDialog FileDialog;
+        private System.Windows.Forms.Button BTN_Rotate;
     }
 }
