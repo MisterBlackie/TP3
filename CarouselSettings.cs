@@ -41,9 +41,6 @@ namespace Client_PM
 
         private void TrackBarVitesse_ValueChanged(object sender, EventArgs e)
         {
-            if (TrackBarVitesse.Value == 0)
-                TrackBarVitesse.Value++;
-
             Settings.VitesseCarousel = TrackBarVitesse.Value;
         }
 

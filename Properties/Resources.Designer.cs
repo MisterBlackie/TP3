@@ -453,6 +453,46 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap RemoveFromSlide_Clicked {
+            get {
+                object obj = ResourceManager.GetObject("RemoveFromSlide_Clicked", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RemoveFromSlide_Disabled {
+            get {
+                object obj = ResourceManager.GetObject("RemoveFromSlide_Disabled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RemoveFromSlide_Neutral {
+            get {
+                object obj = ResourceManager.GetObject("RemoveFromSlide_Neutral", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RemoveFromSlide_Over {
+            get {
+                object obj = ResourceManager.GetObject("RemoveFromSlide_Over", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Reset_Clicked {
             get {
                 object obj = ResourceManager.GetObject("Reset_Clicked", resourceCulture);
