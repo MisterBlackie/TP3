@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Client_PM
 {
-    public partial class Tabs : Form
+    public partial class DLG_Aide : Form
     {
-        public Tabs()
+        public DLG_Aide()
         {
             InitializeComponent();
         }

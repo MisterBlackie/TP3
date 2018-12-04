@@ -403,6 +403,7 @@ namespace Client_PM
             FB_Slideshow_Reset.Enabled = Logged_User != null;
             FB_Blacklist_Reset.Enabled = Logged_User != null && CBX_BlackList.Items.Count > 0;
             FB_Other_Download.Enabled = PhotoBrowser.SelectedPhoto != null;
+            FB_EditDiapo.Enabled = Logged_User != null;
         }
 
         private void Init_UsersList()
@@ -456,6 +457,12 @@ namespace Client_PM
             }
             if (!AlreadyInSlideshow)
                 Slideshow.Add(PhotoBrowser.SelectedPhoto);
+        }
+
+        private void ModifyPhotoSlideshow()
+        {
+            PhotoSlideshow DLG = new PhotoSlideshow(ref Slideshow);
+            DLG.ShowDialog();
         }
 
         private void ResetSlideshow()
@@ -719,6 +726,38 @@ namespace Client_PM
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             SaveSettings();
+        }
+
+        private void FB_EditDiapo_Click(object sender, EventArgs e)
+        {
+            ModifyPhotoSlideshow();
+            UpdateAddSlideShow();
+        }
+
+        private void ajouterToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (PhotoBrowser.SelectedPhoto != null)
+            {
+                AddToSlideshow();
+                UpdateAddSlideShow();
+            }
+        }
+
+        private void modifierLesPhotosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ModifyPhotoSlideshow();
+            UpdateAddSlideShow();
+        }
+
+        private void réinitialiserLesPhotosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ResetSlideshow();
+            UpdateAddSlideShow();
+        }
+
+        private void démarrerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenSlideShow();
         }
     }
 }
