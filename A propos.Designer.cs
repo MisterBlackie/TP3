@@ -34,26 +34,29 @@
             // RTB_Infos
             // 
             this.RTB_Infos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RTB_Infos.Location = new System.Drawing.Point(12, 12);
-            this.RTB_Infos.Margin = new System.Windows.Forms.Padding(5);
+            this.RTB_Infos.Location = new System.Drawing.Point(16, 15);
+            this.RTB_Infos.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.RTB_Infos.Name = "RTB_Infos";
             this.RTB_Infos.ReadOnly = true;
-            this.RTB_Infos.Size = new System.Drawing.Size(243, 116);
+            this.RTB_Infos.Size = new System.Drawing.Size(323, 142);
             this.RTB_Infos.TabIndex = 0;
             this.RTB_Infos.Text = " Application client photo manager\n\n Gabriel Lachapelle\n Alexandre Tremblay\n";
             // 
             // A_propos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(266, 136);
+            this.ClientSize = new System.Drawing.Size(355, 167);
             this.Controls.Add(this.RTB_Infos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "A_propos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "À propos";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.A_propos_FormClosing);
+            this.Load += new System.EventHandler(this.A_propos_Load);
             this.ResumeLayout(false);
 
         }

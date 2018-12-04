@@ -41,35 +41,40 @@
             // 
             // MS_Carousel
             // 
+            this.MS_Carousel.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MS_Carousel.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TSMI_Settings});
             this.MS_Carousel.Location = new System.Drawing.Point(0, 0);
             this.MS_Carousel.Name = "MS_Carousel";
-            this.MS_Carousel.Size = new System.Drawing.Size(800, 24);
+            this.MS_Carousel.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.MS_Carousel.Size = new System.Drawing.Size(1067, 28);
             this.MS_Carousel.TabIndex = 4;
             this.MS_Carousel.Text = "MS_Carousel";
             // 
             // TSMI_Settings
             // 
             this.TSMI_Settings.Name = "TSMI_Settings";
-            this.TSMI_Settings.Size = new System.Drawing.Size(61, 20);
+            this.TSMI_Settings.Size = new System.Drawing.Size(73, 24);
             this.TSMI_Settings.Text = "Options";
             this.TSMI_Settings.Click += new System.EventHandler(this.TSMI_Settings_Click);
             // 
             // Carousel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.MS_Carousel);
             this.DoubleBuffered = true;
             this.KeyPreview = true;
             this.MainMenuStrip = this.MS_Carousel;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Carousel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diaporama";
             this.TransparencyKey = System.Drawing.Color.Transparent;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Carousel_FormClosing);
+            this.Load += new System.EventHandler(this.Carousel_Load);
             this.Shown += new System.EventHandler(this.Carousel_Shown);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Carousel_KeyDown);
             this.MS_Carousel.ResumeLayout(false);

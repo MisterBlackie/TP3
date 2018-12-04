@@ -27,6 +27,7 @@ namespace Client_PM
 
         private void InfoPhoto_Load(object sender, EventArgs e)
         {
+            LoadSettings();
             PictureBox.Image = Photo.GetOriginalImage();
 
             TBX_Author.Text = User;
@@ -34,6 +35,30 @@ namespace Client_PM
             TBX_CreationDate.Text = Photo.CreationDate.ToString();
             RTB_Description.Text = Photo.Description;
             TBX_Keywords.Text = Photo.Keywords;
+        }
+
+
+        private void LoadSettings()
+        {
+            if (!Properties.Settings.Default.FirstUse_InfoPhoto)
+            {
+                // Taille du form
+                Size = Properties.Settings.Default.TailleInfoPhoto;
+                // Position du form
+                Location = Properties.Settings.Default.PositionInfoPhoto;
+            }
+        }
+
+        private void SaveSettings()
+        {
+            // Taille du form
+            Properties.Settings.Default.TailleInfoPhoto = Size;
+            // Position du form
+            Properties.Settings.Default.PositionInfoPhoto = Location;
+
+            Properties.Settings.Default.FirstUse_InfoPhoto = false;
+            Properties.Settings.Default.Save();
+
         }
 
         private void BTN_Ok_Click(object sender, EventArgs e)
@@ -45,6 +70,11 @@ namespace Client_PM
         {
             IsClosing = true;
             Parent.ShowPhoto();
+        }
+
+        private void InfoPhoto_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveSettings();
         }
     }
 }

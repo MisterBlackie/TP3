@@ -58,5 +58,375 @@ namespace Client_PM.Properties {
                 this["Password"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.StringCollection Blacklist {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["Blacklist"]));
+            }
+            set {
+                this["Blacklist"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.StringCollection PhotoCarousel {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["PhotoCarousel"]));
+            }
+            set {
+                this["PhotoCarousel"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PositionFureteur {
+            get {
+                return ((string)(this["PositionFureteur"]));
+            }
+            set {
+                this["PositionFureteur"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point PositionMainForm {
+            get {
+                return ((global::System.Drawing.Point)(this["PositionMainForm"]));
+            }
+            set {
+                this["PositionMainForm"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1171, 721")]
+        public global::System.Drawing.Size TailleMainForm {
+            get {
+                return ((global::System.Drawing.Size)(this["TailleMainForm"]));
+            }
+            set {
+                this["TailleMainForm"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point PositionAPropos {
+            get {
+                return ((global::System.Drawing.Point)(this["PositionAPropos"]));
+            }
+            set {
+                this["PositionAPropos"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Size TailleAPropos {
+            get {
+                return ((global::System.Drawing.Size)(this["TailleAPropos"]));
+            }
+            set {
+                this["TailleAPropos"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point PositionAddEditPhoto {
+            get {
+                return ((global::System.Drawing.Point)(this["PositionAddEditPhoto"]));
+            }
+            set {
+                this["PositionAddEditPhoto"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Size TailleAddEditPhoto {
+            get {
+                return ((global::System.Drawing.Size)(this["TailleAddEditPhoto"]));
+            }
+            set {
+                this["TailleAddEditPhoto"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point PositionCarousel {
+            get {
+                return ((global::System.Drawing.Point)(this["PositionCarousel"]));
+            }
+            set {
+                this["PositionCarousel"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Size TailleCarousel {
+            get {
+                return ((global::System.Drawing.Size)(this["TailleCarousel"]));
+            }
+            set {
+                this["TailleCarousel"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point PositionDLG_Account {
+            get {
+                return ((global::System.Drawing.Point)(this["PositionDLG_Account"]));
+            }
+            set {
+                this["PositionDLG_Account"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Size TailleDLG_Account {
+            get {
+                return ((global::System.Drawing.Size)(this["TailleDLG_Account"]));
+            }
+            set {
+                this["TailleDLG_Account"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point PositionDLG_Login {
+            get {
+                return ((global::System.Drawing.Point)(this["PositionDLG_Login"]));
+            }
+            set {
+                this["PositionDLG_Login"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Size TailleDLG_Login {
+            get {
+                return ((global::System.Drawing.Size)(this["TailleDLG_Login"]));
+            }
+            set {
+                this["TailleDLG_Login"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point PositionInfoPhoto {
+            get {
+                return ((global::System.Drawing.Point)(this["PositionInfoPhoto"]));
+            }
+            set {
+                this["PositionInfoPhoto"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Size TailleInfoPhoto {
+            get {
+                return ((global::System.Drawing.Size)(this["TailleInfoPhoto"]));
+            }
+            set {
+                this["TailleInfoPhoto"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point PositionTabs {
+            get {
+                return ((global::System.Drawing.Point)(this["PositionTabs"]));
+            }
+            set {
+                this["PositionTabs"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Size TailleTabs {
+            get {
+                return ((global::System.Drawing.Size)(this["TailleTabs"]));
+            }
+            set {
+                this["TailleTabs"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point PositionCarouselSettings {
+            get {
+                return ((global::System.Drawing.Point)(this["PositionCarouselSettings"]));
+            }
+            set {
+                this["PositionCarouselSettings"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Size TailleCarouselSettings {
+            get {
+                return ((global::System.Drawing.Size)(this["TailleCarouselSettings"]));
+            }
+            set {
+                this["TailleCarouselSettings"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool FirstUse_MainForm {
+            get {
+                return ((bool)(this["FirstUse_MainForm"]));
+            }
+            set {
+                this["FirstUse_MainForm"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool FirstUse_APropos {
+            get {
+                return ((bool)(this["FirstUse_APropos"]));
+            }
+            set {
+                this["FirstUse_APropos"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool FirstUse_AddEditPhoto {
+            get {
+                return ((bool)(this["FirstUse_AddEditPhoto"]));
+            }
+            set {
+                this["FirstUse_AddEditPhoto"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool FirstUse_Carousel {
+            get {
+                return ((bool)(this["FirstUse_Carousel"]));
+            }
+            set {
+                this["FirstUse_Carousel"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool FirstUse_CarouselSettings {
+            get {
+                return ((bool)(this["FirstUse_CarouselSettings"]));
+            }
+            set {
+                this["FirstUse_CarouselSettings"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool FirstUse_DLG_Account {
+            get {
+                return ((bool)(this["FirstUse_DLG_Account"]));
+            }
+            set {
+                this["FirstUse_DLG_Account"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool FirstUse_DLG_Login {
+            get {
+                return ((bool)(this["FirstUse_DLG_Login"]));
+            }
+            set {
+                this["FirstUse_DLG_Login"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool FirstUse_InfoPhoto {
+            get {
+                return ((bool)(this["FirstUse_InfoPhoto"]));
+            }
+            set {
+                this["FirstUse_InfoPhoto"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool FirstUse_Tabs {
+            get {
+                return ((bool)(this["FirstUse_Tabs"]));
+            }
+            set {
+                this["FirstUse_Tabs"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool Paramètre {
+            get {
+                return ((bool)(this["Paramètre"]));
+            }
+            set {
+                this["Paramètre"] = value;
+            }
+        }
     }
 }

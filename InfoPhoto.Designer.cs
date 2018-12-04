@@ -177,6 +177,7 @@
             this.Name = "InfoPhoto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InfoPhoto";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InfoPhoto_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.InfoPhoto_FormClosed);
             this.Load += new System.EventHandler(this.InfoPhoto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).EndInit();

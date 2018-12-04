@@ -37,6 +37,9 @@ namespace Client_PM
                 CBX_SeSouvenir.Checked = Properties.Settings.Default.Username != "";
                 TBX_UserName.Text = Properties.Settings.Default.Username;
                 TBX_Password.Text = Properties.Settings.Default.Password;
+
+                Size = Properties.Settings.Default.TailleDLG_Login;
+                Location = Properties.Settings.Default.PositionDLG_Login;
             }
         }
 
@@ -46,13 +49,19 @@ namespace Client_PM
             {
                 Properties.Settings.Default.Username = TBX_UserName.Text;
                 Properties.Settings.Default.Password = TBX_Password.Text;
-                Properties.Settings.Default.First_Use = false;
-                Properties.Settings.Default.Save();
             }
             else
             {
-                Properties.Settings.Default.Reset();
+                Properties.Settings.Default.Username = "";
+                Properties.Settings.Default.Password = "";
             }
+ 
+            Properties.Settings.Default.TailleDLG_Login = Size;
+            Properties.Settings.Default.PositionDLG_Login = Location;
+
+
+            Properties.Settings.Default.First_Use = false;
+            Properties.Settings.Default.Save();
         }
 
         private bool Validate_UserName(ref string message)

@@ -23,6 +23,7 @@ namespace Client_PM
         }
         private void DLG_Account_Load(object sender, EventArgs e)
         {
+            LoadSettings();
 
             ValidationProvider = new ValidationProvider(this, SubmitTask);
             ValidationProvider.AddControlToValidate(TBX_Username, Validate_TBX_Username, Validate_TBX_Username_OnSubmit);
@@ -48,6 +49,29 @@ namespace Client_PM
             User.Password = TBX_Password.Text;
             if (AvatarImageChanged )
                 User.SetAvatarImage(IBX_Avatar.BackgroundImage);
+        }
+        private void LoadSettings()
+        {
+            if (!Properties.Settings.Default.FirstUse_DLG_Account)
+            {
+                // Taille du form
+                Size = Properties.Settings.Default.TailleDLG_Account;
+
+                // Position du form
+                Location = Properties.Settings.Default.PositionDLG_Account;
+            }
+        }
+
+        private void SaveSettings()
+        {
+            // Taille du form
+            Properties.Settings.Default.TailleDLG_Account = Size;
+
+            // Position du form
+            Properties.Settings.Default.PositionDLG_Account = Location;
+
+            Properties.Settings.Default.FirstUse_DLG_Account = false;
+            Properties.Settings.Default.Save();
         }
         private bool Validate_TBX_Username(ref string message)
         {
@@ -117,6 +141,11 @@ namespace Client_PM
             {
                 IBX_Avatar.BackgroundImage = Image.FromFile(OFD_Image.FileName);
             }
+        }
+
+        private void DLG_Account_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveSettings();
         }
     }
 }

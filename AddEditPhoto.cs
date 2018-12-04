@@ -89,6 +89,8 @@ namespace Client_PM
 
         private void AddEditPhoto_Load(object sender, EventArgs e)
         {
+            LoadSettings();
+
             if (EditingMode)
             {
                 BTN_Ajout.Text = "Modifier";
@@ -110,6 +112,35 @@ namespace Client_PM
         private void BTN_Rotate_Click(object sender, EventArgs e)
         {
             ImageBox.BackgroundImage = Rotate(ImageBox.BackgroundImage);
+        }
+
+        private void LoadSettings()
+        {
+            if (!Properties.Settings.Default.FirstUse_AddEditPhoto)
+            {
+                // Taille du form
+                Size = Properties.Settings.Default.TailleAddEditPhoto;
+
+                // Position du form
+                Location = Properties.Settings.Default.PositionAddEditPhoto;
+            }
+        }
+
+        private void SaveSettings()
+        {
+            // Taille du form
+            Properties.Settings.Default.TailleAddEditPhoto = Size;
+
+            // Position du form
+            Properties.Settings.Default.PositionAddEditPhoto = Location;
+
+            Properties.Settings.Default.FirstUse_AddEditPhoto = false;
+            Properties.Settings.Default.Save();
+        }
+
+        private void AddEditPhoto_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveSettings();
         }
     }
 }

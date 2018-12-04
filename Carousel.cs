@@ -137,10 +137,44 @@ namespace Client_PM
             }
         }
 
+        private void LoadSettings()
+        {
+            if (!Properties.Settings.Default.FirstUse_Carousel)
+            {
+                // Taille du form
+                Size = Properties.Settings.Default.TailleCarousel;
+
+                // Position du form
+                Location = Properties.Settings.Default.PositionCarousel;
+            }
+        }
+
+        private void SaveSettings()
+        {
+            // Taille du form
+            Properties.Settings.Default.TailleCarousel = Size;
+
+            // Position du form
+            Properties.Settings.Default.PositionCarousel = Location;
+
+            Properties.Settings.Default.FirstUse_Carousel = false;
+            Properties.Settings.Default.Save();
+        }
+
         private void Timer_Tick(object sender, EventArgs e)
         {
             Next();
             Timer.Interval = 500 * Settings.VitesseCarousel;
+        }
+
+        private void Carousel_Load(object sender, EventArgs e)
+        {
+            LoadSettings();
+        }
+
+        private void Carousel_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveSettings();
         }
     }
 }

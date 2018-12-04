@@ -45,7 +45,7 @@
             this.CB_DefilementAleatoire.Location = new System.Drawing.Point(9, 29);
             this.CB_DefilementAleatoire.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CB_DefilementAleatoire.Name = "CB_DefilementAleatoire";
-            this.CB_DefilementAleatoire.Size = new System.Drawing.Size(170, 24);
+            this.CB_DefilementAleatoire.Size = new System.Drawing.Size(205, 29);
             this.CB_DefilementAleatoire.TabIndex = 0;
             this.CB_DefilementAleatoire.Text = "Défilement aléatoire";
             this.CB_DefilementAleatoire.UseVisualStyleBackColor = true;
@@ -68,7 +68,7 @@
             this.label1.Location = new System.Drawing.Point(9, 97);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 20);
+            this.label1.Size = new System.Drawing.Size(198, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Vitesse de défilement";
             // 
@@ -77,7 +77,7 @@
             this.TrackBarVitesse.Location = new System.Drawing.Point(6, 138);
             this.TrackBarVitesse.Minimum = 1;
             this.TrackBarVitesse.Name = "TrackBarVitesse";
-            this.TrackBarVitesse.Size = new System.Drawing.Size(173, 45);
+            this.TrackBarVitesse.Size = new System.Drawing.Size(173, 56);
             this.TrackBarVitesse.TabIndex = 3;
             this.TrackBarVitesse.Value = 1;
             this.TrackBarVitesse.ValueChanged += new System.EventHandler(this.TrackBarVitesse_ValueChanged);
@@ -88,7 +88,7 @@
             this.label2.Location = new System.Drawing.Point(9, 188);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 20);
+            this.label2.Size = new System.Drawing.Size(73, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "Rapide";
             // 
@@ -98,7 +98,7 @@
             this.label3.Location = new System.Drawing.Point(138, 188);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 20);
+            this.label3.Size = new System.Drawing.Size(50, 25);
             this.label3.TabIndex = 5;
             this.label3.Text = "Lent";
             // 
@@ -120,7 +120,7 @@
             // 
             // CarouselSettings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(212, 288);
             this.Controls.Add(this.groupBox1);
@@ -133,6 +133,7 @@
             this.Name = "CarouselSettings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CarouselSettings";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CarouselSettings_FormClosing);
             this.Load += new System.EventHandler(this.CarouselSettings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TrackBarVitesse)).EndInit();
             this.groupBox1.ResumeLayout(false);

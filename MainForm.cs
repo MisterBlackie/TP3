@@ -1,6 +1,7 @@
 ﻿using PhotoManagerClient;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -46,6 +47,7 @@ namespace Client_PM
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            LoadSettings();
             UpdateFlashButtons();
         }
 
@@ -602,6 +604,93 @@ namespace Client_PM
             }
 
         }
+
+        private void SaveSettings()
+        {
+            // Position du fureteur de photo
+            Properties.Settings.Default.PositionFureteur = PhotoBrowser.Placement.ToString();
+
+            // Liste des photos dans le carousel
+            // On ne garde que la liste des IDs des photos puisque Properties ne donne pas l'option de stocker une list<Photo>
+            StringCollection List = new StringCollection();
+            foreach (Photo P in Slideshow)
+            {
+                List.Add(P.Id.ToString());
+            }
+            Properties.Settings.Default.PhotoCarousel = List;
+            List.Clear();
+
+            // Liste des usagers dans la blaclist
+            foreach (int I in Blacklist)
+            {
+                List.Add(I.ToString());
+            }
+            Properties.Settings.Default.Blacklist = List;
+
+            // Position du MainForm
+            Properties.Settings.Default.PositionMainForm = Location;
+
+            // Taille du MainForm
+            Properties.Settings.Default.TailleMainForm = Size;
+
+            Properties.Settings.Default.FirstUse_MainForm = false;
+            Properties.Settings.Default.Save();
+        }
+
+        private void LoadSettings()
+        {
+            if (!Properties.Settings.Default.FirstUse_MainForm)
+            {
+                // Position du fureteur
+                // Puisqu'il que Properties n'offre pas l'option de choisir des enums, il est stocké en string
+                switch (Properties.Settings.Default.PositionFureteur.ToLower())
+                {
+                    case "bottom":
+                        PhotoBrowser.Placement = PhotoBrowserPlacement.Bottom;
+                        break;
+                    case "top":
+                        PhotoBrowser.Placement = PhotoBrowserPlacement.Top;
+                        break;
+                    case "left":
+                        PhotoBrowser.Placement = PhotoBrowserPlacement.Left;
+                        break;
+                    case "right":
+                        PhotoBrowser.Placement = PhotoBrowserPlacement.Right;
+                        break;
+                }
+
+                // Liste des photos du carousel
+                foreach (string ID in Properties.Settings.Default.PhotoCarousel)
+                {
+                    Photo Photo = DBPhotosWebServices.GetPhoto(int.Parse(ID));
+                    if (Photo != null)
+                        Slideshow.Add(Photo);
+                }
+
+                // Liste des usagers dans la blacklist
+                foreach (string ID in Properties.Settings.Default.Blacklist)
+                {
+                    Blacklist.Add(int.Parse(ID));
+                }
+                CBX_BlackList_Load();
+
+                // Position du MainForm
+                Location = Properties.Settings.Default.PositionMainForm;
+
+                // Taille du MainForm
+                Size = Properties.Settings.Default.TailleMainForm;
+            }
+        }
+
+        private void CBX_BlackList_Load()
+        {
+            CBX_BlackList.Items.Clear();
+
+            foreach (int ID in Blacklist)
+            {
+                CBX_BlackList.Items.Add(DBPhotosWebServices.GetUser(ID));
+            }
+        }
         #endregion
 
         private void CBX_BlackList_SelectedIndexChanged(object sender, EventArgs e)
@@ -625,6 +714,11 @@ namespace Client_PM
                 FB_Blacklist_Add.NeutralImage = Properties.Resources.Add_Neutral;
                 FB_Blacklist_Add.OverImage = Properties.Resources.Add_Over;
             }
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveSettings();
         }
     }
 }

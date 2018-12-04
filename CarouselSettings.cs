@@ -31,7 +31,32 @@ namespace Client_PM
 
         private void CarouselSettings_Load(object sender, EventArgs e)
         {
+            LoadSettings();
             SetValue();
+        }
+
+        private void LoadSettings()
+        {
+            if (!Properties.Settings.Default.FirstUse_CarouselSettings)
+            {
+                // Taille du form
+                Size = Properties.Settings.Default.TailleCarouselSettings;
+
+                // Position du form
+                Location = Properties.Settings.Default.PositionCarouselSettings;
+            }
+        }
+
+        private void SaveSettings()
+        {
+            // Taille du form
+            Properties.Settings.Default.TailleCarouselSettings = Size;
+
+            // Position du form
+            Properties.Settings.Default.PositionCarousel = Location;
+
+            Properties.Settings.Default.FirstUse_CarouselSettings = false;
+            Properties.Settings.Default.Save();
         }
 
         private void CB_DefilementAleatoire_CheckedChanged(object sender, EventArgs e)
@@ -48,6 +73,11 @@ namespace Client_PM
         {
             Settings.Reset();
             SetValue();
+        }
+
+        private void CarouselSettings_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveSettings();
         }
     }
 }

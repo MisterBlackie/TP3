@@ -51,14 +51,14 @@
             // 
             this.TBX_Username.Location = new System.Drawing.Point(142, 25);
             this.TBX_Username.Name = "TBX_Username";
-            this.TBX_Username.Size = new System.Drawing.Size(173, 26);
+            this.TBX_Username.Size = new System.Drawing.Size(173, 30);
             this.TBX_Username.TabIndex = 0;
             // 
             // TBX_Password
             // 
             this.TBX_Password.Location = new System.Drawing.Point(142, 57);
             this.TBX_Password.Name = "TBX_Password";
-            this.TBX_Password.Size = new System.Drawing.Size(173, 26);
+            this.TBX_Password.Size = new System.Drawing.Size(173, 30);
             this.TBX_Password.TabIndex = 1;
             this.TBX_Password.UseSystemPasswordChar = true;
             // 
@@ -66,7 +66,7 @@
             // 
             this.TBX_VerifyPassword.Location = new System.Drawing.Point(142, 89);
             this.TBX_VerifyPassword.Name = "TBX_VerifyPassword";
-            this.TBX_VerifyPassword.Size = new System.Drawing.Size(173, 26);
+            this.TBX_VerifyPassword.Size = new System.Drawing.Size(173, 30);
             this.TBX_VerifyPassword.TabIndex = 2;
             this.TBX_VerifyPassword.UseSystemPasswordChar = true;
             // 
@@ -75,7 +75,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(8, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 20);
+            this.label1.Size = new System.Drawing.Size(155, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nom d\'utilisateur";
             // 
@@ -84,7 +84,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(29, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 20);
+            this.label2.Size = new System.Drawing.Size(130, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mot de passe";
             // 
@@ -93,7 +93,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(29, 92);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 20);
+            this.label3.Size = new System.Drawing.Size(122, 25);
             this.label3.TabIndex = 1;
             this.label3.Text = "Confirmation";
             // 
@@ -178,7 +178,7 @@
             // DLG_Account
             // 
             this.AcceptButton = this.BTN_Ok;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BTN_Cancel;
             this.ClientSize = new System.Drawing.Size(352, 529);
@@ -191,7 +191,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "DLG_Account";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Création de compte";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DLG_Account_FormClosing);
             this.Load += new System.EventHandler(this.DLG_Account_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -56,7 +56,7 @@
             this.LBL_Desc.Location = new System.Drawing.Point(16, 84);
             this.LBL_Desc.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LBL_Desc.Name = "LBL_Desc";
-            this.LBL_Desc.Size = new System.Drawing.Size(93, 20);
+            this.LBL_Desc.Size = new System.Drawing.Size(115, 25);
             this.LBL_Desc.TabIndex = 10;
             this.LBL_Desc.Text = "Description:";
             // 
@@ -80,7 +80,7 @@
             this.LBL_Keywords.Location = new System.Drawing.Point(15, 206);
             this.LBL_Keywords.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LBL_Keywords.Name = "LBL_Keywords";
-            this.LBL_Keywords.Size = new System.Drawing.Size(73, 20);
+            this.LBL_Keywords.Size = new System.Drawing.Size(93, 25);
             this.LBL_Keywords.TabIndex = 11;
             this.LBL_Keywords.Text = "Mot-clés:";
             // 
@@ -92,7 +92,7 @@
             this.TBX_Keywords.Location = new System.Drawing.Point(19, 228);
             this.TBX_Keywords.Margin = new System.Windows.Forms.Padding(2);
             this.TBX_Keywords.Name = "TBX_Keywords";
-            this.TBX_Keywords.Size = new System.Drawing.Size(337, 26);
+            this.TBX_Keywords.Size = new System.Drawing.Size(337, 30);
             this.TBX_Keywords.TabIndex = 4;
             // 
             // GB_Info
@@ -121,9 +121,9 @@
             this.RB_Private.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.RB_Private.AutoSize = true;
-            this.RB_Private.Location = new System.Drawing.Point(278, 44);
+            this.RB_Private.Location = new System.Drawing.Point(260, 44);
             this.RB_Private.Name = "RB_Private";
-            this.RB_Private.Size = new System.Drawing.Size(70, 24);
+            this.RB_Private.Size = new System.Drawing.Size(88, 29);
             this.RB_Private.TabIndex = 2;
             this.RB_Private.TabStop = true;
             this.RB_Private.Text = "Privée";
@@ -137,7 +137,7 @@
             this.TBX_Title.Location = new System.Drawing.Point(20, 43);
             this.TBX_Title.Margin = new System.Windows.Forms.Padding(2);
             this.TBX_Title.Name = "TBX_Title";
-            this.TBX_Title.Size = new System.Drawing.Size(215, 26);
+            this.TBX_Title.Size = new System.Drawing.Size(215, 30);
             this.TBX_Title.TabIndex = 1;
             // 
             // LBL_Title
@@ -149,7 +149,7 @@
             this.LBL_Title.Location = new System.Drawing.Point(16, 21);
             this.LBL_Title.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LBL_Title.Name = "LBL_Title";
-            this.LBL_Title.Size = new System.Drawing.Size(44, 20);
+            this.LBL_Title.Size = new System.Drawing.Size(57, 25);
             this.LBL_Title.TabIndex = 9;
             this.LBL_Title.Text = "Titre:";
             // 
@@ -225,7 +225,7 @@
             // AddEditPhoto
             // 
             this.AcceptButton = this.BTN_Ajout;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BTN_Cancel;
             this.ClientSize = new System.Drawing.Size(402, 613);
@@ -242,6 +242,7 @@
             this.Name = "AddEditPhoto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ajout d\'une photo";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddEditPhoto_FormClosing);
             this.Load += new System.EventHandler(this.AddEditPhoto_Load);
             this.GB_Info.ResumeLayout(false);
             this.GB_Info.PerformLayout();
