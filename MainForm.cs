@@ -471,6 +471,7 @@ namespace Client_PM
 
         private void UpdateControls()
         {
+            TSMI_Carousel.Enabled = Logged_User != null;
             MI_Account_Profile.Enabled = Logged_User != null;
             MI_Account_Login.Enabled = Logged_User == null;
             TSMI_Blacklist.Enabled = Logged_User != null;

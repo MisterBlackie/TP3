@@ -18,9 +18,10 @@ C:\Users\Gabriel\Documents\GitHub\TP3\obj\Debug\Client_PM.DLG_Login.resources
 C:\Users\Gabriel\Documents\GitHub\TP3\obj\Debug\Client_PM.InfoPhoto.resources
 C:\Users\Gabriel\Documents\GitHub\TP3\obj\Debug\Client_PM.MainForm.resources
 C:\Users\Gabriel\Documents\GitHub\TP3\obj\Debug\Client_PM.Properties.Resources.resources
-C:\Users\Gabriel\Documents\GitHub\TP3\obj\Debug\Client_PM.Tabs.resources
 C:\Users\Gabriel\Documents\GitHub\TP3\obj\Debug\Client_PM.csproj.GenerateResource.cache
 C:\Users\Gabriel\Documents\GitHub\TP3\obj\Debug\Client_PM.csproj.CoreCompileInputs.cache
 C:\Users\Gabriel\Documents\GitHub\TP3\obj\Debug\Client_PM.csproj.CopyComplete
 C:\Users\Gabriel\Documents\GitHub\TP3\obj\Debug\Client_PM.exe
 C:\Users\Gabriel\Documents\GitHub\TP3\obj\Debug\Client_PM.pdb
+C:\Users\Gabriel\Documents\GitHub\TP3\obj\Debug\Client_PM.PhotoSlideshow.resources
+C:\Users\Gabriel\Documents\GitHub\TP3\obj\Debug\Client_PM.DLG_Aide.resources
