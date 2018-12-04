@@ -133,7 +133,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "DLG_Login";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Connexion";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DLG_Login_FormClosing);
             this.Load += new System.EventHandler(this.DLG_Login_Load);

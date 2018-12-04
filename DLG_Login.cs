@@ -38,7 +38,7 @@ namespace Client_PM
                 TBX_UserName.Text = Properties.Settings.Default.Username;
                 TBX_Password.Text = Properties.Settings.Default.Password;
 
-                Size = Properties.Settings.Default.TailleDLG_Login;
+                //Size = Properties.Settings.Default.TailleDLG_Login;
                 Location = Properties.Settings.Default.PositionDLG_Login;
             }
         }

@@ -164,6 +164,7 @@ namespace Client_PM
             {
                 Logged_User = dlg.User;
                 Setup_Logged_User();
+                LoadPhoto();
             }
         }
 
@@ -195,11 +196,6 @@ namespace Client_PM
         private void MI_Blacklist_Add_Click(object sender, EventArgs e)
         {
             TBC_PhotoManager.SelectTab(1);
-        }
-
-        private void MI_Blacklist_Show_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void TSMI_Help_Click(object sender, EventArgs e)
@@ -267,6 +263,8 @@ namespace Client_PM
         private void PhotoBrowser_SelectedChanged(object sender, EventArgs e)
         {
             FB_Image_Show.Enabled = PhotoBrowser.SelectedPhoto != null;
+            MI_Info.Enabled = PhotoBrowser.SelectedPhoto != null;
+            MI_Info.Enabled = PhotoBrowser.SelectedPhoto != null;
             FB_Blacklist_Add.Enabled = PhotoBrowser.SelectedPhoto != null;
             UpdateAddSlideShow();
             UpdateBlacklistFB();
@@ -276,15 +274,19 @@ namespace Client_PM
                 if (PhotoBrowser.SelectedPhoto.OwnerId == Logged_User.Id)
                 {
                     FB_Image_Edit.Enabled = true;
+                    MI_Edit.Enabled = true;
                     FB_Image_Remove.Enabled = true;
+                    MI_Delete.Enabled = true;
                 }
 
                 FB_Other_Download.Enabled = true;
             }
             else
             {
+                MI_Edit.Enabled = false;
                 FB_Image_Edit.Enabled = false;
                 FB_Image_Remove.Enabled = false;
+                MI_Delete.Enabled = false;
                 FB_Other_Download.Enabled = false;
             }
         }
@@ -300,6 +302,40 @@ namespace Client_PM
 
                 e.Handled = true;
             }
+        }
+
+        private void CBX_BlackList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CBX_BlackList.SelectedIndex >= 0)
+            {
+                FB_Blacklist_Add.Enabled = true;
+                AddToBlacklistMode = false;
+                FB_Blacklist_Add.BackgroundImage = Properties.Resources.Remove_Neutral;
+                FB_Blacklist_Add.ClickedImage = Properties.Resources.Remove_Clicked;
+                FB_Blacklist_Add.DisabledImage = Properties.Resources.Remove_Disabled;
+                FB_Blacklist_Add.NeutralImage = Properties.Resources.Remove_Neutral;
+                FB_Blacklist_Add.OverImage = Properties.Resources.Remove_Over;
+            }
+            else
+            {
+                AddToBlacklistMode = true;
+                FB_Blacklist_Add.BackgroundImage = Properties.Resources.Add_Neutral;
+                FB_Blacklist_Add.ClickedImage = Properties.Resources.Add_Clicked;
+                FB_Blacklist_Add.DisabledImage = Properties.Resources.Add_Disabled;
+                FB_Blacklist_Add.NeutralImage = Properties.Resources.Add_Neutral;
+                FB_Blacklist_Add.OverImage = Properties.Resources.Add_Over;
+            }
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveSettings();
+        }
+
+        private void MI_Blacklist_Show_Click(object sender, EventArgs e)
+        {
+            ResetSlideshow();
+            UpdateAddSlideShow();
         }
         #endregion
 
@@ -397,6 +433,7 @@ namespace Client_PM
         private void UpdateFlashButtons()
         {
             FB_Image_Add.Enabled = Logged_User != null;
+            MI_Add.Enabled = Logged_User != null;
             FB_Scroll_Prev.Enabled = Logged_User != null;
             FB_Scroll_Next.Enabled = Logged_User != null;
             FB_Slideshow_Start.Enabled = Logged_User != null;
@@ -524,7 +561,7 @@ namespace Client_PM
             PhotoBrowser.Location = TBC_PhotoManager.Location;
             PhotoBrowser.Size = new Size(TBC_PhotoManager.Size.Width, ClientSize.Height - 37);
             Refresh();
-       
+
         }
 
         private void OpenTabs()
@@ -567,7 +604,7 @@ namespace Client_PM
         {
             if (CBX_BlackList.SelectedIndex >= 0)
             {
-                foreach(int Id in Blacklist)
+                foreach (int Id in Blacklist)
                 {
                     if (DBPhotosWebServices.GetUser(Id).Name == CBX_BlackList.SelectedItem.ToString())
                     {
@@ -676,7 +713,6 @@ namespace Client_PM
 
                 // Position du MainForm
                 Location = Properties.Settings.Default.PositionMainForm;
-
                 // Taille du MainForm
                 Size = Properties.Settings.Default.TailleMainForm;
             }
@@ -691,34 +727,31 @@ namespace Client_PM
                 CBX_BlackList.Items.Add(DBPhotosWebServices.GetUser(ID));
             }
         }
+
         #endregion
 
-        private void CBX_BlackList_SelectedIndexChanged(object sender, EventArgs e)
+        private void MI_Add_Click(object sender, EventArgs e)
         {
-            if (CBX_BlackList.SelectedIndex >= 0)
+            AddPhoto();
+        }
+
+        private void MI_Edit_Click(object sender, EventArgs e)
+        {
+            EditPhoto();
+        }
+
+        private void MI_Delete_Click(object sender, EventArgs e)
+        {
+            if (PhotoBrowser.SelectedPhoto != null && PhotoBrowser.SelectedPhoto.OwnerId == Logged_User.Id)
             {
-                FB_Blacklist_Add.Enabled = true;
-                AddToBlacklistMode = false;
-                FB_Blacklist_Add.BackgroundImage = Properties.Resources.Remove_Neutral;
-                FB_Blacklist_Add.ClickedImage = Properties.Resources.Remove_Clicked;
-                FB_Blacklist_Add.DisabledImage = Properties.Resources.Remove_Disabled;
-                FB_Blacklist_Add.NeutralImage = Properties.Resources.Remove_Neutral;
-                FB_Blacklist_Add.OverImage = Properties.Resources.Remove_Over;
-            }
-            else
-            {
-                AddToBlacklistMode = true;
-                FB_Blacklist_Add.BackgroundImage = Properties.Resources.Add_Neutral;
-                FB_Blacklist_Add.ClickedImage = Properties.Resources.Add_Clicked;
-                FB_Blacklist_Add.DisabledImage = Properties.Resources.Add_Disabled;
-                FB_Blacklist_Add.NeutralImage = Properties.Resources.Add_Neutral;
-                FB_Blacklist_Add.OverImage = Properties.Resources.Add_Over;
+                DBPhotosWebServices.DeletePhoto(PhotoBrowser.SelectedPhoto);
+                PhotoBrowser.DeleteSelectedPhoto();
             }
         }
 
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void MI_Info_Click(object sender, EventArgs e)
         {
-            SaveSettings();
+            ShowPhoto();
         }
     }
 }

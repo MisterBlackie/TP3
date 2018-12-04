@@ -55,7 +55,7 @@ namespace Client_PM
             if (!Properties.Settings.Default.FirstUse_DLG_Account)
             {
                 // Taille du form
-                Size = Properties.Settings.Default.TailleDLG_Account;
+                //Size = Properties.Settings.Default.TailleDLG_Account;
 
                 // Position du form
                 Location = Properties.Settings.Default.PositionDLG_Account;

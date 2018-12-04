@@ -47,10 +47,10 @@
             this.MI_Display_Down = new System.Windows.Forms.ToolStripMenuItem();
             this.MI_Display_Left = new System.Windows.Forms.ToolStripMenuItem();
             this.MI_Display_Right = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.informationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MI_Add = new System.Windows.Forms.ToolStripMenuItem();
+            this.MI_Edit = new System.Windows.Forms.ToolStripMenuItem();
+            this.MI_Delete = new System.Windows.Forms.ToolStripMenuItem();
+            this.MI_Info = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMI_Blacklist = new System.Windows.Forms.ToolStripMenuItem();
             this.MI_Blacklist_Add = new System.Windows.Forms.ToolStripMenuItem();
             this.MI_Blacklist_Show = new System.Windows.Forms.ToolStripMenuItem();
@@ -105,7 +105,7 @@
             this.DTP_End.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTP_End.Location = new System.Drawing.Point(366, 46);
             this.DTP_End.Name = "DTP_End";
-            this.DTP_End.Size = new System.Drawing.Size(176, 26);
+            this.DTP_End.Size = new System.Drawing.Size(176, 22);
             this.DTP_End.TabIndex = 9;
             // 
             // LBL_DateText
@@ -114,7 +114,7 @@
             this.LBL_DateText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_DateText.Location = new System.Drawing.Point(344, 50);
             this.LBL_DateText.Name = "LBL_DateText";
-            this.LBL_DateText.Size = new System.Drawing.Size(18, 20);
+            this.LBL_DateText.Size = new System.Drawing.Size(16, 16);
             this.LBL_DateText.TabIndex = 8;
             this.LBL_DateText.Text = "à";
             // 
@@ -123,7 +123,7 @@
             this.DTP_Start.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTP_Start.Location = new System.Drawing.Point(366, 21);
             this.DTP_Start.Name = "DTP_Start";
-            this.DTP_Start.Size = new System.Drawing.Size(176, 26);
+            this.DTP_Start.Size = new System.Drawing.Size(176, 22);
             this.DTP_Start.TabIndex = 7;
             // 
             // CBX_Keywords
@@ -132,7 +132,7 @@
             this.CBX_Keywords.FormattingEnabled = true;
             this.CBX_Keywords.Location = new System.Drawing.Point(104, 48);
             this.CBX_Keywords.Name = "CBX_Keywords";
-            this.CBX_Keywords.Size = new System.Drawing.Size(195, 28);
+            this.CBX_Keywords.Size = new System.Drawing.Size(195, 24);
             this.CBX_Keywords.TabIndex = 0;
             this.CBX_Keywords.SelectedIndexChanged += new System.EventHandler(this.CBX_Keywords_SelectedIndexChanged);
             // 
@@ -142,7 +142,7 @@
             this.CBX_UsersList.FormattingEnabled = true;
             this.CBX_UsersList.Location = new System.Drawing.Point(104, 20);
             this.CBX_UsersList.Name = "CBX_UsersList";
-            this.CBX_UsersList.Size = new System.Drawing.Size(195, 28);
+            this.CBX_UsersList.Size = new System.Drawing.Size(195, 24);
             this.CBX_UsersList.TabIndex = 0;
             this.CBX_UsersList.SelectedIndexChanged += new System.EventHandler(this.CBX_UsersList_SelectedIndexChanged);
             // 
@@ -157,7 +157,7 @@
             this.TSMI_About});
             this.MS_Account.Location = new System.Drawing.Point(0, 0);
             this.MS_Account.Name = "MS_Account";
-            this.MS_Account.Size = new System.Drawing.Size(1153, 28);
+            this.MS_Account.Size = new System.Drawing.Size(1153, 24);
             this.MS_Account.TabIndex = 2;
             this.MS_Account.Text = "menuStrip1";
             // 
@@ -169,34 +169,34 @@
             this.Mi_Account_Create,
             this.MI_Account_Exit});
             this.TSMI_Account.Name = "TSMI_Account";
-            this.TSMI_Account.Size = new System.Drawing.Size(74, 24);
+            this.TSMI_Account.Size = new System.Drawing.Size(62, 20);
             this.TSMI_Account.Text = "Compte";
             // 
             // MI_Account_Login
             // 
             this.MI_Account_Login.Name = "MI_Account_Login";
-            this.MI_Account_Login.Size = new System.Drawing.Size(198, 26);
+            this.MI_Account_Login.Size = new System.Drawing.Size(166, 22);
             this.MI_Account_Login.Text = "Connexion";
             this.MI_Account_Login.Click += new System.EventHandler(this.MI_Account_Login_Click);
             // 
             // MI_Account_Profile
             // 
             this.MI_Account_Profile.Name = "MI_Account_Profile";
-            this.MI_Account_Profile.Size = new System.Drawing.Size(198, 26);
+            this.MI_Account_Profile.Size = new System.Drawing.Size(166, 22);
             this.MI_Account_Profile.Text = "Profil";
             this.MI_Account_Profile.Click += new System.EventHandler(this.MI_Account_Profile_Click);
             // 
             // Mi_Account_Create
             // 
             this.Mi_Account_Create.Name = "Mi_Account_Create";
-            this.Mi_Account_Create.Size = new System.Drawing.Size(198, 26);
+            this.Mi_Account_Create.Size = new System.Drawing.Size(166, 22);
             this.Mi_Account_Create.Text = "Nouveau compte";
             this.Mi_Account_Create.Click += new System.EventHandler(this.Mi_Account_Create_Click);
             // 
             // MI_Account_Exit
             // 
             this.MI_Account_Exit.Name = "MI_Account_Exit";
-            this.MI_Account_Exit.Size = new System.Drawing.Size(198, 26);
+            this.MI_Account_Exit.Size = new System.Drawing.Size(166, 22);
             this.MI_Account_Exit.Text = "Déconnexion";
             this.MI_Account_Exit.Click += new System.EventHandler(this.MI_Account_Exit_Click);
             // 
@@ -204,12 +204,12 @@
             // 
             this.TSMI_Photos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MI_Display,
-            this.ajouterToolStripMenuItem,
-            this.modifierToolStripMenuItem,
-            this.supprimerToolStripMenuItem,
-            this.informationsToolStripMenuItem});
+            this.MI_Add,
+            this.MI_Edit,
+            this.MI_Delete,
+            this.MI_Info});
             this.TSMI_Photos.Name = "TSMI_Photos";
-            this.TSMI_Photos.Size = new System.Drawing.Size(66, 24);
+            this.TSMI_Photos.Size = new System.Drawing.Size(56, 20);
             this.TSMI_Photos.Text = "Photos";
             // 
             // MI_Display
@@ -220,60 +220,68 @@
             this.MI_Display_Left,
             this.MI_Display_Right});
             this.MI_Display.Name = "MI_Display";
-            this.MI_Display.Size = new System.Drawing.Size(168, 26);
+            this.MI_Display.Size = new System.Drawing.Size(142, 22);
             this.MI_Display.Text = "Affichage";
             // 
             // MI_Display_Up
             // 
             this.MI_Display_Up.Name = "MI_Display_Up";
-            this.MI_Display_Up.Size = new System.Drawing.Size(133, 26);
+            this.MI_Display_Up.Size = new System.Drawing.Size(114, 22);
             this.MI_Display_Up.Text = "Haut";
             this.MI_Display_Up.Click += new System.EventHandler(this.MI_Display_Up_Click);
             // 
             // MI_Display_Down
             // 
             this.MI_Display_Down.Name = "MI_Display_Down";
-            this.MI_Display_Down.Size = new System.Drawing.Size(133, 26);
+            this.MI_Display_Down.Size = new System.Drawing.Size(114, 22);
             this.MI_Display_Down.Text = "Bas";
             this.MI_Display_Down.Click += new System.EventHandler(this.MI_Display_Down_Click);
             // 
             // MI_Display_Left
             // 
             this.MI_Display_Left.Name = "MI_Display_Left";
-            this.MI_Display_Left.Size = new System.Drawing.Size(133, 26);
+            this.MI_Display_Left.Size = new System.Drawing.Size(114, 22);
             this.MI_Display_Left.Text = "Gauche";
             this.MI_Display_Left.Click += new System.EventHandler(this.MI_Display_Left_Click);
             // 
             // MI_Display_Right
             // 
             this.MI_Display_Right.Name = "MI_Display_Right";
-            this.MI_Display_Right.Size = new System.Drawing.Size(133, 26);
+            this.MI_Display_Right.Size = new System.Drawing.Size(114, 22);
             this.MI_Display_Right.Text = "Droite";
             this.MI_Display_Right.Click += new System.EventHandler(this.MI_Display_Right_Click);
             // 
-            // ajouterToolStripMenuItem
+            // MI_Add
             // 
-            this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
-            this.ajouterToolStripMenuItem.Text = "Ajouter";
+            this.MI_Add.Enabled = false;
+            this.MI_Add.Name = "MI_Add";
+            this.MI_Add.Size = new System.Drawing.Size(142, 22);
+            this.MI_Add.Text = "Ajouter";
+            this.MI_Add.Click += new System.EventHandler(this.MI_Add_Click);
             // 
-            // modifierToolStripMenuItem
+            // MI_Edit
             // 
-            this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
-            this.modifierToolStripMenuItem.Text = "Modifier";
+            this.MI_Edit.Enabled = false;
+            this.MI_Edit.Name = "MI_Edit";
+            this.MI_Edit.Size = new System.Drawing.Size(142, 22);
+            this.MI_Edit.Text = "Modifier";
+            this.MI_Edit.Click += new System.EventHandler(this.MI_Edit_Click);
             // 
-            // supprimerToolStripMenuItem
+            // MI_Delete
             // 
-            this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
-            this.supprimerToolStripMenuItem.Text = "Supprimer";
+            this.MI_Delete.Enabled = false;
+            this.MI_Delete.Name = "MI_Delete";
+            this.MI_Delete.Size = new System.Drawing.Size(142, 22);
+            this.MI_Delete.Text = "Supprimer";
+            this.MI_Delete.Click += new System.EventHandler(this.MI_Delete_Click);
             // 
-            // informationsToolStripMenuItem
+            // MI_Info
             // 
-            this.informationsToolStripMenuItem.Name = "informationsToolStripMenuItem";
-            this.informationsToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
-            this.informationsToolStripMenuItem.Text = "Informations";
+            this.MI_Info.Enabled = false;
+            this.MI_Info.Name = "MI_Info";
+            this.MI_Info.Size = new System.Drawing.Size(142, 22);
+            this.MI_Info.Text = "Informations";
+            this.MI_Info.Click += new System.EventHandler(this.MI_Info_Click);
             // 
             // TSMI_Blacklist
             // 
@@ -281,34 +289,34 @@
             this.MI_Blacklist_Add,
             this.MI_Blacklist_Show});
             this.TSMI_Blacklist.Name = "TSMI_Blacklist";
-            this.TSMI_Blacklist.Size = new System.Drawing.Size(92, 24);
+            this.TSMI_Blacklist.Size = new System.Drawing.Size(75, 20);
             this.TSMI_Blacklist.Text = "Liste Noire";
             // 
             // MI_Blacklist_Add
             // 
             this.MI_Blacklist_Add.Name = "MI_Blacklist_Add";
-            this.MI_Blacklist_Add.Size = new System.Drawing.Size(216, 26);
+            this.MI_Blacklist_Add.Size = new System.Drawing.Size(179, 22);
             this.MI_Blacklist_Add.Text = "Ajouter / Supprimer";
             this.MI_Blacklist_Add.Click += new System.EventHandler(this.MI_Blacklist_Add_Click);
             // 
             // MI_Blacklist_Show
             // 
             this.MI_Blacklist_Show.Name = "MI_Blacklist_Show";
-            this.MI_Blacklist_Show.Size = new System.Drawing.Size(216, 26);
+            this.MI_Blacklist_Show.Size = new System.Drawing.Size(179, 22);
             this.MI_Blacklist_Show.Text = "Réinitialiser";
             this.MI_Blacklist_Show.Click += new System.EventHandler(this.MI_Blacklist_Show_Click);
             // 
             // TSMI_Help
             // 
             this.TSMI_Help.Name = "TSMI_Help";
-            this.TSMI_Help.Size = new System.Drawing.Size(52, 24);
+            this.TSMI_Help.Size = new System.Drawing.Size(43, 20);
             this.TSMI_Help.Text = "Aide";
             this.TSMI_Help.Click += new System.EventHandler(this.TSMI_Help_Click);
             // 
             // TSMI_About
             // 
             this.TSMI_About.Name = "TSMI_About";
-            this.TSMI_About.Size = new System.Drawing.Size(82, 24);
+            this.TSMI_About.Size = new System.Drawing.Size(67, 20);
             this.TSMI_About.Text = "À propos";
             this.TSMI_About.Click += new System.EventHandler(this.TSMI_About_Click);
             // 
@@ -336,10 +344,10 @@
             this.TP_Photos.Controls.Add(this.GB_Scroll);
             this.TP_Photos.Controls.Add(this.GB_Slideshow);
             this.TP_Photos.Controls.Add(this.GB_Image);
-            this.TP_Photos.Location = new System.Drawing.Point(4, 34);
+            this.TP_Photos.Location = new System.Drawing.Point(4, 29);
             this.TP_Photos.Name = "TP_Photos";
             this.TP_Photos.Padding = new System.Windows.Forms.Padding(3);
-            this.TP_Photos.Size = new System.Drawing.Size(1121, 82);
+            this.TP_Photos.Size = new System.Drawing.Size(1121, 87);
             this.TP_Photos.TabIndex = 0;
             this.TP_Photos.Text = "Photos";
             // 
@@ -482,7 +490,7 @@
             this.FB_Slideshow_Add.OverImage = global::Client_PM.Properties.Resources.AddToSlide_Over;
             this.FB_Slideshow_Add.Size = new System.Drawing.Size(36, 36);
             this.FB_Slideshow_Add.TabIndex = 0;
-            this.FB_ToolTips.SetToolTip(this.FB_Slideshow_Add, "Ajouter une image au diaporama");
+            this.FB_ToolTips.SetToolTip(this.FB_Slideshow_Add, "Ajouter l\'image au diaporama");
             this.FB_Slideshow_Add.UseVisualStyleBackColor = true;
             this.FB_Slideshow_Add.Click += new System.EventHandler(this.FB_Slideshow_Add_Click);
             // 
@@ -579,10 +587,10 @@
             this.TP_Filters.BackColor = System.Drawing.Color.White;
             this.TP_Filters.Controls.Add(this.GB_Filters);
             this.TP_Filters.Controls.Add(this.GB_Blacklist);
-            this.TP_Filters.Location = new System.Drawing.Point(4, 34);
+            this.TP_Filters.Location = new System.Drawing.Point(4, 29);
             this.TP_Filters.Name = "TP_Filters";
             this.TP_Filters.Padding = new System.Windows.Forms.Padding(3);
-            this.TP_Filters.Size = new System.Drawing.Size(1121, 82);
+            this.TP_Filters.Size = new System.Drawing.Size(1121, 87);
             this.TP_Filters.TabIndex = 1;
             this.TP_Filters.Text = "Filtres";
             // 
@@ -611,7 +619,7 @@
             this.RB_Users.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RB_Users.Location = new System.Drawing.Point(6, 22);
             this.RB_Users.Name = "RB_Users";
-            this.RB_Users.Size = new System.Drawing.Size(115, 24);
+            this.RB_Users.Size = new System.Drawing.Size(92, 20);
             this.RB_Users.TabIndex = 11;
             this.RB_Users.TabStop = true;
             this.RB_Users.Text = "Utilisateurs";
@@ -623,7 +631,7 @@
             this.RB_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RB_Date.Location = new System.Drawing.Point(305, 21);
             this.RB_Date.Name = "RB_Date";
-            this.RB_Date.Size = new System.Drawing.Size(66, 24);
+            this.RB_Date.Size = new System.Drawing.Size(55, 20);
             this.RB_Date.TabIndex = 13;
             this.RB_Date.Text = "Date";
             this.RB_Date.UseVisualStyleBackColor = true;
@@ -634,7 +642,7 @@
             this.CB_HideMyPhotos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CB_HideMyPhotos.Location = new System.Drawing.Point(559, 35);
             this.CB_HideMyPhotos.Name = "CB_HideMyPhotos";
-            this.CB_HideMyPhotos.Size = new System.Drawing.Size(237, 24);
+            this.CB_HideMyPhotos.Size = new System.Drawing.Size(190, 20);
             this.CB_HideMyPhotos.TabIndex = 10;
             this.CB_HideMyPhotos.Text = "Ne pas afficher mes photos";
             this.CB_HideMyPhotos.UseVisualStyleBackColor = true;
@@ -646,7 +654,7 @@
             this.RB_Keyword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RB_Keyword.Location = new System.Drawing.Point(6, 48);
             this.RB_Keyword.Name = "RB_Keyword";
-            this.RB_Keyword.Size = new System.Drawing.Size(98, 24);
+            this.RB_Keyword.Size = new System.Drawing.Size(79, 20);
             this.RB_Keyword.TabIndex = 12;
             this.RB_Keyword.Text = "Mots-Clé";
             this.RB_Keyword.UseVisualStyleBackColor = true;
@@ -669,7 +677,7 @@
             this.CBX_BlackList.Location = new System.Drawing.Point(137, 30);
             this.CBX_BlackList.Margin = new System.Windows.Forms.Padding(10, 3, 20, 3);
             this.CBX_BlackList.Name = "CBX_BlackList";
-            this.CBX_BlackList.Size = new System.Drawing.Size(187, 33);
+            this.CBX_BlackList.Size = new System.Drawing.Size(187, 28);
             this.CBX_BlackList.TabIndex = 3;
             this.CBX_BlackList.SelectedIndexChanged += new System.EventHandler(this.CBX_BlackList_SelectedIndexChanged);
             // 
@@ -735,7 +743,7 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1153, 674);
             this.Controls.Add(this.PhotoBrowser);
@@ -825,10 +833,10 @@
         private PhotoManagerClient.FlashButton FB_Image_Add;
         private PhotoManagerClient.FlashButton FB_Blacklist_Reset;
         private PhotoManagerClient.FlashButton FB_Blacklist_Add;
-        private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem informationsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MI_Add;
+        private System.Windows.Forms.ToolStripMenuItem MI_Edit;
+        private System.Windows.Forms.ToolStripMenuItem MI_Delete;
+        private System.Windows.Forms.ToolStripMenuItem MI_Info;
         private System.Windows.Forms.ComboBox CBX_BlackList;
     }
 }

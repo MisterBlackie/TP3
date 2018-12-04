@@ -39,9 +39,9 @@
             this.BTN_Ok = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.IBX_Avatar = new PhotoManagerClient.ImageBox();
             this.BTN_Rechercher = new System.Windows.Forms.Button();
             this.OFD_Image = new System.Windows.Forms.OpenFileDialog();
+            this.IBX_Avatar = new PhotoManagerClient.ImageBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IBX_Avatar)).BeginInit();
@@ -51,14 +51,14 @@
             // 
             this.TBX_Username.Location = new System.Drawing.Point(142, 25);
             this.TBX_Username.Name = "TBX_Username";
-            this.TBX_Username.Size = new System.Drawing.Size(173, 30);
+            this.TBX_Username.Size = new System.Drawing.Size(180, 26);
             this.TBX_Username.TabIndex = 0;
             // 
             // TBX_Password
             // 
             this.TBX_Password.Location = new System.Drawing.Point(142, 57);
             this.TBX_Password.Name = "TBX_Password";
-            this.TBX_Password.Size = new System.Drawing.Size(173, 30);
+            this.TBX_Password.Size = new System.Drawing.Size(180, 26);
             this.TBX_Password.TabIndex = 1;
             this.TBX_Password.UseSystemPasswordChar = true;
             // 
@@ -66,42 +66,42 @@
             // 
             this.TBX_VerifyPassword.Location = new System.Drawing.Point(142, 89);
             this.TBX_VerifyPassword.Name = "TBX_VerifyPassword";
-            this.TBX_VerifyPassword.Size = new System.Drawing.Size(173, 30);
+            this.TBX_VerifyPassword.Size = new System.Drawing.Size(180, 26);
             this.TBX_VerifyPassword.TabIndex = 2;
             this.TBX_VerifyPassword.UseSystemPasswordChar = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 28);
+            this.label1.Location = new System.Drawing.Point(10, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 25);
+            this.label1.Size = new System.Drawing.Size(126, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nom d\'utilisateur";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 60);
+            this.label2.Location = new System.Drawing.Point(31, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 25);
+            this.label2.Size = new System.Drawing.Size(105, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mot de passe";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 92);
+            this.label3.Location = new System.Drawing.Point(37, 92);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 25);
+            this.label3.Size = new System.Drawing.Size(99, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Confirmation";
             // 
             // BTN_Cancel
             // 
-            this.BTN_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_Cancel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BTN_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Cancel.Location = new System.Drawing.Point(265, 488);
+            this.BTN_Cancel.Location = new System.Drawing.Point(288, 515);
             this.BTN_Cancel.Name = "BTN_Cancel";
             this.BTN_Cancel.Size = new System.Drawing.Size(75, 29);
             this.BTN_Cancel.TabIndex = 4;
@@ -110,9 +110,9 @@
             // 
             // BTN_Ok
             // 
-            this.BTN_Ok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_Ok.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BTN_Ok.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.BTN_Ok.Location = new System.Drawing.Point(184, 488);
+            this.BTN_Ok.Location = new System.Drawing.Point(207, 515);
             this.BTN_Ok.Name = "BTN_Ok";
             this.BTN_Ok.Size = new System.Drawing.Size(75, 29);
             this.BTN_Ok.TabIndex = 3;
@@ -127,9 +127,10 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(19, 19);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(10);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(327, 127);
+            this.groupBox1.Size = new System.Drawing.Size(344, 127);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informations du compte";
@@ -137,33 +138,17 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.IBX_Avatar);
-            this.groupBox2.Location = new System.Drawing.Point(12, 146);
+            this.groupBox2.Location = new System.Drawing.Point(19, 166);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(10);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(327, 336);
+            this.groupBox2.Size = new System.Drawing.Size(344, 336);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Avatar";
             // 
-            // IBX_Avatar
-            // 
-            this.IBX_Avatar.AllowDrop = true;
-            this.IBX_Avatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.IBX_Avatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.IBX_Avatar.ControlToolTipText = "You can either drag & drop, paste image from clipboard or choose an image file wi" +
-    "th context menu.";
-            this.IBX_Avatar.ImportImageText = "Import image from file...";
-            this.IBX_Avatar.Location = new System.Drawing.Point(12, 25);
-            this.IBX_Avatar.Name = "IBX_Avatar";
-            this.IBX_Avatar.OpenFileDialogTitle = "Please choose image an file";
-            this.IBX_Avatar.PasteMenuText = "Paste image from clipboard";
-            this.IBX_Avatar.Size = new System.Drawing.Size(300, 300);
-            this.IBX_Avatar.TabIndex = 2;
-            this.IBX_Avatar.TabStop = false;
-            this.IBX_Avatar.BackgroundImageChanged += new System.EventHandler(this.IBX_Avatar_BackgroundImageChanged);
-            // 
             // BTN_Rechercher
             // 
-            this.BTN_Rechercher.Location = new System.Drawing.Point(12, 489);
+            this.BTN_Rechercher.Location = new System.Drawing.Point(19, 515);
             this.BTN_Rechercher.Name = "BTN_Rechercher";
             this.BTN_Rechercher.Size = new System.Drawing.Size(116, 28);
             this.BTN_Rechercher.TabIndex = 7;
@@ -175,13 +160,31 @@
             // 
             this.OFD_Image.FileName = "openFileDialog1";
             // 
+            // IBX_Avatar
+            // 
+            this.IBX_Avatar.AllowDrop = true;
+            this.IBX_Avatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.IBX_Avatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.IBX_Avatar.ControlToolTipText = "You can either drag & drop, paste image from clipboard or choose an image file wi" +
+    "th context menu.";
+            this.IBX_Avatar.ImportImageText = "Import image from file...";
+            this.IBX_Avatar.Location = new System.Drawing.Point(22, 27);
+            this.IBX_Avatar.Margin = new System.Windows.Forms.Padding(5);
+            this.IBX_Avatar.Name = "IBX_Avatar";
+            this.IBX_Avatar.OpenFileDialogTitle = "Please choose image an file";
+            this.IBX_Avatar.PasteMenuText = "Paste image from clipboard";
+            this.IBX_Avatar.Size = new System.Drawing.Size(300, 300);
+            this.IBX_Avatar.TabIndex = 2;
+            this.IBX_Avatar.TabStop = false;
+            this.IBX_Avatar.BackgroundImageChanged += new System.EventHandler(this.IBX_Avatar_BackgroundImageChanged);
+            // 
             // DLG_Account
             // 
             this.AcceptButton = this.BTN_Ok;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BTN_Cancel;
-            this.ClientSize = new System.Drawing.Size(352, 529);
+            this.ClientSize = new System.Drawing.Size(381, 551);
             this.Controls.Add(this.BTN_Rechercher);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PhotoManagerClient;
 
 namespace Client_PM
 {
@@ -35,6 +36,8 @@ namespace Client_PM
             TBX_CreationDate.Text = Photo.CreationDate.ToString();
             RTB_Description.Text = Photo.Description;
             TBX_Keywords.Text = Photo.Keywords;
+            TBX_Size.Text = Photo.GetOriginalImage().Width + "x" + Photo.GetOriginalImage().Height + " pixels";
+            PBX_Avatar.BackgroundImage = DBPhotosWebServices.GetUser(Photo.OwnerId).GetAvatarOriginalImage();
         }
 
 
@@ -43,7 +46,7 @@ namespace Client_PM
             if (!Properties.Settings.Default.FirstUse_InfoPhoto)
             {
                 // Taille du form
-                Size = Properties.Settings.Default.TailleInfoPhoto;
+                // Size = Properties.Settings.Default.TailleInfoPhoto;
                 // Position du form
                 Location = Properties.Settings.Default.PositionInfoPhoto;
             }
