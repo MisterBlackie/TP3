@@ -13,21 +13,23 @@ namespace Client_PM
 {
     public partial class Carousel : Form
     {
-        bool FullScreen = false;
         public List<Photo> PhotoList { get; set; }
+        private List<Photo> Photos;
         private ListeSettings Settings;
-        private Random Randomizer { get; set; }
-        private int NbProchainePhoto { get; set; }
+        private int[] Order;
+        private bool Random = false;
+        private bool FullScreen = false;
+        private int CurrentIndex;
+
 
         public Carousel()
         {
             InitializeComponent();
-
+            this.DoubleBuffered = true;
+            this.BackColor = Color.Black;
+            this.BackgroundImageLayout = ImageLayout.Zoom;
+            this.AllowTransparency = false;
             Settings = new ListeSettings();
-            Randomizer = new Random();
-
-            NbProchainePhoto = 0;
-            Timer.Start();
         }
 
         private void ChangerFullScreen()
@@ -59,21 +61,6 @@ namespace Client_PM
             }
         }
 
-        private void GetProchainePhoto()
-        {
-            if (NbProchainePhoto >= PhotoList.Count)
-                NbProchainePhoto = 0;
-            
-            Timer.Interval = Settings.VitesseCarousel * 1000; // Au cas que l'interval est été changé dans les settings
-            this.BackgroundImageLayout = ImageLayout.Zoom;
-            this.BackgroundImage = PhotoList.ElementAt(NbProchainePhoto).GetOriginalImage();
-
-            if (Settings.DefilementAleatoire)
-                NbProchainePhoto = Randomizer.Next() % PhotoList.Count;
-            else
-                NbProchainePhoto++;
-        }
-
         private void OpenSettings()
         {
             CarouselSettings DLG = new CarouselSettings(ref Settings);
@@ -93,15 +80,67 @@ namespace Client_PM
             }
         }
 
-        private void Timer_Tick(object sender, EventArgs e)
-        {
-            GetProchainePhoto();
-        }
-
         private void TSMI_Settings_Click(object sender, EventArgs e)
         {
             OpenSettings();
 
+        }
+
+        private void Carousel_Shown(object sender, EventArgs e)
+        {
+            Photos = new List<Photo>();
+            foreach (Photo Photo in PhotoList)
+            {
+                if (Photo != null)
+                    Photos.Add(Photo);
+            }
+            SetOrder();
+            Timer.Start();
+        }
+
+        private void SetOrder()
+        {
+            CurrentIndex = 0;
+            int Count = Photos.Count;
+            Order = new int[Count];
+
+            for (int i = 0; i < Count; i++)
+            {
+                Order[i] = i;
+            }
+            if (Random)
+                Randomize();
+            Next();
+        }
+
+        private void Randomize()
+        {
+            Random Rand = new Random(DateTime.Now.Second);
+            int nb_Photos = Photos.Count;
+            for (int i = 0; i < nb_Photos - 1; i++)
+            {
+                int j = Rand.Next((nb_Photos - i - 2)) + i + 1;
+                int k = Order[i];
+                Order[i] = Order[j];
+                Order[j] = k;
+            }
+        }
+
+        private void Next()
+        {
+            if (Order.Count() > 0)
+            {
+                // Régler l'image de fond avec la prochaine photo
+                this.BackgroundImage = Photos[Order[CurrentIndex]].GetOriginalImage();
+                // Index de la prochaine photo. Si était la dernière, revenir à la première
+                CurrentIndex = CurrentIndex < Photos.Count - 1 ? CurrentIndex + 1 : 0;
+            }
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            Next();
+            Timer.Interval = 500 * Settings.VitesseCarousel;
         }
     }
 }

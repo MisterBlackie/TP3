@@ -70,6 +70,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diaporama";
             this.TransparencyKey = System.Drawing.Color.Transparent;
+            this.Shown += new System.EventHandler(this.Carousel_Shown);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Carousel_KeyDown);
             this.MS_Carousel.ResumeLayout(false);
             this.MS_Carousel.PerformLayout();
