@@ -154,7 +154,21 @@ namespace Client_PM
 
         private void MI_Account_Profile_Click(object sender, EventArgs e)
         {
+            Profile DLG = new Profile();
+            DLG.User = Logged_User;
+            DialogResult DGR = DLG.ShowDialog();
 
+            if (DGR == DialogResult.OK)
+            {
+                Logged_User = DLG.User;
+                DBPhotosWebServices.UpdateUser(Logged_User);
+            }
+            else if (DGR == DialogResult.Yes)
+            {
+                DBPhotosWebServices.DeleteUser(Logged_User.Id);
+                Logged_User = null;
+            }
+            Setup_Logged_User();
         }
 
         private void Mi_Account_Create_Click(object sender, EventArgs e)
@@ -213,7 +227,7 @@ namespace Client_PM
 
         private void CBX_UsersList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (RB_Users.Checked)
+            if (RB_Users.Checked && CBX_UsersList.SelectedItem.ToString() != "")
             {
                 User selectedUser = (User)CBX_UsersList.SelectedItem;
                 if (selectedUser.Id == -1) // Only mine
@@ -241,7 +255,7 @@ namespace Client_PM
 
         private void CBX_Keywords_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (RB_Keyword.Checked)
+            if (RB_Keyword.Checked && CBX_Keywords.Text != "")
             {
                 if (!Initializing)
                 {
@@ -288,19 +302,6 @@ namespace Client_PM
                 FB_Image_Remove.Enabled = false;
                 MI_Delete.Enabled = false;
                 FB_Other_Download.Enabled = false;
-            }
-        }
-
-        private void MainForm_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.H)
-            {
-                if (TBC_PhotoManager.Visible)
-                    CloseTabs();
-                else
-                    OpenTabs();
-
-                e.Handled = true;
             }
         }
 
@@ -768,7 +769,7 @@ namespace Client_PM
             UpdateAddSlideShow();
         }
 
-        private void ajouterToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void MI_AddToSlideshow_Click(object sender, EventArgs e)
         {
             if (PhotoBrowser.SelectedPhoto != null)
             {
@@ -777,21 +778,57 @@ namespace Client_PM
             }
         }
 
-        private void modifierLesPhotosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MI_EditSlideshow_Click(object sender, EventArgs e)
         {
             ModifyPhotoSlideshow();
             UpdateAddSlideShow();
         }
 
-        private void réinitialiserLesPhotosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MI_ResetSlideshow_Click(object sender, EventArgs e)
         {
             ResetSlideshow();
             UpdateAddSlideShow();
         }
 
-        private void démarrerToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MI_StartSlideshow_Click(object sender, EventArgs e)
         {
             OpenSlideShow();
+        }
+
+        private void BTN_DateSearch_Click(object sender, EventArgs e)
+        {
+
+            PhotoFilter.SetDateFilter(true, DTP_Start.Value, DTP_End.Value);
+            LoadPhoto();
+        }
+
+        private void RB_Date_CheckedChanged(object sender, EventArgs e)
+        {
+            BTN_DateSearch.Enabled = RB_Date.Checked;
+            if (RB_Date.Checked == false)
+                PhotoFilter.SetDateFilter(false, DTP_Start.Value, DTP_End.Value);
+
+        }
+
+        private void RB_Users_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CBX_UsersList.SelectedItem.ToString() != "")
+                CBX_UsersList_SelectedIndexChanged(sender, e);
+        }
+
+        private void RB_Keyword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CBX_Keywords.SelectedItem.ToString() != "")
+                PhotoFilter.SetKeywordsFilter(true, CBX_Keywords.SelectedItem.ToString());
+            LoadPhoto();
+        }
+
+        private void masquerLesOngletsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (TBC_PhotoManager.Visible)
+                CloseTabs();
+            else
+                OpenTabs();
         }
     }
 }

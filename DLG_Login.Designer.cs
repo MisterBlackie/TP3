@@ -59,6 +59,8 @@
             // 
             // TBX_UserName
             // 
+            this.TBX_UserName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TBX_UserName.Location = new System.Drawing.Point(18, 54);
             this.TBX_UserName.Name = "TBX_UserName";
             this.TBX_UserName.Size = new System.Drawing.Size(188, 26);
@@ -66,6 +68,8 @@
             // 
             // TBX_Password
             // 
+            this.TBX_Password.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TBX_Password.Location = new System.Drawing.Point(18, 119);
             this.TBX_Password.Name = "TBX_Password";
             this.TBX_Password.Size = new System.Drawing.Size(188, 26);
@@ -95,6 +99,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.CBX_SeSouvenir);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
@@ -109,6 +116,7 @@
             // 
             // CBX_SeSouvenir
             // 
+            this.CBX_SeSouvenir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.CBX_SeSouvenir.AutoSize = true;
             this.CBX_SeSouvenir.Location = new System.Drawing.Point(18, 151);
             this.CBX_SeSouvenir.Name = "CBX_SeSouvenir";
@@ -132,6 +140,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximumSize = new System.Drawing.Size(262, 291);
             this.Name = "DLG_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Connexion";

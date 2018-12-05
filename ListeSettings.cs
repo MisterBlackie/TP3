@@ -19,10 +19,22 @@ namespace Client_PM
             Reset();
         }
 
+        ~ListeSettings()
+        {
+            SaveSettings();
+        }
+
         public void Reset()
         {
-            DefilementAleatoire = false;
-            VitesseCarousel = 3;
+            DefilementAleatoire = Properties.Settings.Default.DefilementAleatoireDiapo;
+            VitesseCarousel = Properties.Settings.Default.VitesseDiapo;
+        }
+
+        public void SaveSettings()
+        {
+            Properties.Settings.Default.DefilementAleatoireDiapo = DefilementAleatoire;
+            Properties.Settings.Default.VitesseDiapo = VitesseCarousel;
+            Properties.Settings.Default.Save();
         }
     }
 }

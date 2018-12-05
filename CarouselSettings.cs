@@ -14,7 +14,7 @@ namespace Client_PM
     public partial class CarouselSettings : Form
     {
 
-        ListeSettings Settings = new ListeSettings();
+        ListeSettings Settings;
 
         public CarouselSettings(ref ListeSettings Liste)
         {
@@ -44,6 +44,7 @@ namespace Client_PM
 
                 // Position du form
                 Location = Properties.Settings.Default.PositionCarouselSettings;
+
             }
         }
 
@@ -56,6 +57,7 @@ namespace Client_PM
             Properties.Settings.Default.PositionCarousel = Location;
 
             Properties.Settings.Default.FirstUse_CarouselSettings = false;
+            Settings.SaveSettings();
             Properties.Settings.Default.Save();
         }
 
