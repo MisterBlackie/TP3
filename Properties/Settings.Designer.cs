@@ -440,5 +440,41 @@ namespace Client_PM.Properties {
                 this["DefilementAleatoireDiapo"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool FirstUse_PhotosBrowser {
+            get {
+                return ((bool)(this["FirstUse_PhotosBrowser"]));
+            }
+            set {
+                this["FirstUse_PhotosBrowser"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point PositionPhotosBrowser {
+            get {
+                return ((global::System.Drawing.Point)(this["PositionPhotosBrowser"]));
+            }
+            set {
+                this["PositionPhotosBrowser"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Size TaillePhotosBrowser {
+            get {
+                return ((global::System.Drawing.Size)(this["TaillePhotosBrowser"]));
+            }
+            set {
+                this["TaillePhotosBrowser"] = value;
+            }
+        }
     }
 }

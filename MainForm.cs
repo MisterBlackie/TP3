@@ -214,7 +214,7 @@ namespace Client_PM
 
         private void TSMI_Help_Click(object sender, EventArgs e)
         {
-
+            OpenHelp();
         }
         private void TSMI_About_Click(object sender, EventArgs e)
         {
@@ -442,6 +442,12 @@ namespace Client_PM
             FB_Blacklist_Reset.Enabled = Logged_User != null && CBX_BlackList.Items.Count > 0;
             FB_Other_Download.Enabled = PhotoBrowser.SelectedPhoto != null;
             FB_EditDiapo.Enabled = Logged_User != null;
+        }
+
+        private void OpenHelp()
+        {
+            DLG_Aide DLG = new DLG_Aide();
+            DLG.Show();
         }
 
         private void Init_UsersList()

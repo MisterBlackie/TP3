@@ -59,6 +59,9 @@
             // 
             // PhotoBrowser
             // 
+            this.PhotoBrowser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PhotoBrowser.Location = new System.Drawing.Point(14, 14);
             this.PhotoBrowser.Margin = new System.Windows.Forms.Padding(5);
             this.PhotoBrowser.Name = "PhotoBrowser";
@@ -70,7 +73,7 @@
             // 
             // PhotoSlideshow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1117, 629);
             this.Controls.Add(this.BTN_Delete);
@@ -80,6 +83,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "PhotoSlideshow";
             this.Text = "Modification des photos du diaporama";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PhotoSlideshow_FormClosing);
             this.Load += new System.EventHandler(this.PhotoSlideshow_Load);
             this.ResumeLayout(false);
 

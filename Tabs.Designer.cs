@@ -28,13 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.WebBrowser = new System.Windows.Forms.WebBrowser();
             this.SuspendLayout();
+            // 
+            // WebBrowser
+            // 
+            this.WebBrowser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.WebBrowser.Location = new System.Drawing.Point(0, 0);
+            this.WebBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.WebBrowser.Name = "WebBrowser";
+            this.WebBrowser.ScriptErrorsSuppressed = true;
+            this.WebBrowser.Size = new System.Drawing.Size(1179, 818);
+            this.WebBrowser.TabIndex = 0;
+            this.WebBrowser.Url = new System.Uri("http://198.27.125.127", System.UriKind.Absolute);
             // 
             // DLG_Aide
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(715, 554);
+            this.ClientSize = new System.Drawing.Size(1181, 819);
+            this.Controls.Add(this.WebBrowser);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DLG_Aide";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -46,5 +61,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.WebBrowser WebBrowser;
     }
 }

@@ -22,6 +22,7 @@ namespace Client_PM
 
         private void PhotoSlideshow_Load(object sender, EventArgs e)
         {
+            LoadSettings();
             ListToBrowser();
             ChangerEtatBouton();
         }
@@ -39,6 +40,23 @@ namespace Client_PM
             {
                 PhotoBrowser.AddPhoto(P);
             }
+        }
+
+        private void LoadSettings()
+        {
+            if (!Properties.Settings.Default.FirstUse_PhotosBrowser)
+            {
+                Size = Properties.Settings.Default.TaillePhotosBrowser;
+                Location = Properties.Settings.Default.PositionPhotosBrowser;
+            }
+        }
+
+        private void SaveSettings()
+        {
+            Properties.Settings.Default.TaillePhotosBrowser = Size;
+            Properties.Settings.Default.PositionPhotosBrowser = Location;
+            Properties.Settings.Default.FirstUse_PhotosBrowser = false;
+            Properties.Settings.Default.Save();
         }
 
         private void PhotoBrowser_SelectedChanged(object sender, EventArgs e)
@@ -63,6 +81,11 @@ namespace Client_PM
         private void BTN_Delete_Click(object sender, EventArgs e)
         {
             RemovePhoto();
+        }
+
+        private void PhotoSlideshow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveSettings();
         }
     }
 }

@@ -78,6 +78,11 @@ namespace Client_PM
             {
                 OpenSettings();
             }
+            else if (e.KeyCode == Keys.Escape) // Fermeture du plein écran
+            {
+                if (FullScreen)
+                    ChangerFullScreen();
+            }
         }
 
         private void TSMI_Settings_Click(object sender, EventArgs e)
