@@ -795,6 +795,7 @@ namespace Client_PM
             OpenSlideShow();
         }
 
+<<<<<<< HEAD
         private void BTN_DateSearch_Click(object sender, EventArgs e)
         {
 
@@ -823,6 +824,8 @@ namespace Client_PM
             LoadPhoto();
         }
 
+=======
+>>>>>>> 0bf03d11b466e1ac1d8ab148dd456f0da235dfd7
         private void masquerLesOngletsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (TBC_PhotoManager.Visible)
