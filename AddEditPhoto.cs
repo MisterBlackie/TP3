@@ -77,8 +77,9 @@ namespace Client_PM
         {
             Photo.Title = TBX_Title.Text;
             Photo.Description = RTB_Description.Text;
-            Photo.Keywords = TBX_Keywords.Text; //Devrait permettre plus qu'un mot clé...
+            Photo.Keywords = TBX_Keywords.Text;
             Photo.Shared = !RB_Private.Checked;
+            Photo.CreationDate = DateTime.Now;
         }
 
         private void ImageBox_BackgroundImageChanged(object sender, EventArgs e)

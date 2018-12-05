@@ -378,5 +378,17 @@
   <ItemGroup>
     <None Include="Resources\RemoveFromSlide_Over.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slide_Photos_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slide_Photos_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slide_Photos_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slide_Photos_Over.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -88,7 +88,6 @@ namespace Client_PM
         private void TSMI_Settings_Click(object sender, EventArgs e)
         {
             OpenSettings();
-
         }
 
         private void Carousel_Shown(object sender, EventArgs e)

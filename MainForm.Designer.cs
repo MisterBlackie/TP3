@@ -113,7 +113,7 @@
             this.DTP_End.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTP_End.Location = new System.Drawing.Point(366, 46);
             this.DTP_End.Name = "DTP_End";
-            this.DTP_End.Size = new System.Drawing.Size(176, 26);
+            this.DTP_End.Size = new System.Drawing.Size(176, 22);
             this.DTP_End.TabIndex = 9;
             // 
             // LBL_DateText
@@ -122,7 +122,7 @@
             this.LBL_DateText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_DateText.Location = new System.Drawing.Point(344, 50);
             this.LBL_DateText.Name = "LBL_DateText";
-            this.LBL_DateText.Size = new System.Drawing.Size(18, 20);
+            this.LBL_DateText.Size = new System.Drawing.Size(16, 16);
             this.LBL_DateText.TabIndex = 8;
             this.LBL_DateText.Text = "à";
             // 
@@ -131,7 +131,7 @@
             this.DTP_Start.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTP_Start.Location = new System.Drawing.Point(366, 21);
             this.DTP_Start.Name = "DTP_Start";
-            this.DTP_Start.Size = new System.Drawing.Size(176, 26);
+            this.DTP_Start.Size = new System.Drawing.Size(176, 22);
             this.DTP_Start.TabIndex = 7;
             // 
             // CBX_Keywords
@@ -140,7 +140,7 @@
             this.CBX_Keywords.FormattingEnabled = true;
             this.CBX_Keywords.Location = new System.Drawing.Point(104, 48);
             this.CBX_Keywords.Name = "CBX_Keywords";
-            this.CBX_Keywords.Size = new System.Drawing.Size(195, 28);
+            this.CBX_Keywords.Size = new System.Drawing.Size(195, 24);
             this.CBX_Keywords.TabIndex = 0;
             this.CBX_Keywords.SelectedIndexChanged += new System.EventHandler(this.CBX_Keywords_SelectedIndexChanged);
             // 
@@ -150,7 +150,7 @@
             this.CBX_UsersList.FormattingEnabled = true;
             this.CBX_UsersList.Location = new System.Drawing.Point(104, 20);
             this.CBX_UsersList.Name = "CBX_UsersList";
-            this.CBX_UsersList.Size = new System.Drawing.Size(195, 28);
+            this.CBX_UsersList.Size = new System.Drawing.Size(195, 24);
             this.CBX_UsersList.TabIndex = 0;
             this.CBX_UsersList.SelectedIndexChanged += new System.EventHandler(this.CBX_UsersList_SelectedIndexChanged);
             // 
@@ -166,7 +166,7 @@
             this.TSMI_About});
             this.MS_Account.Location = new System.Drawing.Point(0, 0);
             this.MS_Account.Name = "MS_Account";
-            this.MS_Account.Size = new System.Drawing.Size(1153, 28);
+            this.MS_Account.Size = new System.Drawing.Size(1153, 24);
             this.MS_Account.TabIndex = 2;
             this.MS_Account.Text = "menuStrip1";
             // 
@@ -179,14 +179,14 @@
             this.MI_Account_Exit});
             this.TSMI_Account.Name = "TSMI_Account";
             this.TSMI_Account.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
-            this.TSMI_Account.Size = new System.Drawing.Size(74, 24);
+            this.TSMI_Account.Size = new System.Drawing.Size(62, 20);
             this.TSMI_Account.Text = "Compte";
             // 
             // MI_Account_Login
             // 
             this.MI_Account_Login.Name = "MI_Account_Login";
             this.MI_Account_Login.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
-            this.MI_Account_Login.Size = new System.Drawing.Size(251, 26);
+            this.MI_Account_Login.Size = new System.Drawing.Size(209, 22);
             this.MI_Account_Login.Text = "Connexion";
             this.MI_Account_Login.Click += new System.EventHandler(this.MI_Account_Login_Click);
             // 
@@ -194,7 +194,7 @@
             // 
             this.MI_Account_Profile.Name = "MI_Account_Profile";
             this.MI_Account_Profile.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.MI_Account_Profile.Size = new System.Drawing.Size(251, 26);
+            this.MI_Account_Profile.Size = new System.Drawing.Size(209, 22);
             this.MI_Account_Profile.Text = "Profil";
             this.MI_Account_Profile.Click += new System.EventHandler(this.MI_Account_Profile_Click);
             // 
@@ -202,7 +202,7 @@
             // 
             this.Mi_Account_Create.Name = "Mi_Account_Create";
             this.Mi_Account_Create.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.Mi_Account_Create.Size = new System.Drawing.Size(251, 26);
+            this.Mi_Account_Create.Size = new System.Drawing.Size(209, 22);
             this.Mi_Account_Create.Text = "Nouveau compte";
             this.Mi_Account_Create.Click += new System.EventHandler(this.Mi_Account_Create_Click);
             // 
@@ -210,7 +210,7 @@
             // 
             this.MI_Account_Exit.Name = "MI_Account_Exit";
             this.MI_Account_Exit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.MI_Account_Exit.Size = new System.Drawing.Size(251, 26);
+            this.MI_Account_Exit.Size = new System.Drawing.Size(209, 22);
             this.MI_Account_Exit.Text = "Déconnexion";
             this.MI_Account_Exit.Click += new System.EventHandler(this.MI_Account_Exit_Click);
             // 
@@ -223,7 +223,7 @@
             this.MI_Delete,
             this.MI_Info});
             this.TSMI_Photos.Name = "TSMI_Photos";
-            this.TSMI_Photos.Size = new System.Drawing.Size(66, 24);
+            this.TSMI_Photos.Size = new System.Drawing.Size(56, 20);
             this.TSMI_Photos.Text = "Photos";
             // 
             // MI_Display
@@ -235,14 +235,14 @@
             this.MI_Display_Right,
             this.masquerLesOngletsToolStripMenuItem});
             this.MI_Display.Name = "MI_Display";
-            this.MI_Display.Size = new System.Drawing.Size(216, 26);
+            this.MI_Display.Size = new System.Drawing.Size(179, 22);
             this.MI_Display.Text = "Affichage";
             // 
             // MI_Display_Up
             // 
             this.MI_Display_Up.Name = "MI_Display_Up";
             this.MI_Display_Up.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Up)));
-            this.MI_Display_Up.Size = new System.Drawing.Size(304, 26);
+            this.MI_Display_Up.Size = new System.Drawing.Size(250, 22);
             this.MI_Display_Up.Text = "Haut";
             this.MI_Display_Up.Click += new System.EventHandler(this.MI_Display_Up_Click);
             // 
@@ -250,7 +250,7 @@
             // 
             this.MI_Display_Down.Name = "MI_Display_Down";
             this.MI_Display_Down.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Down)));
-            this.MI_Display_Down.Size = new System.Drawing.Size(304, 26);
+            this.MI_Display_Down.Size = new System.Drawing.Size(250, 22);
             this.MI_Display_Down.Text = "Bas";
             this.MI_Display_Down.Click += new System.EventHandler(this.MI_Display_Down_Click);
             // 
@@ -258,7 +258,7 @@
             // 
             this.MI_Display_Left.Name = "MI_Display_Left";
             this.MI_Display_Left.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Left)));
-            this.MI_Display_Left.Size = new System.Drawing.Size(304, 26);
+            this.MI_Display_Left.Size = new System.Drawing.Size(250, 22);
             this.MI_Display_Left.Text = "Gauche";
             this.MI_Display_Left.Click += new System.EventHandler(this.MI_Display_Left_Click);
             // 
@@ -266,7 +266,7 @@
             // 
             this.MI_Display_Right.Name = "MI_Display_Right";
             this.MI_Display_Right.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Right)));
-            this.MI_Display_Right.Size = new System.Drawing.Size(304, 26);
+            this.MI_Display_Right.Size = new System.Drawing.Size(250, 22);
             this.MI_Display_Right.Text = "Droite";
             this.MI_Display_Right.Click += new System.EventHandler(this.MI_Display_Right_Click);
             // 
@@ -276,7 +276,7 @@
             this.masquerLesOngletsToolStripMenuItem.ShortcutKeyDisplayString = "";
             this.masquerLesOngletsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.H)));
-            this.masquerLesOngletsToolStripMenuItem.Size = new System.Drawing.Size(304, 26);
+            this.masquerLesOngletsToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
             this.masquerLesOngletsToolStripMenuItem.Text = "Masquer les onglets";
             this.masquerLesOngletsToolStripMenuItem.Click += new System.EventHandler(this.masquerLesOngletsToolStripMenuItem_Click);
             // 
@@ -285,7 +285,7 @@
             this.MI_Add.Enabled = false;
             this.MI_Add.Name = "MI_Add";
             this.MI_Add.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.MI_Add.Size = new System.Drawing.Size(216, 26);
+            this.MI_Add.Size = new System.Drawing.Size(179, 22);
             this.MI_Add.Text = "Ajouter";
             this.MI_Add.Click += new System.EventHandler(this.MI_Add_Click);
             // 
@@ -294,7 +294,7 @@
             this.MI_Edit.Enabled = false;
             this.MI_Edit.Name = "MI_Edit";
             this.MI_Edit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.MI_Edit.Size = new System.Drawing.Size(216, 26);
+            this.MI_Edit.Size = new System.Drawing.Size(179, 22);
             this.MI_Edit.Text = "Modifier";
             this.MI_Edit.Click += new System.EventHandler(this.MI_Edit_Click);
             // 
@@ -303,7 +303,7 @@
             this.MI_Delete.Enabled = false;
             this.MI_Delete.Name = "MI_Delete";
             this.MI_Delete.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.MI_Delete.Size = new System.Drawing.Size(216, 26);
+            this.MI_Delete.Size = new System.Drawing.Size(179, 22);
             this.MI_Delete.Text = "Supprimer";
             this.MI_Delete.Click += new System.EventHandler(this.MI_Delete_Click);
             // 
@@ -312,7 +312,7 @@
             this.MI_Info.Enabled = false;
             this.MI_Info.Name = "MI_Info";
             this.MI_Info.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.MI_Info.Size = new System.Drawing.Size(216, 26);
+            this.MI_Info.Size = new System.Drawing.Size(179, 22);
             this.MI_Info.Text = "Informations";
             this.MI_Info.Click += new System.EventHandler(this.MI_Info_Click);
             // 
@@ -324,14 +324,14 @@
             this.MI_ResetSlideshow,
             this.MI_StartSlideshow});
             this.TSMI_Carousel.Name = "TSMI_Carousel";
-            this.TSMI_Carousel.Size = new System.Drawing.Size(96, 24);
+            this.TSMI_Carousel.Size = new System.Drawing.Size(77, 20);
             this.TSMI_Carousel.Text = "Diaporama";
             // 
             // MI_AddToSlideshow
             // 
             this.MI_AddToSlideshow.Name = "MI_AddToSlideshow";
             this.MI_AddToSlideshow.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
-            this.MI_AddToSlideshow.Size = new System.Drawing.Size(280, 26);
+            this.MI_AddToSlideshow.Size = new System.Drawing.Size(228, 22);
             this.MI_AddToSlideshow.Text = "Ajouter";
             this.MI_AddToSlideshow.Click += new System.EventHandler(this.MI_AddToSlideshow_Click);
             // 
@@ -339,7 +339,7 @@
             // 
             this.MI_EditSlideshow.Name = "MI_EditSlideshow";
             this.MI_EditSlideshow.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.E)));
-            this.MI_EditSlideshow.Size = new System.Drawing.Size(280, 26);
+            this.MI_EditSlideshow.Size = new System.Drawing.Size(228, 22);
             this.MI_EditSlideshow.Text = "Modifier les photos";
             this.MI_EditSlideshow.Click += new System.EventHandler(this.MI_EditSlideshow_Click);
             // 
@@ -347,7 +347,7 @@
             // 
             this.MI_ResetSlideshow.Name = "MI_ResetSlideshow";
             this.MI_ResetSlideshow.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.R)));
-            this.MI_ResetSlideshow.Size = new System.Drawing.Size(280, 26);
+            this.MI_ResetSlideshow.Size = new System.Drawing.Size(228, 22);
             this.MI_ResetSlideshow.Text = "Réinitialiser les photos";
             this.MI_ResetSlideshow.Click += new System.EventHandler(this.MI_ResetSlideshow_Click);
             // 
@@ -355,7 +355,7 @@
             // 
             this.MI_StartSlideshow.Name = "MI_StartSlideshow";
             this.MI_StartSlideshow.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
-            this.MI_StartSlideshow.Size = new System.Drawing.Size(280, 26);
+            this.MI_StartSlideshow.Size = new System.Drawing.Size(228, 22);
             this.MI_StartSlideshow.Text = "Démarrer";
             this.MI_StartSlideshow.Click += new System.EventHandler(this.MI_StartSlideshow_Click);
             // 
@@ -365,14 +365,14 @@
             this.MI_Blacklist_Add,
             this.MI_Blacklist_Show});
             this.TSMI_Blacklist.Name = "TSMI_Blacklist";
-            this.TSMI_Blacklist.Size = new System.Drawing.Size(92, 24);
+            this.TSMI_Blacklist.Size = new System.Drawing.Size(75, 20);
             this.TSMI_Blacklist.Text = "Liste Noire";
             // 
             // MI_Blacklist_Add
             // 
             this.MI_Blacklist_Add.Name = "MI_Blacklist_Add";
             this.MI_Blacklist_Add.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.MI_Blacklist_Add.Size = new System.Drawing.Size(267, 26);
+            this.MI_Blacklist_Add.Size = new System.Drawing.Size(220, 22);
             this.MI_Blacklist_Add.Text = "Ajouter / Supprimer";
             this.MI_Blacklist_Add.Click += new System.EventHandler(this.MI_Blacklist_Add_Click);
             // 
@@ -380,7 +380,7 @@
             // 
             this.MI_Blacklist_Show.Name = "MI_Blacklist_Show";
             this.MI_Blacklist_Show.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.MI_Blacklist_Show.Size = new System.Drawing.Size(267, 26);
+            this.MI_Blacklist_Show.Size = new System.Drawing.Size(220, 22);
             this.MI_Blacklist_Show.Text = "Réinitialiser";
             this.MI_Blacklist_Show.Click += new System.EventHandler(this.MI_Blacklist_Show_Click);
             // 
@@ -388,7 +388,7 @@
             // 
             this.TSMI_Help.Name = "TSMI_Help";
             this.TSMI_Help.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
-            this.TSMI_Help.Size = new System.Drawing.Size(52, 24);
+            this.TSMI_Help.Size = new System.Drawing.Size(43, 20);
             this.TSMI_Help.Text = "Aide";
             this.TSMI_Help.Click += new System.EventHandler(this.TSMI_Help_Click);
             // 
@@ -396,7 +396,7 @@
             // 
             this.TSMI_About.Name = "TSMI_About";
             this.TSMI_About.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.TSMI_About.Size = new System.Drawing.Size(82, 24);
+            this.TSMI_About.Size = new System.Drawing.Size(67, 20);
             this.TSMI_About.Text = "À propos";
             this.TSMI_About.Click += new System.EventHandler(this.TSMI_About_Click);
             // 
@@ -424,10 +424,10 @@
             this.TP_Photos.Controls.Add(this.GB_Scroll);
             this.TP_Photos.Controls.Add(this.GB_Slideshow);
             this.TP_Photos.Controls.Add(this.GB_Image);
-            this.TP_Photos.Location = new System.Drawing.Point(4, 34);
+            this.TP_Photos.Location = new System.Drawing.Point(4, 29);
             this.TP_Photos.Name = "TP_Photos";
             this.TP_Photos.Padding = new System.Windows.Forms.Padding(3);
-            this.TP_Photos.Size = new System.Drawing.Size(1121, 82);
+            this.TP_Photos.Size = new System.Drawing.Size(1121, 87);
             this.TP_Photos.TabIndex = 0;
             this.TP_Photos.Text = "Photos";
             // 
@@ -485,10 +485,10 @@
             this.TP_Filters.BackColor = System.Drawing.Color.White;
             this.TP_Filters.Controls.Add(this.GB_Filters);
             this.TP_Filters.Controls.Add(this.GB_Blacklist);
-            this.TP_Filters.Location = new System.Drawing.Point(4, 34);
+            this.TP_Filters.Location = new System.Drawing.Point(4, 29);
             this.TP_Filters.Name = "TP_Filters";
             this.TP_Filters.Padding = new System.Windows.Forms.Padding(3);
-            this.TP_Filters.Size = new System.Drawing.Size(1121, 82);
+            this.TP_Filters.Size = new System.Drawing.Size(1121, 87);
             this.TP_Filters.TabIndex = 1;
             this.TP_Filters.Text = "Filtres";
             // 
@@ -529,7 +529,7 @@
             this.RB_Users.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RB_Users.Location = new System.Drawing.Point(6, 22);
             this.RB_Users.Name = "RB_Users";
-            this.RB_Users.Size = new System.Drawing.Size(115, 24);
+            this.RB_Users.Size = new System.Drawing.Size(92, 20);
             this.RB_Users.TabIndex = 11;
             this.RB_Users.TabStop = true;
             this.RB_Users.Text = "Utilisateurs";
@@ -542,7 +542,7 @@
             this.RB_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RB_Date.Location = new System.Drawing.Point(305, 21);
             this.RB_Date.Name = "RB_Date";
-            this.RB_Date.Size = new System.Drawing.Size(66, 24);
+            this.RB_Date.Size = new System.Drawing.Size(55, 20);
             this.RB_Date.TabIndex = 13;
             this.RB_Date.Text = "Date";
             this.RB_Date.UseVisualStyleBackColor = true;
@@ -554,7 +554,7 @@
             this.CB_HideMyPhotos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CB_HideMyPhotos.Location = new System.Drawing.Point(606, 35);
             this.CB_HideMyPhotos.Name = "CB_HideMyPhotos";
-            this.CB_HideMyPhotos.Size = new System.Drawing.Size(177, 24);
+            this.CB_HideMyPhotos.Size = new System.Drawing.Size(143, 20);
             this.CB_HideMyPhotos.TabIndex = 10;
             this.CB_HideMyPhotos.Text = "Cacher mes photos";
             this.CB_HideMyPhotos.UseVisualStyleBackColor = true;
@@ -566,7 +566,7 @@
             this.RB_Keyword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RB_Keyword.Location = new System.Drawing.Point(6, 48);
             this.RB_Keyword.Name = "RB_Keyword";
-            this.RB_Keyword.Size = new System.Drawing.Size(98, 24);
+            this.RB_Keyword.Size = new System.Drawing.Size(79, 20);
             this.RB_Keyword.TabIndex = 12;
             this.RB_Keyword.Text = "Mots-Clé";
             this.RB_Keyword.UseVisualStyleBackColor = true;
@@ -590,7 +590,7 @@
             this.CBX_BlackList.Location = new System.Drawing.Point(137, 30);
             this.CBX_BlackList.Margin = new System.Windows.Forms.Padding(10, 3, 20, 3);
             this.CBX_BlackList.Name = "CBX_BlackList";
-            this.CBX_BlackList.Size = new System.Drawing.Size(187, 33);
+            this.CBX_BlackList.Size = new System.Drawing.Size(187, 28);
             this.CBX_BlackList.TabIndex = 3;
             this.CBX_BlackList.SelectedIndexChanged += new System.EventHandler(this.CBX_BlackList_SelectedIndexChanged);
             // 
@@ -672,16 +672,16 @@
             // 
             // FB_EditDiapo
             // 
-            this.FB_EditDiapo.BackgroundImage = global::Client_PM.Properties.Resources.Edit_Neutral;
+            this.FB_EditDiapo.BackgroundImage = global::Client_PM.Properties.Resources.Slide_Photos_Neutral;
             this.FB_EditDiapo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FB_EditDiapo.ClickedImage = global::Client_PM.Properties.Resources.Edit_Clicked;
-            this.FB_EditDiapo.DisabledImage = global::Client_PM.Properties.Resources.Edit_Disabled;
+            this.FB_EditDiapo.ClickedImage = global::Client_PM.Properties.Resources.Slide_Photos_Clicked;
+            this.FB_EditDiapo.DisabledImage = global::Client_PM.Properties.Resources.Slide_Photos_Disabled;
             this.FB_EditDiapo.Image = ((System.Drawing.Image)(resources.GetObject("FB_EditDiapo.Image")));
-            this.FB_EditDiapo.Location = new System.Drawing.Point(127, 26);
+            this.FB_EditDiapo.Location = new System.Drawing.Point(125, 24);
             this.FB_EditDiapo.Name = "FB_EditDiapo";
-            this.FB_EditDiapo.NeutralImage = global::Client_PM.Properties.Resources.Edit_Neutral;
+            this.FB_EditDiapo.NeutralImage = global::Client_PM.Properties.Resources.Slide_Photos_Neutral;
             this.FB_EditDiapo.OverImage = global::Client_PM.Properties.Resources.Edit_Over;
-            this.FB_EditDiapo.Size = new System.Drawing.Size(36, 36);
+            this.FB_EditDiapo.Size = new System.Drawing.Size(42, 42);
             this.FB_EditDiapo.TabIndex = 3;
             this.FB_ToolTips.SetToolTip(this.FB_EditDiapo, "Modifier les photos du diaporama");
             this.FB_EditDiapo.UseVisualStyleBackColor = true;
@@ -858,7 +858,7 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1153, 674);
             this.Controls.Add(this.PhotoBrowser);

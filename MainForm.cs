@@ -728,7 +728,7 @@ namespace Client_PM
 
                 // Position du MainForm
                 Location = Properties.Settings.Default.PositionMainForm;
-                // Taille du MainForm
+                //Taille du MainForm
                 Size = Properties.Settings.Default.TailleMainForm;
             }
         }
