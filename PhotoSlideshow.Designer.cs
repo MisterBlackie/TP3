@@ -36,10 +36,10 @@
             // BTN_Quitter
             // 
             this.BTN_Quitter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_Quitter.Location = new System.Drawing.Point(932, 636);
-            this.BTN_Quitter.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.BTN_Quitter.Location = new System.Drawing.Point(993, 557);
+            this.BTN_Quitter.Margin = new System.Windows.Forms.Padding(5);
             this.BTN_Quitter.Name = "BTN_Quitter";
-            this.BTN_Quitter.Size = new System.Drawing.Size(175, 76);
+            this.BTN_Quitter.Size = new System.Drawing.Size(110, 58);
             this.BTN_Quitter.TabIndex = 1;
             this.BTN_Quitter.Text = "Quitter";
             this.BTN_Quitter.UseVisualStyleBackColor = true;
@@ -48,10 +48,10 @@
             // BTN_Delete
             // 
             this.BTN_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_Delete.Location = new System.Drawing.Point(747, 636);
+            this.BTN_Delete.Location = new System.Drawing.Point(861, 557);
             this.BTN_Delete.Margin = new System.Windows.Forms.Padding(5);
             this.BTN_Delete.Name = "BTN_Delete";
-            this.BTN_Delete.Size = new System.Drawing.Size(175, 76);
+            this.BTN_Delete.Size = new System.Drawing.Size(110, 58);
             this.BTN_Delete.TabIndex = 3;
             this.BTN_Delete.Text = "Retirer";
             this.BTN_Delete.UseVisualStyleBackColor = true;
@@ -64,22 +64,22 @@
             this.PhotoBrowser.Name = "PhotoBrowser";
             this.PhotoBrowser.Placement = PhotoManagerClient.PhotoBrowserPlacement.Left;
             this.PhotoBrowser.SelectedPhoto = null;
-            this.PhotoBrowser.Size = new System.Drawing.Size(1093, 612);
+            this.PhotoBrowser.Size = new System.Drawing.Size(1089, 533);
             this.PhotoBrowser.TabIndex = 0;
             this.PhotoBrowser.SelectedChanged += new PhotoManagerClient.PhotosBrowser.SelectedChangedHandler(this.PhotoBrowser_SelectedChanged);
             // 
             // PhotoSlideshow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1121, 726);
+            this.ClientSize = new System.Drawing.Size(1117, 629);
             this.Controls.Add(this.BTN_Delete);
             this.Controls.Add(this.BTN_Quitter);
             this.Controls.Add(this.PhotoBrowser);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "PhotoSlideshow";
-            this.Text = "PhotoSlideshow";
+            this.Text = "Modification des photos du diaporama";
             this.Load += new System.EventHandler(this.PhotoSlideshow_Load);
             this.ResumeLayout(false);
 

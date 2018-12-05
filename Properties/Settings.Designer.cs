@@ -419,13 +419,25 @@ namespace Client_PM.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool Paramètre {
+        [global::System.Configuration.DefaultSettingValueAttribute("3")]
+        public int VitesseDiapo {
             get {
-                return ((bool)(this["Paramètre"]));
+                return ((int)(this["VitesseDiapo"]));
             }
             set {
-                this["Paramètre"] = value;
+                this["VitesseDiapo"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool DefilementAleatoireDiapo {
+            get {
+                return ((bool)(this["DefilementAleatoireDiapo"]));
+            }
+            set {
+                this["DefilementAleatoireDiapo"] = value;
             }
         }
     }

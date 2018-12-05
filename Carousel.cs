@@ -176,5 +176,10 @@ namespace Client_PM
         {
             SaveSettings();
         }
+
+        private void TSMI_FullScreen_Click(object sender, EventArgs e)
+        {
+            ChangerFullScreen();
+        }
     }
 }

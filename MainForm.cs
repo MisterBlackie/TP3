@@ -291,19 +291,6 @@ namespace Client_PM
             }
         }
 
-        private void MainForm_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.H)
-            {
-                if (TBC_PhotoManager.Visible)
-                    CloseTabs();
-                else
-                    OpenTabs();
-
-                e.Handled = true;
-            }
-        }
-
         private void CBX_BlackList_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (CBX_BlackList.SelectedIndex >= 0)
@@ -768,7 +755,7 @@ namespace Client_PM
             UpdateAddSlideShow();
         }
 
-        private void ajouterToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void MI_AddToSlideshow_Click(object sender, EventArgs e)
         {
             if (PhotoBrowser.SelectedPhoto != null)
             {
@@ -777,21 +764,29 @@ namespace Client_PM
             }
         }
 
-        private void modifierLesPhotosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MI_EditSlideshow_Click(object sender, EventArgs e)
         {
             ModifyPhotoSlideshow();
             UpdateAddSlideShow();
         }
 
-        private void réinitialiserLesPhotosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MI_ResetSlideshow_Click(object sender, EventArgs e)
         {
             ResetSlideshow();
             UpdateAddSlideShow();
         }
 
-        private void démarrerToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MI_StartSlideshow_Click(object sender, EventArgs e)
         {
             OpenSlideShow();
+        }
+
+        private void masquerLesOngletsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (TBC_PhotoManager.Visible)
+                CloseTabs();
+            else
+                OpenTabs();
         }
     }
 }

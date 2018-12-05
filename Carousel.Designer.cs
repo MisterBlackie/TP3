@@ -32,6 +32,7 @@
             this.Timer = new System.Windows.Forms.Timer(this.components);
             this.MS_Carousel = new System.Windows.Forms.MenuStrip();
             this.TSMI_Settings = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMI_FullScreen = new System.Windows.Forms.ToolStripMenuItem();
             this.MS_Carousel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,32 +44,38 @@
             // 
             this.MS_Carousel.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MS_Carousel.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TSMI_Settings});
+            this.TSMI_Settings,
+            this.TSMI_FullScreen});
             this.MS_Carousel.Location = new System.Drawing.Point(0, 0);
             this.MS_Carousel.Name = "MS_Carousel";
-            this.MS_Carousel.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.MS_Carousel.Size = new System.Drawing.Size(1067, 28);
+            this.MS_Carousel.Size = new System.Drawing.Size(800, 24);
             this.MS_Carousel.TabIndex = 4;
             this.MS_Carousel.Text = "MS_Carousel";
             // 
             // TSMI_Settings
             // 
             this.TSMI_Settings.Name = "TSMI_Settings";
-            this.TSMI_Settings.Size = new System.Drawing.Size(73, 24);
+            this.TSMI_Settings.Size = new System.Drawing.Size(61, 20);
             this.TSMI_Settings.Text = "Options";
             this.TSMI_Settings.Click += new System.EventHandler(this.TSMI_Settings_Click);
             // 
+            // TSMI_FullScreen
+            // 
+            this.TSMI_FullScreen.Name = "TSMI_FullScreen";
+            this.TSMI_FullScreen.Size = new System.Drawing.Size(77, 20);
+            this.TSMI_FullScreen.Text = "Plein écran";
+            this.TSMI_FullScreen.Click += new System.EventHandler(this.TSMI_FullScreen_Click);
+            // 
             // Carousel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.MS_Carousel);
             this.DoubleBuffered = true;
             this.KeyPreview = true;
             this.MainMenuStrip = this.MS_Carousel;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Carousel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diaporama";
@@ -88,5 +95,6 @@
         private System.Windows.Forms.Timer Timer;
         private System.Windows.Forms.MenuStrip MS_Carousel;
         private System.Windows.Forms.ToolStripMenuItem TSMI_Settings;
+        private System.Windows.Forms.ToolStripMenuItem TSMI_FullScreen;
     }
 }
